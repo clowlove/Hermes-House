@@ -1,8 +1,7 @@
-# 自动收集 AI 资讯
 name: AI News Collector
 on:
   schedule:
-    - cron: '0 6,18 * * *'  # 北京时间 14:00 和 02:00
+    - cron: '0 6,18 * * *'
   workflow_dispatch:
 
 jobs:
@@ -11,33 +10,35 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Check arXiv cs.AI recent papers
+      - name: Fetch arXiv cs.AI papers
         run: |
-          curl -s "https://export.arxiv.org/api/query?search_query=cat:cs.AI&start=0&max_results=5&sortBy=submittedDate&sortOrder=descending" | \
+          curl -s "https://export.arxiv.org/api/query?search_query=cat:cs.AI&start=0&max_results=8&sortBy=submittedDate&sortOrder=descending" | \
           python3 -c "
 import sys, re
 content = sys.stdin.read()
 entries = re.split(r'<entry>', content)[1:]
-for e in entries[:5]:
+print('### 📄 Latest arXiv cs.AI Papers\n')
+for e in entries[:8]:
     title = re.search(r'<title>(.*?)</title>', e, re.DOTALL)
-    summary = re.search(r'<summary>(.*?)</summary>', e, re.DOTALL)
+    link = re.search(r'<id>(.*?)</id>', e)
     if title:
         t = title.group(1).replace('\n', ' ').strip()
-        print(f'📄 {t}')
+        l = link.group(1).strip() if link else ''
+        print(f'- [{t}]({l})')
 " >> $GITHUB_STEP_SUMMARY
-      
-      - name: Create/update news issue
+          
+      - name: Create news issue
+        if: github.event_name == 'schedule'
         run: |
           date=$(date +%Y-%m-%d)
-          issue_title="AI News Digest $date"
+          body="## AI News Digest - $(date +'%Y年%m月%d日')\n\nCollected at $(date -u +'%H:%M UTC')\n\n<!-- news -->"
           
-          # Check if issue exists
+          # Check for existing open news issue
           existing=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/clowlove/Harmes-House/issues?state=open&labels=news" | \
-            python3 -c "import sys,json; issues=json.load(sys.stdin); print(issues[0]['number'] if issues else '')")
+            python3 -c "import sys,json; i=json.load(sys.stdin); print(str(i[0]['number']) if i else '')" 2>/dev/null)
           
           if [ -n "$existing" ]; then
-            echo "Issue #$existing already exists"
+            echo "News issue #$existing exists, skipping new issue creation"
           else
-            echo "Creating new issue..."
-          fi
+            echo "Would create new issue (schedule run)"
