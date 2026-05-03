@@ -1,0 +1,23 @@
+# Auto-merge PRs that pass CI
+name: Auto Merge
+on:
+  pull_request:
+  workflow_run:
+    workflows: ["Validate Skills"]
+    types: [completed]
+  push:
+    branches: [main]
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pascalgn/automerge-action@v0.16
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_METHOD: squash
+          AUTO_MERGE_METHOD: squash
