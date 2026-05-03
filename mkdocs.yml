@@ -29,6 +29,10 @@ nav:
   - Home: index.md
   - Skills: skills.md
   - Contributing: contributing.md
+  - Evolution:
+    - 成长日志: evolution/log-2026-05.md
+    - 架构模式: evolution/architecture-patterns.md
+    - 技术发现: evolution/tech-discoveries.md
 
 markdown_extensions:
   - pymdownx.highlight:
