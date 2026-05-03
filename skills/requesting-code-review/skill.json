@@ -1,0 +1,24 @@
+{
+  "name": "requesting-code-review",
+  "version": "2.0.0",
+  "description": ">",
+  "author": "Hermes Agent (adapted from obra/superpowers + MorAlekss)",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[code-review, security, verification, quality, pre-commit, auto-fix]",
+  "hermes": {
+    "skill_category": "software-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

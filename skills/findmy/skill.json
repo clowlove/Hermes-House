@@ -1,0 +1,24 @@
+{
+  "name": "findmy",
+  "version": "1.0.0",
+  "description": "Track Apple devices and AirTags via FindMy.app on macOS using AppleScript and screen capture.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[FindMy, AirTag, location, tracking, macOS, Apple]",
+  "hermes": {
+    "skill_category": "apple",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

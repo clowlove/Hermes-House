@@ -1,0 +1,24 @@
+{
+  "name": "creative-ideation",
+  "version": "1.0.0",
+  "description": "Generate project ideas through creative constraints. Use when the user says 'I want to build something', 'give me a project idea', 'I'm bored', 'what should I make', 'inspire me', or any variant of 'I have tools but no direction'. Works for code, art, hardware, writing, tools, and anything that can be made.",
+  "author": "SHL0MS",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[Creative, Ideation, Projects, Brainstorming, Inspiration]",
+  "hermes": {
+    "skill_category": "creative",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

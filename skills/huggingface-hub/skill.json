@@ -1,0 +1,24 @@
+{
+  "name": "huggingface-hub",
+  "version": "1.0.0",
+  "description": "Hugging Face Hub CLI (hf) — search, download, and upload models and datasets, manage repos, query datasets with SQL, deploy inference endpoints, manage Spaces and buckets.",
+  "author": "Hugging Face",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[huggingface, hf, models, datasets, hub, mlops]",
+  "hermes": {
+    "skill_category": "mlops",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

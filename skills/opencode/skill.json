@@ -1,0 +1,24 @@
+{
+  "name": "opencode",
+  "version": "1.2.0",
+  "description": "Delegate coding tasks to OpenCode CLI agent for feature implementation, refactoring, PR review, and long-running autonomous sessions. Requires the opencode CLI installed and authenticated.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[Coding-Agent, OpenCode, Autonomous, Refactoring, Code-Review]",
+  "hermes": {
+    "skill_category": "autonomous-ai-agents",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

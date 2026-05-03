@@ -1,0 +1,24 @@
+{
+  "name": "blogwatcher",
+  "version": "2.0.0",
+  "description": "Monitor blogs and RSS/Atom feeds for updates using the blogwatcher-cli tool. Add blogs, scan for new articles, track read status, and filter by category.",
+  "author": "JulienTant (fork of Hyaxia/blogwatcher)",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[RSS, Blogs, Feed-Reader, Monitoring]",
+  "hermes": {
+    "skill_category": "research",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

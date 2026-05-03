@@ -1,0 +1,24 @@
+{
+  "name": "notion",
+  "version": "1.0.0",
+  "description": "Notion API for creating and managing pages, databases, and blocks via curl. Search, create, update, and query Notion workspaces directly from the terminal.",
+  "author": "community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[Notion, Productivity, Notes, Database, API]",
+  "hermes": {
+    "skill_category": "productivity",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

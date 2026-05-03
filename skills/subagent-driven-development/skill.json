@@ -1,0 +1,24 @@
+{
+  "name": "subagent-driven-development",
+  "version": "1.1.0",
+  "description": "Use when executing implementation plans with independent tasks. Dispatches fresh delegate_task per task with two-stage review (spec compliance then code quality).",
+  "author": "Hermes Agent (adapted from obra/superpowers)",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[delegation, subagent, implementation, workflow, parallel]",
+  "hermes": {
+    "skill_category": "software-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

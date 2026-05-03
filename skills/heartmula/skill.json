@@ -1,7 +1,7 @@
 {
-  "name": "model-fallback",
+  "name": "heartmula",
   "version": "1.0.0",
-  "description": "为 Hermes Agent 配置模型故障转移，自动切换到备用模型。类似于 FreeRide 的\"速率限制自动切换\"概念，但专为 Hermes Agent 设计。",
+  "description": "Set up and run HeartMuLa, the open-source music generation model family (Suno-like). Generates full songs from lyrics + tags with multilingual support.",
   "author": "Hermes Agent Community",
   "license": "MIT",
   "platforms": [
@@ -9,9 +9,9 @@
     "macos"
   ],
   "commands": [],
-  "tags": "[model, fallback, openrouter, free-ai, redundancy]",
+  "tags": "[music, audio, generation, ai, heartmula, heartcodec, lyrics, songs]",
   "hermes": {
-    "skill_category": "devops",
+    "skill_category": "media",
     "compatibility": [
       "hermes-agent >= 1.0.0"
     ]

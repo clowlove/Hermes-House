@@ -1,24 +1,24 @@
 {
   "name": "scrapling",
   "version": "0.4.7",
-  "description": "Scrapling - 自适应 Web 爬虫框架，支持反爬绕过、自动元素定位、MCP 集成",
+  "description": "Scrapling - 自适应 Web 爬虫框架，支持反爬绕过、自动元素定位、MCP 集成。42k stars 的专业级爬虫库。",
   "author": "D4Vinci + Hermes Agent",
   "license": "MIT",
-  "platforms": ["linux", "macos", "windows"],
-  "commands": ["scrapling"],
-  "api_keys_needed": [],
-  "tags": ["web-scraping", "crawling", "anti-bot", "cloudflare", "adaptive", "mcp", "spider"],
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[web-scraping, crawling, anti-bot, cloudflare, adaptive, mcp]",
   "hermes": {
     "skill_category": "devops",
-    "compatibility": ["hermes-agent >= 1.0.0"],
-    "python_package": "scrapling"
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
   },
-  "files": ["SKILL.md"],
+  "files": [
+    "SKILL.md"
+  ],
   "last_updated": "2026-05-03",
-  "status": "stable",
-  "github": {
-    "repo": "D4Vinci/Scrapling",
-    "stars": "42.2k",
-    "forks": "3.8k"
-  }
+  "status": "stable"
 }

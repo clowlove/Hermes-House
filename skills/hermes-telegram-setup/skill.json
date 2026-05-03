@@ -1,7 +1,7 @@
 {
-  "name": "model-fallback",
+  "name": "hermes-telegram-setup",
   "version": "1.0.0",
-  "description": "为 Hermes Agent 配置模型故障转移，自动切换到备用模型。类似于 FreeRide 的\"速率限制自动切换\"概念，但专为 Hermes Agent 设计。",
+  "description": "Set up and troubleshoot Telegram bot integration with Hermes Agent gateway — token config, pairing flow, gateway service management, and common pitfalls.",
   "author": "Hermes Agent Community",
   "license": "MIT",
   "platforms": [
@@ -9,7 +9,7 @@
     "macos"
   ],
   "commands": [],
-  "tags": "[model, fallback, openrouter, free-ai, redundancy]",
+  "tags": "[telegram, gateway, bot, setup, messaging]",
   "hermes": {
     "skill_category": "devops",
     "compatibility": [

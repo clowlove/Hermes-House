@@ -1,0 +1,24 @@
+{
+  "name": "songsee",
+  "version": "1.0.0",
+  "description": "Generate spectrograms and audio feature visualizations (mel, chroma, MFCC, tempogram, etc.) from audio files via CLI. Useful for audio analysis, music production debugging, and visual documentation.",
+  "author": "community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[Audio, Visualization, Spectrogram, Music, Analysis]",
+  "hermes": {
+    "skill_category": "media",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
