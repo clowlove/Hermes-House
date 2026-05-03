@@ -13,12 +13,53 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Check required files
+      - name: Validate skill structure and JSON schema
         run: |
+          errors=0
+          
           for dir in skills/*/; do
             skill=$(basename "$dir")
-            [ -f "$dir/SKILL.md" ] && echo "✅ $skill has SKILL.md" || { echo "❌ $skill missing SKILL.md"; exit 1; }
-            [ -f "$dir/skill.json" ] && echo "✅ $skill has skill.json" || { echo "❌ $skill missing skill.json"; exit 1; }
+            
+            # Check SKILL.md
+            if [ ! -f "$dir/SKILL.md" ]; then
+              echo "❌ $skill: missing SKILL.md"
+              errors=$((errors+1))
+            elif [ ! -s "$dir/SKILL.md" ]; then
+              echo "❌ $skill: SKILL.md is empty"
+              errors=$((errors+1))
+            else
+              lines=$(wc -l < "$dir/SKILL.md")
+              echo "✅ $skill: SKILL.md ($lines lines)"
+            fi
+            
+            # Check skill.json
+            if [ ! -f "$dir/skill.json" ]; then
+              echo "❌ $skill: missing skill.json"
+              errors=$((errors+1))
+            else
+              if python3 -c "import json; json.load(open('$dir/skill.json'))" 2>/dev/null; then
+                name=$(python3 -c "import json; d=json.load(open('$dir/skill.json')); print(d.get('name',''))")
+                version=$(python3 -c "import json; d=json.load(open('$dir/skill.json')); print(d.get('version',''))")
+                desc=$(python3 -c "import json; d=json.load(open('$dir/skill.json')); print(d.get('description',''))")
+                
+                if [ -z "$name" ] || [ -z "$version" ] || [ -z "$desc" ]; then
+                  echo "❌ $skill: skill.json missing required field (name/version/description)"
+                  errors=$((errors+1))
+                else
+                  echo "✅ $skill: skill.json valid (name=$name, version=$version)"
+                fi
+              else
+                echo "❌ $skill: skill.json is invalid JSON"
+                errors=$((errors+1))
+              fi
+            fi
           done
+          
+          if [ $errors -gt 0 ]; then
+            echo ""
+            echo "❌ Validation failed with $errors error(s)"
+            exit 1
+          fi
+          
+          echo ""
           echo "🎉 All skills validated!"
-
