@@ -1,0 +1,10 @@
+docs:
+  - changed: ['docs/**/*', '**/*.md']
+ci/cd:
+  - changed: ['.github/workflows/**/*']
+skills:
+  - changed: ['skills/**/*']
+scripts:
+  - changed: ['**/*.py', '**/*.sh']
+config:
+  - changed: ['.github/*', 'mkdocs.yml', 'package.json']
