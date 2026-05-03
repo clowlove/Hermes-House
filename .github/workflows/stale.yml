@@ -1,0 +1,37 @@
+name: Manage Stale Issues and PRs
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 60
+          days-before-close: 14
+          stale-issue-label: 'stale'
+          stale-issue-message: |
+            This issue has been automatically marked as stale because it has not had recent activity. It will be closed after 14 days if no further action is taken.
+            *This is an automated message.*
+          close-issue-message: |
+            This issue has been closed because it was marked as stale.
+            *This is an automated message.*
+          days-before-stale-pr: 30
+          days-before-close-pr: 7
+          stale-pr-label: 'stale'
+          stale-pr-message: |
+            This PR has been automatically marked as stale.
+            *This is an automated message.*
+          close-pr-message: |
+            This PR has been closed because it was marked as stale.
+            *This is an automated message.*
+          exempt-issue-labels: 'pinned,security,priority'
+          exempt-pr-labels: 'pinned,security,priority'
