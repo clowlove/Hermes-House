@@ -24,4 +24,6 @@ Thumbs.db
 htmlcov/
 
 # Logs
-*.log
+*.logsite/
+.site
+generate_nav.py
