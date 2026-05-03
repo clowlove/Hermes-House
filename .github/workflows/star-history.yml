@@ -1,0 +1,17 @@
+name: Weekly Star History
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Track star history
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: repo } = await github.rest.repos.get({ owner: context.repo.owner, repo: context.repo.repo });
+            console.log(`Stars: ${repo.stargazers_count}, Forks: ${repo.forks_count}`);
