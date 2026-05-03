@@ -1,0 +1,37 @@
+name: Auto Manage
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    
+    steps:
+      - uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          days-before-stale: 60
+          days-before-close: 30
+          stale-issue-message: '此 Issue 已闲置 60 天，将被自动关闭。如需保留请评论。'
+          stale-pr-message: '此 PR 已闲置 60 天，将被自动关闭。'
+          close-issue-message: '此 Issue 因长期闲置已被自动关闭。'
+          close-pr-message: '此 PR 因长期闲置已被自动关闭。'
+
+  auto-merge:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pascalgn/automerge-action@v0.16
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AUTO_MERGE_METHOD: squash

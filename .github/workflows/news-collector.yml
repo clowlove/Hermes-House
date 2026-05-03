@@ -1,0 +1,43 @@
+# 自动收集 AI 资讯
+name: AI News Collector
+on:
+  schedule:
+    - cron: '0 6,18 * * *'  # 北京时间 14:00 和 02:00
+  workflow_dispatch:
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Check arXiv cs.AI recent papers
+        run: |
+          curl -s "https://export.arxiv.org/api/query?search_query=cat:cs.AI&start=0&max_results=5&sortBy=submittedDate&sortOrder=descending" | \
+          python3 -c "
+import sys, re
+content = sys.stdin.read()
+entries = re.split(r'<entry>', content)[1:]
+for e in entries[:5]:
+    title = re.search(r'<title>(.*?)</title>', e, re.DOTALL)
+    summary = re.search(r'<summary>(.*?)</summary>', e, re.DOTALL)
+    if title:
+        t = title.group(1).replace('\n', ' ').strip()
+        print(f'📄 {t}')
+" >> $GITHUB_STEP_SUMMARY
+      
+      - name: Create/update news issue
+        run: |
+          date=$(date +%Y-%m-%d)
+          issue_title="AI News Digest $date"
+          
+          # Check if issue exists
+          existing=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/clowlove/Harmes-House/issues?state=open&labels=news" | \
+            python3 -c "import sys,json; issues=json.load(sys.stdin); print(issues[0]['number'] if issues else '')")
+          
+          if [ -n "$existing" ]; then
+            echo "Issue #$existing already exists"
+          else
+            echo "Creating new issue..."
+          fi

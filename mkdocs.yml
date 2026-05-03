@@ -1,0 +1,41 @@
+site_name: Hermes House
+site_description: Hermes Agent 技能仓库 — 自动化你的 AI 工作流
+site_url: https://clowlove.github.io/Harmes-House/
+repo_name: clowlove/Harmes-House
+repo_url: https://github.com/clowlove/Harmes-House
+
+theme:
+  name: material
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep purple
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep purple
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Skills: skills.md
+  - Contributing: contributing.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details

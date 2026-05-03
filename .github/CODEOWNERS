@@ -1,0 +1,5 @@
+# Codeowners - 自动分配 reviewer
+# 指定各目录的默认 reviewer
+skills/  @clowlove
+.github/ @clowlove
+docs/    @clowlove
