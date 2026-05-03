@@ -60,5 +60,6 @@
   "github/github-repo-management": "ddb15a744e4178d597fc916a983f3624",
   "github/github-issues": "c7645c9a856f0c90c0d233cc973aa63f",
   "github/codebase-inspection": "2099ed2343b9c82bae8332193c8fc383",
-  "github/github-auth": "be45ead535682803f05caf0239461383"
+  "github/github-auth": "be45ead535682803f05caf0239461383",
+  "devops/copilot-cli": "09844312c72821ea51ae9758de20d740"
 }
