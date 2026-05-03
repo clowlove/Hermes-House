@@ -2,11 +2,7 @@
 name: Auto Merge
 on:
   pull_request:
-  workflow_run:
-    workflows: ["Validate Skills"]
-    types: [completed]
-  push:
-    branches: [main]
+    types: [opened, synchronize, reopened]
 
 jobs:
   auto-merge:
@@ -21,3 +17,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MERGE_METHOD: squash
           AUTO_MERGE_METHOD: squash
+          UPDATE_METHOD: merge
+          MAX_RETRY: 5

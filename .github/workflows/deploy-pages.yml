@@ -21,10 +21,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install mkdocs mkdocs-material
-      - run: mkdocs gh-deploy --force
+
+      - name: Configure git for gh-deploy
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/clowlove/Harmes-House.git
+
+      - name: Install and deploy
+        run: |
+          pip install mkdocs mkdocs-material
+          mkdocs gh-deploy --force --message "Auto deploy $(date)"
+
       - id: deployment
         uses: actions/deploy-pages@v4
