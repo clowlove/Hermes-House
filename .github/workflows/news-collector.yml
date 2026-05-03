@@ -9,36 +9,50 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Fetch arXiv cs.AI papers
         run: |
-          curl -s "https://export.arxiv.org/api/query?search_query=cat:cs.AI&start=0&max_results=8&sortBy=submittedDate&sortOrder=descending" | \
-          python3 -c "
-import sys, re
-content = sys.stdin.read()
-entries = re.split(r'<entry>', content)[1:]
-print('### 📄 Latest arXiv cs.AI Papers\n')
-for e in entries[:8]:
-    title = re.search(r'<title>(.*?)</title>', e, re.DOTALL)
-    link = re.search(r'<id>(.*?)</id>', e)
-    if title:
-        t = title.group(1).replace('\n', ' ').strip()
-        l = link.group(1).strip() if link else ''
-        print(f'- [{t}]({l})')
-" >> $GITHUB_STEP_SUMMARY
-          
-      - name: Create news issue
+          python3 << 'PYEOF'
+          import urllib.request
+          import re
+          import os
+
+          url = "https://export.arxiv.org/api/query?search_query=cat:cs.AI&start=0&max_results=8&sortBy=submittedDate&sortOrder=descending"
+          try:
+              with urllib.request.urlopen(url, timeout=15) as resp:
+                  content = resp.read().decode('utf-8')
+          except Exception as e:
+              print(f"Error fetching: {e}")
+              exit(0)
+
+          entries = re.split(r'<entry>', content)[1:]
+          print('### 📄 Latest arXiv cs.AI Papers\n')
+          for e in entries[:8]:
+              title_m = re.search(r'<title>(.*?)</title>', e, re.DOTALL)
+              link_m = re.search(r'<id>(.*?)</id>', e)
+              if title_m:
+                  t = title_m.group(1).replace('\n', ' ').strip()
+                  l = link_m.group(1).strip() if link_m else ''
+                  print(f'- [{t}]({l})')
+
+          summary = os.environ.get('GITHUB_STEP_SUMMARY', '')
+          PYEOF
+
+      - name: Create/update news issue
         if: github.event_name == 'schedule'
         run: |
           date=$(date +%Y-%m-%d)
-          body="## AI News Digest - $(date +'%Y年%m月%d日')\n\nCollected at $(date -u +'%H:%M UTC')\n\n<!-- news -->"
-          
-          # Check for existing open news issue
           existing=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/clowlove/Harmes-House/issues?state=open&labels=news" | \
-            python3 -c "import sys,json; i=json.load(sys.stdin); print(str(i[0]['number']) if i else '')" 2>/dev/null)
-          
+            python3 -c "import sys,json; i=json.load(sys.stdin); print(str(i[0]['number']) if i else '')")
+
           if [ -n "$existing" ]; then
-            echo "News issue #$existing exists, skipping new issue creation"
+            echo "News issue #$existing already exists"
           else
-            echo "Would create new issue (schedule run)"
+            echo "Would create issue (scheduled run)"
+            curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Content-Type: application/json" \
+              -d "{\"title\": \"AI News Digest $(date +'%Y-%m-%d')\", \"body\": \"AI News Digest - $(date +'%Y年%m月%d日')\", \"labels\": [\"news\"]}" \
+              "https://api.github.com/repos/clowlove/Harmes-House/issues" | \
+            python3 -c "import sys,json; d=json.load(sys.stdin); print(f\"Created issue #{d.get('number')}\")"
+          fi
