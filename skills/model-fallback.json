@@ -1,0 +1,21 @@
+{
+  "name": "model-fallback",
+  "version": "1.0.0",
+  "description": "为 Hermes Agent 配置模型故障转移，自动切换到备用模型",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": ["linux", "macos"],
+  "commands": [],
+  "api_keys_needed": ["OPENROUTER_API_KEY"],
+  "tags": ["model", "fallback", "openrouter", "free-ai", "redundancy"],
+  "hermes": {
+    "skill_category": "devops",
+    "compatibility": ["hermes-agent >= 1.0.0"],
+    "config_file": "~/.hermes/config.yaml"
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
