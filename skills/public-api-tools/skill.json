@@ -1,7 +1,7 @@
 {
-  "name": "obsidian",
+  "name": "public-api-tools",
   "version": "1.0.0",
-  "description": "Read, search, and create notes in the Obsidian vault. 支持 Hermes-Wiki 知识库工作流。",
+  "description": "来自 public-apis 项目的免费公共 API 工具集 — QR码、图标、截图、LaTeX公式渲染等",
   "author": "Hermes Agent Community",
   "license": "MIT",
   "platforms": [
@@ -10,11 +10,11 @@
   ],
   "commands": [],
   "tags": [
-    "note-taking",
-    "obsidian"
+    "productivity",
+    "public-api-tools"
   ],
   "hermes": {
-    "skill_category": "note-taking",
+    "skill_category": "productivity",
     "compatibility": [
       "hermes-agent >= 1.0.0"
     ]
