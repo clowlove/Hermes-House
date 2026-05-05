@@ -27,3 +27,4 @@ htmlcov/
 *.logsite/
 .site
 generate_nav.py
+site/
