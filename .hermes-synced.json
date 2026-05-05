@@ -1,6 +1,6 @@
 {
   "mcp/native-mcp": "6cd5b8bd2c24112f85dfef56f3e6b3d0",
-  "note-taking/obsidian": "3e37d256e85a4cea32fa7bed949266ee",
+  "note-taking/obsidian": "ce57960c5238018bb91fef6b63e7467a",
   "apple/apple-notes": "8dd4360523604cb04d3b081ed852264d",
   "apple/apple-reminders": "bc815a9f25f8a5bf470a05540e5307ea",
   "apple/findmy": "6cf7edc17e5eb14092f4ea0fe1d625f0",
@@ -62,5 +62,6 @@
   "github/codebase-inspection": "2099ed2343b9c82bae8332193c8fc383",
   "github/github-auth": "be45ead535682803f05caf0239461383",
   "devops/copilot-cli": "09844312c72821ea51ae9758de20d740",
-  "email/mails": "8c9ccc5a0c9b8783ac71c7bdd7428e1e"
+  "email/mails": "8c9ccc5a0c9b8783ac71c7bdd7428e1e",
+  "productivity/public-api-tools": "b67d07aae51c46988bebf67a338279a0"
 }
