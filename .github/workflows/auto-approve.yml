@@ -1,0 +1,22 @@
+name: Auto Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  auto-approve:
+    if: github.event.pull_request.user.login == 'clowlove'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto approve PR
+        run: |
+          curl -s -X POST \
+            -H "Authorization: token ${{ secrets.CLAWLOVE_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"event":"APPROVE","body":"Auto approved by Hermès CI"}' \
+            "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/reviews"
