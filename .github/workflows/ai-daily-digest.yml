@@ -1,0 +1,64 @@
+name: AI Daily Digest
+
+on:
+  schedule:
+    - cron: '0 13 * * *'  # 每天北京时间 13:00
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch AI News
+        run: |
+          # 获取 Hacker News AI 相关内容
+          HN_TOP=$(curl -s "https://hn.algolia.com/api/v1/search?query=AI%20OR%20LLM%20OR%20machine%20learning&tags=story&hitsPerPage=5" | \
+            python3 -c "import sys,json; data=json.load(sys.stdin); [print(f'- [{h[\"title\"]}]({h[\"url\"]})') for h in data['hits'][:5]]" 2>/dev/null || echo "- 暂无数据")
+
+          # 获取 Reddit ML 新闻
+          REDDIT=$(curl -s -H "User-Agent: script" "https://www.reddit.com/r/MachineLearning/hot.json?limit=5" | \
+            python3 -c "import sys,json; data=json.load(sys.stdin); [print(f'- [{c[\"data\"][\"title\"]}](https://reddit.com{c[\"data\"][\"permalink\"]})') for c in data['data']['children'][:5]]" 2>/dev/null || echo "- 暂无数据")
+
+          echo "HN_TOP=$HN_TOP" >> $GITHUB_ENV
+          echo "REDDIT=$REDDIT" >> $GITHUB_ENV
+
+      - name: Create or update digest issue
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          REPO=${{ github.repository }}
+          
+          # 检查今天是否已有 issue
+          EXISTING=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/$REPO/issues?labels=daily-digest&state=open" | \
+            python3 -c "import sys,json; issues=json.load(sys.stdin); 
+            for i in issues:
+              if '$TODAY' in i['title']: print(i['number'])
+            " 2>/dev/null || echo "")
+
+          if [ -n "$EXISTING" ]; then
+            echo "Issue already exists: #$EXISTING"
+            exit 0
+          fi
+
+          # 创建新 Issue
+          BODY="## 🤖 AI Daily Digest - $TODAY
+
+### 🔥 Hacker News AI 热榜
+$(echo "$HN_TOP")
+
+### 📢 Reddit r/MachineLearning 热门
+$(echo "$REDDIT")
+
+---
+*由 Hermès Agent 自动生成 | [订阅设置](.github/workflows/ai-daily-digest.yml)*"
+
+          curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"title\":\"AI Daily Digest - $TODAY\",\"body\":$(echo "$BODY" | jq -Rs .),\"labels\":[\"daily-digest\",\"automated\"]}" \
+            "https://api.github.com/repos/$REPO/issues"
