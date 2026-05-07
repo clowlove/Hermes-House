@@ -1,0 +1,24 @@
+{
+  "name": "sqlite-data",
+  "version": "1.0.0",
+  "description": "SQLite 数据库操作 - 创建/查询/聚合 Hermes Agent 的结构化数据。存储新闻聚合、趋势数据、任务状态等。",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[database, sqlite, data-storage, query]",
+  "hermes": {
+    "skill_category": "data-science",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
