@@ -28,7 +28,7 @@
   "devops/custom-openai-provider": "ef332d12e8a85d48af75926d1ae16cad",
   "devops/hermes-telegram-setup": "340c1b283cdd6145b509e7b5cdf986eb",
   "devops/webhook-subscriptions": "b9c36377cdc30cd57f56076e3bfcd5cc",
-  "devops/scrapling": "0433b3f10210fdb56bc523e374293c99",
+  "devops/scrapling": "1d76fb838f74247b236ca12db39f07d4",
   "devops/model-fallback": "a760e29f1c61bb706b19f739680445c4",
   "creative/songwriting-and-ai-music": "e4fa692b4c1f3753fa55746c33f87e65",
   "creative/ascii-art": "ace25e66a7a2599bdf382b7393ff2b9e",
@@ -63,5 +63,9 @@
   "github/github-auth": "be45ead535682803f05caf0239461383",
   "devops/copilot-cli": "176397467e07122b406f88315524a96d",
   "email/mails": "8c9ccc5a0c9b8783ac71c7bdd7428e1e",
-  "productivity/public-api-tools": "b67d07aae51c46988bebf67a338279a0"
+  "productivity/public-api-tools": "b67d07aae51c46988bebf67a338279a0",
+  "data-science/matplotlib-charts": "6a29d82080576ea3af33a5b505117503",
+  "data-science/sqlite-data": "53eac862d08414bf045080b4ade94af4",
+  "productivity/cli-utilities": "ab6cabb3a894a173bb3314a223810ec3",
+  "productivity/report-generation": "600a46a17c59017923f365ec07fc0c2b"
 }
