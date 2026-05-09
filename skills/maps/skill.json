@@ -1,7 +1,7 @@
 {
   "name": "maps",
   "version": "1.2.0",
-  "description": ">",
+  "description": "Geocode, POIs, routes, timezones via OpenStreetMap/OSRM.",
   "author": "Mibayy",
   "license": "MIT",
   "platforms": [

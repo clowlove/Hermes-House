@@ -1,0 +1,24 @@
+{
+  "name": "kanban-worker",
+  "version": "2.0.0",
+  "description": "Pitfalls, examples, and edge cases for Hermes Kanban workers. The lifecycle itself is auto-injected into every worker's system prompt as KANBAN_GUIDANCE (from agent/prompt_builder.py); this skill is what you load when you want deeper detail on specific scenarios.",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[kanban, multi-agent, collaboration, workflow, pitfalls]",
+  "hermes": {
+    "skill_category": "devops",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "kanban-orchestrator",
+  "version": "2.0.0",
+  "description": "Decomposition playbook + specialist-roster conventions + anti-temptation rules for an orchestrator profile routing work through Kanban. The \"don't do the work yourself\" rule and the basic lifecycle are auto-injected into every kanban worker's system prompt; this skill is the deeper playbook when you're specifically playing the orchestrator role.",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[kanban, multi-agent, orchestration, routing]",
+  "hermes": {
+    "skill_category": "devops",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

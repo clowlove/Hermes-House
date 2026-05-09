@@ -1,7 +1,7 @@
 {
   "name": "youtube-content",
   "version": "1.0.0",
-  "description": ">",
+  "description": "YouTube transcripts to summaries, threads, blogs.",
   "author": "Hermes Agent Community",
   "license": "MIT",
   "platforms": [

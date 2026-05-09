@@ -1,0 +1,24 @@
+{
+  "name": "node-inspect-debugger",
+  "version": "1.0.0",
+  "description": "Debug Node.js via --inspect + Chrome DevTools Protocol CLI.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[debugging, nodejs, node-inspect, cdp, breakpoints, ui-tui]",
+  "hermes": {
+    "skill_category": "software-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

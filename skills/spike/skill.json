@@ -1,0 +1,24 @@
+{
+  "name": "spike",
+  "version": "1.0.0",
+  "description": "Throwaway experiments to validate an idea before build.",
+  "author": "Hermes Agent (adapted from gsd-build/get-shit-done)",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[spike, prototype, experiment, feasibility, throwaway, exploration, research, planning, mvp, proof-of-concept]",
+  "hermes": {
+    "skill_category": "software-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

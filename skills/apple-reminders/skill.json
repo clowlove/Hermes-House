@@ -1,7 +1,7 @@
 {
   "name": "apple-reminders",
   "version": "1.0.0",
-  "description": "Manage Apple Reminders via remindctl CLI (list, add, complete, delete).",
+  "description": "Apple Reminders via remindctl: add, list, complete.",
   "author": "Hermes Agent",
   "license": "MIT",
   "platforms": [

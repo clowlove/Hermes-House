@@ -1,0 +1,24 @@
+{
+  "name": "spotify",
+  "version": "1.0.0",
+  "description": "Spotify: play, search, queue, manage playlists and devices.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[spotify, music, playback, playlists, media]",
+  "hermes": {
+    "skill_category": "media",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
