@@ -1,7 +1,7 @@
 {
   "name": "codex",
   "version": "1.0.0",
-  "description": "Delegate coding tasks to OpenAI Codex CLI agent. Use for building features, refactoring, PR reviews, and batch issue fixing. Requires the codex CLI and a git repository.",
+  "description": "Delegate coding to OpenAI Codex CLI (features, PRs).",
   "author": "Hermes Agent",
   "license": "MIT",
   "platforms": [

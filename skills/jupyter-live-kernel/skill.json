@@ -1,7 +1,7 @@
 {
   "name": "jupyter-live-kernel",
   "version": "1.0.0",
-  "description": ">",
+  "description": "Iterative Python via live Jupyter kernel (hamelnb).",
   "author": "Hermes Agent",
   "license": "MIT",
   "platforms": [
