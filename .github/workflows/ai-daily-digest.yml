@@ -49,14 +49,14 @@ jobs:
           # 创建新 Issue
           BODY="## 🤖 AI Daily Digest - $TODAY
 
-### 🔥 Hacker News AI 热榜
-$(echo "$HN_TOP")
+          ### 🔥 Hacker News AI 热榜
+          $(echo "$HN_TOP")
 
-### 📢 Reddit r/MachineLearning 热门
-$(echo "$REDDIT")
+          ### 📢 Reddit r/MachineLearning 热门
+          $(echo "$REDDIT")
 
----
-*由 Hermès Agent 自动生成 | [订阅设置](.github/workflows/ai-daily-digest.yml)*"
+          ---
+          *由 Hermès Agent 自动生成 | [订阅设置](.github/workflows/ai-daily-digest.yml)*"
 
           curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Content-Type: application/json" \
