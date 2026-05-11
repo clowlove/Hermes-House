@@ -4,7 +4,7 @@
 
 [![Validate Skills](https://github.com/clowlove/Harmes-House/workflows/Validate%20Skills/badge.svg)](https://github.com/clowlove/Harmes-House/actions)
 [![GitHub Pages](https://img.shields.io/github/pages/clowlove/Harmes-House)](https://clowlove.github.io/Harmes-House/)
-[![Skills](https://img.shields.io/badge/skills-67+-blue)](docs/skills.md)
+[![Skills](https://img.shields.io/badge/skills-68+-blue)](docs/skills.md)
 [![License](https://img.shields.io/github/license/clowlove/Harmes-House)](LICENSE)
 
 ---
@@ -41,7 +41,7 @@ git clone https://github.com/clowlove/Harmes-House.git ~/.hermes/skills
 使用 arxiv 搜索 RAG 相关论文
 ```
 
-## 📦 技能分类 (67+)
+## 📦 技能分类 (68+)
 
 <details>
 <summary><b>autonomous-ai-agents (4)</b></summary>
@@ -93,9 +93,16 @@ arxiv, blogwatcher, llm-wiki, polymarket
 </details>
 
 <details>
-<summary><b>其他 (12)</b></summary>
+<summary><b>social-media (2)</b></summary>
 
-obsidian (note-taking), xurl (social-media), openhue (smart-home), godmode (red-teaming), jupyter-live-kernel (data-science), youtube-content (media), heartmula (media), pokemon-player (gaming), minecraft-modpack-server (gaming), findmy, apple-notes, apple-reminders (apple)
+hermes-tweet, xurl
+
+</details>
+
+<details>
+<summary><b>其他 (11)</b></summary>
+
+obsidian (note-taking), openhue (smart-home), godmode (red-teaming), jupyter-live-kernel (data-science), youtube-content (media), heartmula (media), pokemon-player (gaming), minecraft-modpack-server (gaming), findmy, apple-notes, apple-reminders (apple)
 
 </details>
 
