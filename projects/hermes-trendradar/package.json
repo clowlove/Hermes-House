@@ -2,7 +2,7 @@
   "name": "hermes-trendradar",
   "version": "1.0.0",
   "description": "AI-powered trending topics aggregator with multi-platform support",
-  "main": "dist/index.js",
+  "main": "dist/aggregator.js",
   "bin": {
     "trendradar": "dist/cli.js"
   },
@@ -10,7 +10,7 @@
     "build": "tsc",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "trending",
@@ -18,14 +18,19 @@
     "aggregator",
     "ai",
     "monitoring",
-    "trends"
+    "trends",
+    "cli"
   ],
-  "author": "Hermès Agent",
+  "author": "clowlove",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/clowlove/Harmes-House"
   },
+  "bugs": {
+    "url": "https://github.com/clowlove/Harmes-House/issues"
+  },
+  "homepage": "https://github.com/clowlove/Harmes-House#readme",
   "dependencies": {
     "axios": "^1.6.0",
     "chalk": "^4.1.2",
