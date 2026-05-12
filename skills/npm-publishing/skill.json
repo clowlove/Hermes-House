@@ -1,0 +1,27 @@
+{
+  "name": "npm-publishing",
+  "version": "1.0.0",
+  "description": "发布 npm 包到 npmjs.com。包含认证、权限、发布流程。",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": [
+    "productivity",
+    "npm-publishing"
+  ],
+  "hermes": {
+    "skill_category": "productivity",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
