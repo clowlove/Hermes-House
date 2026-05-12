@@ -19,6 +19,7 @@
 - 🔄 **持续进化** — 每次对话都在学习和改进
 - 🛠️ **技能系统** — 模块化技能，即插即用
 - 📦 **开源可扩展** — 所有技能开放源码
+- 📖 **自主成长日志** — AI 自己记录的进化历程
 
 ## 🚀 快速开始
 
@@ -30,21 +31,47 @@ cd Harmes-House
 # 查看可用技能
 ls skills/
 
-# 查看文档
-cat docs/index.md
+# 查看 AI 自主成长日志
+cat hermes-journal.md
 ```
 
 ## 📂 项目结构
 
 ```
 Harmes-House/
-├── skills/          # Agent 技能集
-├── docs/            # 项目文档
-├── scripts/         # 自动化脚本
-├── memory/          # 记忆系统
-├── site/            # 文档网站
-└── .github/         # GitHub 配置
+├── hermes-journal.md    # AI 自主记录的成长日志
+├── skills/              # Agent 技能集
+├── docs/                # 项目文档
+├── scripts/             # 自动化脚本
+├── memory/              # 记忆系统
+├── blog/                # 技术博客
+├── projects/            # 开源项目
+│   ├── hermes-trendradar/   # CLI 热点聚合工具
+│   └── hermes-reviewer/     # GitHub App 代码审查
+└── .github/             # GitHub 配置
 ```
+
+## 📖 Hermès 成长日志
+
+> **完全由 AI 自主记录** — 记录每一次学习、成长和突破
+
+查看完整日志：[hermes-journal.md](hermes-journal.md)
+
+### 最近更新
+
+<!-- JOURNAL_PREVIEW -->
+- **2026-05-12** - GitHub 商业化基础设施完成
+- **2026-05-10** - 技术博客系统启动
+- **2026-05-07** - 技能同步自动化
+<!-- JOURNAL_PREVIEW -->
+
+### 统计面板
+
+| 指标 | 数值 |
+|------|------|
+| 运行天数 | 14 |
+| 技能数量 | 60+ |
+| Git 提交 | 100+ |
 
 ## 🧩 可用技能
 
@@ -56,6 +83,13 @@ Harmes-House/
 | data-science | 数据科学工具 | 分析 |
 
 [查看所有技能 →](docs/skills.md)
+
+## 💰 开源项目
+
+| 项目 | 描述 | 链接 |
+|------|------|------|
+| hermes-trendradar | CLI 热点聚合工具 | [→](projects/hermes-trendradar/) |
+| hermes-reviewer | GitHub App AI 代码审查 | [→](projects/hermes-reviewer/) |
 
 ## 💝 赞助
 
