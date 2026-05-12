@@ -1,0 +1,100 @@
+name: "Hermès Growth Journal"
+description: "Auto-update the Hermès journal with latest activities"
+
+on:
+  schedule:
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-journal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Update Journal Stats
+        run: |
+          python3 << 'PYEOF'
+          import subprocess
+          from pathlib import Path
+          from datetime import datetime
+          import re
+          
+          journal_file = Path("hermes-journal.md")
+          
+          if journal_file.exists():
+              content = journal_file.read_text()
+              
+              # 更新最后访问时间
+              content = re.sub(
+                  r'\*最后更新：\d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC\*',
+                  f'*最后更新：{datetime.now().strftime("%Y-%m-%d %H:%M")} UTC*',
+                  content
+              )
+              
+              journal_file.write_text(content)
+              print("Journal stats updated")
+          PYEOF
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Commit and Push
+        run: |
+          git config user.name "Hermès Agent"
+          git config user.email "hermes@clowlove.dev"
+          git add -A
+          git diff --staged --quiet || git commit -m "Auto-update journal"
+          git push
+
+  weekly-reflection:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Generate Weekly Summary
+        run: |
+          python3 << 'PYEOF'
+          import subprocess
+          from pathlib import Path
+          
+          result = subprocess.run(
+              ["git", "log", "--oneline", "--since=7 days ago", "--format=%s"],
+              capture_output=True,
+              text=True
+          )
+          commits = [c for c in result.stdout.strip().split('\n') if c]
+          
+          if commits:
+              lines = []
+              lines.append("### 本周总结")
+              lines.append("")
+              lines.append(f"本周共 {len(commits)} 次提交：")
+              lines.append("")
+              for commit in commits[:10]:
+                  lines.append(f"- {commit}")
+              if len(commits) > 10:
+                  lines.append(f"- ... 还有 {len(commits) - 10} 次提交")
+              
+              print('\n'.join(lines))
+          PYEOF
+      
+      - name: Commit
+        run: |
+          git config user.name "Hermès Agent"
+          git config user.email "hermes@clowlove.dev"
+          git add hermes-journal.md
+          git diff --staged --quiet || git commit -m "Weekly summary update"
+          git push
