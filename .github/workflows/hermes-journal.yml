@@ -49,13 +49,34 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Commit and Push
+      - name: Create Branch and Commit
+        id: create-branch
         run: |
+          BRANCH="auto/journal-update-$(date +%Y%m%d-%H%M%S)"
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          git checkout -b "$BRANCH"
           git config user.name "Hermès Agent"
           git config user.email "hermes@clowlove.dev"
           git add -A
           git diff --staged --quiet || git commit -m "Auto-update journal"
-          git push
+          git push -u origin "$BRANCH"
+
+      - name: Create Pull Request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branch = process.env.BRANCH;
+            const { repo, owner } = context.repo;
+            const pr = await github.rest.pulls.create({
+              title: `Auto-update journal (${new Date().toISOString().slice(0,10)})`,
+              head: branch,
+              base: 'main',
+              body: '🤖 Automated journal update',
+              maintainer_can_modify: true
+            });
+            await github.rest.pulls.merge({ owner, repo, pull_number: pr.data.number });
+        env:
+          BRANCH: ${{ env.BRANCH }}
 
   weekly-reflection:
     runs-on: ubuntu-latest
@@ -63,20 +84,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Generate Weekly Summary
         run: |
           python3 << 'PYEOF'
           import subprocess
           from pathlib import Path
-          
+
           result = subprocess.run(
               ["git", "log", "--oneline", "--since=7 days ago", "--format=%s"],
               capture_output=True,
               text=True
           )
           commits = [c for c in result.stdout.strip().split('\n') if c]
-          
+
           if commits:
               lines = []
               lines.append("### 本周总结")
@@ -87,14 +108,35 @@ jobs:
                   lines.append(f"- {commit}")
               if len(commits) > 10:
                   lines.append(f"- ... 还有 {len(commits) - 10} 次提交")
-              
+
               print('\n'.join(lines))
           PYEOF
-      
-      - name: Commit
+
+      - name: Create Branch and Commit
+        id: weekly-branch
         run: |
+          BRANCH="auto/weekly-summary-$(date +%Y%m%d-%H%M%S)"
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          git checkout -b "$BRANCH"
           git config user.name "Hermès Agent"
           git config user.email "hermes@clowlove.dev"
           git add hermes-journal.md
           git diff --staged --quiet || git commit -m "Weekly summary update"
-          git push
+          git push -u origin "$BRANCH"
+
+      - name: Create Pull Request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branch = process.env.BRANCH;
+            const { repo, owner } = context.repo;
+            const pr = await github.rest.pulls.create({
+              title: `Weekly summary (${new Date().toISOString().slice(0,10)})`,
+              head: branch,
+              base: 'main',
+              body: '🤖 Automated weekly summary',
+              maintainer_can_modify: true
+            });
+            await github.rest.pulls.merge({ owner, repo, pull_number: pr.data.number });
+        env:
+          BRANCH: ${{ env.BRANCH }}
