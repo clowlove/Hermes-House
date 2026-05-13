@@ -402,3 +402,71 @@ GitHub Apps **cannot be created via API**. The `createApp` GraphQL mutation does
 - **Private key (.pem)** — generated in the UI, used to sign JWTs
 
 The webhook URL can be a placeholder during creation and updated later in App settings.
+
+### GitHub Actions Workflow Debugging — Empty Commits and PR Failures
+
+When a workflow step fails on "Create Pull Request" and logs are unavailable or uninformative:
+
+**Common root cause:** The workflow script made no actual content changes. `git diff --staged --quiet` succeeds (no diff), so `git commit` is skipped, and the branch has no new commits. When `github-script` tries to create a PR for an empty branch, it silently fails.
+
+**Diagnosis via API:**
+```bash
+# Get run → job → step details
+curl -s -H "Authorization: token $GITHUB_TOKEN" \
+  "https://api.github.com/repos/$OWNER/$REPO/actions/runs?per_page=5" | \
+  python3 -c "import sys,json; d=json.load(sys.stdin); [print(f\"{r['id']} | {r['conclusion'] or r['status']} | {r['name']}\") for r in d['workflow_runs'][:3]]"
+
+# Get jobs for a specific run
+curl -s -H "Authorization: token $GITHUB_TOKEN" \
+  "https://api.github.com/repos/$OWNER/$REPO/actions/runs/$RUN_ID/jobs" | \
+  python3 -c "import sys,json; [print(f\"  {j['name']}: {j['conclusion']}\") for j in json.load(sys.stdin)['jobs']]"
+
+# Get step-level details to find the exact failing step
+curl -s -H "Authorization: token $GITHUB_TOKEN" \
+  "https://api.github.com/repos/$OWNER/$REPO/actions/runs/$RUN_ID/jobs" | \
+  python3 -c "import sys,json; jobs=json.load(sys.stdin)['jobs']; [print(f\"  Step {s['number']}: {s['name']} - {s['conclusion']}\") for j in jobs for s in j['steps'] if s['conclusion'] != 'success']"
+```
+
+**Prevention pattern — check for empty commits before pushing:**
+```bash
+git add -A
+if git diff --staged --quiet; then
+  echo "No changes to commit"
+  exit 1  # Don't proceed to PR step — branch would be empty
+fi
+git commit -m "Auto-update journal"
+git push -u origin "$BRANCH"
+```
+
+**Fix for workflows that only update timestamps:** If a workflow only modifies timestamps (e.g., `*最后更新：2026-05-12 16:40 UTC*`), the file content may be identical after regex substitution if the regex doesn't match. The actual file must change — fetch real data (from GitHub API, external sources) and add new content before committing.
+
+### Use `gh CLI` Over `github-script` for PR Operations
+
+`actions/github-script` is unreliable for PR creation and merge — it can fail without clear error messages. Prefer `gh pr create` + `gh pr merge` in a run step:
+
+```yaml
+- name: Create and Merge Pull Request
+  run: |
+    gh pr create \
+      --title "Auto-update journal $(date +%Y-%m-%d)" \
+      --body "🤖 Automated journal update" \
+      --head "$BRANCH" \
+      --base main \
+      --admin \
+    && gh pr merge --squash --auto || echo "PR merge failed or already merged"
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    BRANCH: ${{ env.BRANCH }}
+```
+
+Also ensure explicit job permissions:
+```yaml
+jobs:
+  update-journal:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+```
+
+### Branch Protection: Never `git push` to Protected Branches
