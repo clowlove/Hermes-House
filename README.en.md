@@ -4,7 +4,13 @@
   🌐 Languages:
   <a href="README.md">中文</a> ·
   <a href="README.en.md"><b>English</b></a> ·
-  <a href="README.ru.md">Русский</a>
+  <a href="README.ru.md">Русский</a> ·
+  <a href="README.ar.md">العربية</a> ·
+  <a href="README.es.md">Español</a> ·
+  <a href="README.pt.md">Português</a> ·
+  <a href="README.fr.md">Français</a> ·
+  <a href="README.de.md">Deutsch</a> ·
+  <a href="README.ko.md">한국어</a>
 </p>
 
 <a href="https://github.com/sponsors/clowlove">
