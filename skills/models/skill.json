@@ -1,0 +1,24 @@
+{
+  "name": "models",
+  "version": "1.0.0",
+  "description": "Specific model architectures and tools — image segmentation (SAM), audio generation (MusicGen), CLIP, Stable Diffusion, Whisper, LLaVA.",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[mlops, models]",
+  "hermes": {
+    "skill_category": "mlops",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

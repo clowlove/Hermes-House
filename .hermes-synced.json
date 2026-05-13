@@ -86,5 +86,6 @@
   "software-development/python-debugpy": "a75ff39233e9d884f75b8739771de0d7",
   "software-development/node-inspect-debugger": "2b820befd6d9c6427af610e1788e57a3",
   "software-development/hermes-agent-skill-authoring": "0306b14aba1f37c934a5315a42a2e1bf",
-  "software-development/spike": "add90395922642043b7e0e6fb51a9b5a"
+  "software-development/spike": "add90395922642043b7e0e6fb51a9b5a",
+  "github/github-pages-site": "c390d07b6ea74f9d16fb7571a4186e26"
 }

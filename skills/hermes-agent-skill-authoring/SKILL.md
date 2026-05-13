@@ -124,6 +124,49 @@ Pick the closest existing category. Don't invent new top-level categories casual
 5. **Git add + commit** on the active branch.
 6. **Note:** the CURRENT session's skill loader is cached — `skill_view` / `skills_list` will not see the new skill until a new session. This is expected, not a bug.
 
+## Umbrella (Category) Skills vs Leaf Skills
+
+Skills can be either **leaf skills** (the actual implementation) or **umbrella skills** (category containers). Both need SKILL.md.
+
+**Umbrella pattern example:** `mlops/` has sub-skills like `llama-cpp/`, `serving-llms-vllm/` — but the `mlops/` directory itself is also a skill (shows in `skills_list`). Same for `mlops/inference/`, `mlops/evaluation/`, etc.
+
+**How to tell if a subdirectory needs SKILL.md:**
+```bash
+# List all skill directories (excluding reserved subdirs)
+find ~/.hermes/skills -mindepth 2 -maxdepth 3 -type d | while read d; do
+  if [ ! -f "${d}/SKILL.md" ] && \
+     [ "$(basename "$d")" != "templates" ] && \
+     [ "$(basename "$d")" != "references" ] && \
+     [ "$(basename "$d")" != "scripts" ] && \
+     [ "$(basename "$d")" != ".hub" ] && \
+     [ "$(basename "$d")" != ".archive" ]; then
+    echo "Missing: $d"
+  fi
+done
+```
+
+**Umbrella SKILL.md structure:**
+```yaml
+---
+name: inference
+description: Model serving, quantization, structured output, inference optimization.
+version: 1.0.0
+metadata:
+  hermes:
+    tags: [mlops, inference]
+    related_skills: ['llama-cpp', 'serving-llms-vllm']
+---
+
+# Inference
+
+Model serving and inference optimization tools.
+
+## Sub-skills
+
+- **llama-cpp**: llama.cpp local GGUF inference
+- **serving-llms-vllm**: vLLM high-throughput serving
+```
+
 ## Cross-Referencing Other Skills
 
 `metadata.hermes.related_skills` unions both trees (`skills/` in-repo and `~/.hermes/skills/`) at load time. You CAN reference a user-local skill from an in-repo skill, but it won't resolve for other users who clone the repo fresh. Prefer referencing only in-repo skills from in-repo skills. If a frequently-referenced skill lives only in `~/.hermes/skills/`, consider promoting it to the repo.
