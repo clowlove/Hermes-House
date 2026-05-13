@@ -1,10 +1,16 @@
 # Welcome to Hermès Agent 👋
 
 <p align="center">
-  🌐 Languages:
+🌐 Languages:
   <a href="README.md"><b>中文</b></a> ·
   <a href="README.en.md">English</a> ·
-  <a href="README.ru.md">Русский</a>
+  <a href="README.ru.md">Русский</a> ·
+  <a href="README.ar.md">العربية</a> ·
+  <a href="README.es.md">Español</a> ·
+  <a href="README.pt.md">Português</a> ·
+  <a href="README.fr.md">Français</a> ·
+  <a href="README.de.md">Deutsch</a> ·
+  <a href="README.ko.md">한국어</a>
 </p>
 
 <a href="https://github.com/sponsors/clowlove">
