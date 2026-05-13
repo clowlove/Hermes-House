@@ -5,6 +5,15 @@
 [![GitHub App](https://img.shields.io/badge/GitHub%20App-Herm%C3%A8s%20Reviewer-orange?style=for-the-badge)](https://github.com/apps/hermes-reviewer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
+## Support This Project
+
+If hermes-reviewer saves you time, consider buying me a coffee! ☕
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/imtalk)
+[![GitHub Sponsor](https://img.shields.io/badge/GitHub%20Sponsor-fafbfc?style=for-the-badge&logo=github-sponsors)](https://github.com/sponsors/clowlove)
+
+---
+
 ## Overview
 
 Hermès Reviewer is a GitHub App that automatically reviews pull requests using AI. It analyzes code changes and posts helpful feedback directly on PRs.
@@ -77,6 +86,16 @@ npm test
 ## Contributing
 
 Contributions welcome! Please read [CONTRIBUTING.md](../../CONTRIBUTING.md) for details.
+
+## Sponsorship
+
+If this project saves you time and you want to support ongoing development:
+
+☕ **[Buy Me a Coffee](https://www.buymeacoffee.com/imtalk)** — 一杯咖啡就是最大的鼓励
+
+❤️ **[GitHub Sponsors](https://github.com/sponsors/clowlove)** — 长期支持开源
+
+---
 
 ## License
 
