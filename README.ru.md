@@ -2,8 +2,8 @@
 
 <p align="center">
 🌐 Languages:
-  <a href="README.md">中文</a> ·
-  <a href="README.en.md">English</a> ·
+  <a href="README.md">English</a> ·
+  <a href="README.zh.md">中文</a> ·
   <a href="README.ru.md"><b>Русский</b></a> ·
   <a href="README.ar.md">العربية</a> ·
   <a href="README.es.md">Español</a> ·

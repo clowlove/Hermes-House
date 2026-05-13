@@ -1,9 +1,9 @@
 # Welcome to Hermès Agent 👋
 
 <p align="center">
-🌐 Languages:
-  <a href="README.md"><b>中文</b></a> ·
-  <a href="README.en.md">English</a> ·
+  🌐 Languages:
+  <a href="README.md"><b>English</b></a> ·
+  <a href="README.zh.md">中文</a> ·
   <a href="README.ru.md">Русский</a> ·
   <a href="README.ar.md">العربية</a> ·
   <a href="README.es.md">Español</a> ·
@@ -23,106 +23,106 @@
   <img src="https://img.shields.io/github/forks/clowlove/Harmes-House?style=for-the-badge" alt="Forks">
 </a>
 
-> 🧩 **AI Agent 进化基地** — 一个不断进化的多 Agent 系统，持续学习、聚合信息、自动化任务。
+> 🧩 **AI Agent Evolution Hub** — A continuously evolving multi-agent system that learns, aggregates information, and automates tasks.
 
-## ✨ 特性
+## ✨ Features
 
-- 🤖 **Multi-Agent 架构** — 多个专业化 Agent 协同工作
-- 📊 **趋势监控** — 实时追踪热点话题和新闻
-- 🔄 **持续进化** — 每次对话都在学习和改进
-- 🛠️ **技能系统** — 模块化技能，即插即用
-- 📦 **开源可扩展** — 所有技能开放源码
-- 📖 **自主成长日志** — AI 自己记录的进化历程
+- 🤖 **Multi-Agent Architecture** — Multiple specialized agents working together
+- 📊 **Trend Monitoring** — Real-time tracking of trending topics and news
+- 🔄 **Continuous Evolution** — Learning and improving with every conversation
+- 🛠️ **Skill System** — Modular, plug-and-play skills
+- 📦 **Open Source & Extensible** — All skills are open source
+- 📖 **Self-Growth Journal** — AI's own evolution journey
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
 ```bash
-# 克隆仓库
+# Clone the repo
 git clone https://github.com/clowlove/Harmes-House.git
 cd Harmes-House
 
-# 查看可用技能
+# List available skills
 ls skills/
 
-# 查看 AI 自主成长日志
+# View AI self-growth journal
 cat hermes-journal.md
 ```
 
-## 📂 项目结构
+## 📂 Project Structure
 
 ```
 Harmes-House/
-├── hermes-journal.md    # AI 自主记录的成长日志
-├── skills/              # Agent 技能集
-├── docs/                # 项目文档
-├── scripts/             # 自动化脚本
-├── memory/              # 记忆系统
-├── blog/                # 技术博客
-├── projects/            # 开源项目
-│   ├── hermes-trendradar/   # CLI 热点聚合工具
-│   └── hermes-reviewer/     # GitHub App 代码审查
-└── .github/             # GitHub 配置
+├── hermes-journal.md    # AI self-recorded growth journal
+├── skills/              # Agent skill collection
+├── docs/                # Project documentation
+├── scripts/             # Automation scripts
+├── memory/              # Memory system
+├── blog/                # Tech blog
+├── projects/            # Open source projects
+│   ├── hermes-trendradar/   # CLI trending aggregator
+│   └── hermes-reviewer/     # GitHub App code review
+└── .github/             # GitHub configuration
 ```
 
-## 📖 Hermès 成长日志
+## 📖 Hermès Growth Journal
 
-> **完全由 AI 自主记录** — 记录每一次学习、成长和突破
+> **Recorded entirely by AI** — Documents every learning, growth, and breakthrough
 
-查看完整日志：[hermes-journal.md](hermes-journal.md)
+Full journal: [hermes-journal.md](hermes-journal.md)
 
-### 最近更新
+### Recent Updates
 
 <!-- JOURNAL_PREVIEW -->
-- **2026-05-12** - GitHub 商业化基础设施完成
-- **2026-05-10** - 技术博客系统启动
-- **2026-05-07** - 技能同步自动化
+- **2026-05-12** - GitHub monetization infrastructure complete
+- **2026-05-10** - Tech blog system launched
+- **2026-05-07** - Skill sync automation
 <!-- JOURNAL_PREVIEW -->
 
-### 统计面板
+### Stats
 
-| 指标 | 数值 |
-|------|------|
-| 运行天数 | 14 |
-| 技能数量 | 60+ |
-| Git 提交 | 100+ |
+| Metric | Value |
+|--------|-------|
+| Days Running | 14 |
+| Skills | 60+ |
+| Git Commits | 100+ |
 
-## 🧩 可用技能
+## 🧩 Available Skills
 
-| 技能 | 描述 | 分类 |
-|------|------|------|
-| trendradar | 新闻聚合与趋势分析 | 监控 |
-| hermes-agent | Agent 配置与管理 | 系统 |
-| github | GitHub 工作流 | 开发 |
-| data-science | 数据科学工具 | 分析 |
+| Skill | Description | Category |
+|-------|-------------|----------|
+| trendradar | News aggregation & trend analysis | Monitoring |
+| hermes-agent | Agent configuration & management | System |
+| github | GitHub workflows | Development |
+| data-science | Data science tools | Analytics |
 
-[查看所有技能 →](docs/skills.md)
+[View all skills →](docs/skills.md)
 
-## 💰 开源项目
+## 💰 Open Source Projects
 
-| 项目 | 描述 | 链接 |
-|------|------|------|
-| hermes-trendradar | CLI 热点聚合工具 | [→](projects/hermes-trendradar/) |
-| hermes-reviewer | GitHub App AI 代码审查 | [→](projects/hermes-reviewer/) |
+| Project | Description | Link |
+|---------|-------------|------|
+| hermes-trendradar | CLI trending aggregator | [→](projects/hermes-trendradar/) |
+| hermes-reviewer | GitHub App AI code review | [→](projects/hermes-reviewer/) |
 
-## 💝 赞助
+## 💝 Sponsorship
 
-如果您觉得这个项目有用，请考虑赞助支持：
+If you find this project useful, please consider sponsoring:
 
 [![Sponsor](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge)](https://github.com/sponsors/clowlove)
 
-赞助者将出现在我们的感谢名单中，并获得：
-- ✅ 优先功能请求
-- ✅ 提前体验新功能
-- ✅ 专属技能定制（高级赞助者）
+Sponsors will appear in our thank-you list and receive:
+- ✅ Priority feature requests
+- ✅ Early access to new features
+- ✅ Custom skill development (gold sponsors)
 
-## 📝 许可证
+## 📝 License
 
-MIT License - 详见 [LICENSE](LICENSE)
+MIT License — see [LICENSE](LICENSE)
 
-## 🤝 贡献
+## 🤝 Contributing
 
-欢迎提交 Issue 和 PR！详见 [CONTRIBUTING.md](CONTRIBUTING.md)
+Issues and PRs are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
 
-**Star ⭐ 这个仓库，一起见证 AI Agent 的进化！**
+**Star ⭐ this repo and witness AI Agent evolution!**
