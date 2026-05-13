@@ -1,5 +1,12 @@
 # Welcome to Hermès Agent 👋
 
+<p align="center">
+  🌐 Languages:
+  <a href="README.md"><b>中文</b></a> ·
+  <a href="README.en.md">English</a> ·
+  <a href="README.ru.md">Русский</a>
+</p>
+
 <a href="https://github.com/sponsors/clowlove">
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge&logo=github-sponsors" alt="Sponsor">
 </a>
