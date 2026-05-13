@@ -1,121 +1,55 @@
-# 🤝 贡献指南
+# Contributing to Harmes-House
 
-感谢你的贡献！本文档帮助你创建和提交新技能。
+🎉 Thanks for your interest in contributing!
 
----
+## How to Contribute
 
-## 技能结构
-
-每个技能至少包含两个文件：
-
-```
-skills/
-└── <skill-name>/
-    ├── SKILL.md      # 技能文档（必需）
-    └── skill.json    # 技能元数据（必需）
+### 1. Fork & Branch
+```bash
+git clone https://github.com/YOUR_USERNAME/Harmes-House.git
+git checkout -b feat/your-feature-name
 ```
 
-### SKILL.md 格式
+### 2. Make Changes
+- Follow existing code style
+- Add tests if applicable
+- Keep commits atomic and descriptive
 
-```markdown
----
-name: skill-name
-description: 技能简短描述
-version: 1.0.0
-author: Your Name
-license: MIT
-platforms: [linux, macos, windows]
-prerequisites:
-  commands: [command1, command2]
-  api_keys: [KEY_NAME]
-metadata:
-  hermes:
-    tags: [tag1, tag2]
-    homepage: https://github.com/...
----
+### 3. Commit Format
+```
+type: short description
 
-# 技能名称
-
-技能详细说明...
-
-## 安装
-
-...
-
-## 使用
-
-...
+feat: new feature
+fix: bug fix
+docs: documentation update
+refactor: code refactoring
+test: adding tests
+chore: maintenance
 ```
 
-### skill.json 格式
+### 4. Pull Request
+- Open PR against `main` branch
+- Fill in the PR template
+- Wait for review
 
-```json
-{
-  "name": "skill-name",
-  "version": "1.0.0",
-  "description": "技能描述",
-  "author": "Your Name",
-  "license": "MIT",
-  "platforms": ["linux", "macos"],
-  "commands": [],
-  "api_keys_needed": [],
-  "tags": ["tag1", "tag2"],
-  "hermes": {
-    "skill_category": "devops",
-    "compatibility": ["hermes-agent >= 1.0.0"]
-  },
-  "files": ["SKILL.md"],
-  "last_updated": "2024-01-01",
-  "status": "stable"
-}
+## Project Structure
+
+```
+Harmes-House/
+├── skills/           # Agent skills (modular, plug-and-play)
+├── projects/          # Open source projects
+│   ├── hermes-trendradar/   # CLI trending aggregator
+│   └── hermes-reviewer/     # GitHub App code review
+├── docs/             # Documentation
+├── scripts/          # Automation scripts
+├── memory/           # Memory system
+└── .github/          # GitHub workflows
 ```
 
----
+## Questions?
 
-## 技能分类
+Open an Issue or contact via Telegram [@Talkcn](https://t.me/Talkcn)
 
-| 分类 | 说明 | 示例 |
-|------|------|------|
-| devops | 开发运维工具 | model-fallback, docker |
-| data-science | 数据科学 | jupyter, pandas |
-| mlops | 机器学习运维 | training, inference |
-| social-media | 社交媒体 | xurl, blogwatcher |
-| creative | 创意工具 | ascii-art, image-gen |
-| productivity | 效率工具 | notion, linear |
-| research | 研究工具 | arxiv, blogwatcher |
+## License
 
----
-
-## 提交流程
-
-1. **Fork** 本仓库
-2. 创建新分支：`git checkout -b skills/<skill-name>`
-3. 添加你的技能文件
-4. 测试技能可正常使用
-5. 提交 PR 并描述功能
-
----
-
-## 技能审核标准
-
-✅ **通过条件：**
-- SKILL.md 和 skill.json 格式正确
-- 文档清晰，包含安装和使用说明
-- 不包含敏感信息（API keys 等）
-- 遵循 MIT 许可证
-
-❌ **拒绝条件：**
-- 包含恶意代码
-- 侵犯他人版权
-- 文档不完整或缺失
-- 包含硬编码的凭据
-
----
-
-## 问题反馈
-
-如果你发现问题或有建议，请提交 [Issue](https://github.com/clowlove/Harmes-House/issues)。
-
----
-
-感谢你的贡献！ 🎉
+By contributing, you agree that your contributions will be licensed under the MIT License.
