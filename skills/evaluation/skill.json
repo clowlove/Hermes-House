@@ -1,0 +1,24 @@
+{
+  "name": "evaluation",
+  "version": "1.0.0",
+  "description": "Model evaluation benchmarks, experiment tracking, data curation, tokenizers, and interpretability tools.",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[mlops, evaluation]",
+  "hermes": {
+    "skill_category": "mlops",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
