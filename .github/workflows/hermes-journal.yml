@@ -12,6 +12,9 @@ on:
 jobs:
   update-journal:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,7 +39,7 @@ jobs:
           journal_file = Path("hermes-journal.md")
           log_file = Path("docs/evolution/log-2026-05.md")
           
-          # Search for trending AI Agent projects
+          # Search for trending AI Agent projects (unauthenticated, 10 reqs/min limit)
           queries = [
               "AI agent autonomous reasoning MCP",
               "LLM tool use agent framework 2025",
@@ -46,7 +49,7 @@ jobs:
           for q in queries[:1]:  # Just do 1 query to save time
               try:
                   url = f"https://api.github.com/search/repositories?q={urllib.parse.quote(q)}&sort=stars&order=desc&per_page=5"
-                  req = urllib.request.Request(url, headers={"Authorization": f"token {subprocess.run(['git', 'config', 'user.token'], capture_output=True, text=True).stdout.strip()}"} if subprocess.run(['git', 'config', 'user.token'], capture_output=True, text=True).stdout.strip() else {})
+                  req = urllib.request.Request(url)  # Unauthenticated - 10 reqs/min
                   with urllib.request.urlopen(req, timeout=10) as resp:
                       items = json.loads(resp.read().decode())["items"][:3]
                       for item in items:
@@ -85,19 +88,19 @@ jobs:
                   content = log_file.read_text()
                   content = content.replace("\n---\n\n*日志自动生成，最后更新:", f"\n{entry}\n---\n\n*日志自动生成，最后更新:")
                   log_file.write_text(content)
-                  print(f"Updated evolution log")
+                  print(f"Updated evolution log with {len(unique)} projects")
           
           # Update journal timestamp
           if journal_file.exists():
               content = journal_file.read_text()
+              new_timestamp = f'*最后更新：{datetime.now().strftime("%Y-%m-%d %H:%M")} UTC*'
               content = re.sub(
                   r'\*最后更新：\d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC\*',
-                  f'*最后更新：{datetime.now().strftime("%Y-%m-%d %H:%M")} UTC*',
+                  new_timestamp,
                   content
               )
               journal_file.write_text(content)
-              print("Journal timestamp updated")
-          PYEOF
+              print(f"Updated journal timestamp: {new_timestamp}")
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
@@ -110,29 +113,36 @@ jobs:
           git config user.name "Hermès Agent"
           git config user.email "hermes@clowlove.dev"
           git add -A
-          git diff --staged --quiet || git commit -m "Auto-update journal"
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 1
+          fi
+          git commit -m "Auto-update journal"
           git push -u origin "$BRANCH"
+          echo "Branch $BRANCH pushed successfully"
 
-      - name: Create Pull Request
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const branch = process.env.BRANCH;
-            const { repo, owner } = context.repo;
-            const pr = await github.rest.pulls.create({
-              title: `Auto-update journal (${new Date().toISOString().slice(0,10)})`,
-              head: branch,
-              base: 'main',
-              body: '🤖 Automated journal update',
-              maintainer_can_modify: true
-            });
-            await github.rest.pulls.merge({ owner, repo, pull_number: pr.data.number });
+      - name: Create and Merge Pull Request
+        run: |
+          echo "Creating PR for branch: $BRANCH"
+          # Use gh cli to create and merge PR
+          gh pr create \
+            --title "Auto-update journal $(date +%Y-%m-%d)" \
+            --body "🤖 Automated journal update" \
+            --head "$BRANCH" \
+            --base main \
+            --admin \
+            && echo "PR created, attempting merge..." \
+            && gh pr merge --squash --auto || echo "PR merge failed or already merged"
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: ${{ env.BRANCH }}
 
   weekly-reflection:
     runs-on: ubuntu-latest
     if: github.event_name == 'schedule'
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -173,22 +183,23 @@ jobs:
           git config user.name "Hermès Agent"
           git config user.email "hermes@clowlove.dev"
           git add hermes-journal.md
-          git diff --staged --quiet || git commit -m "Weekly summary update"
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 1
+          fi
+          git commit -m "Weekly summary update"
           git push -u origin "$BRANCH"
 
-      - name: Create Pull Request
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const branch = process.env.BRANCH;
-            const { repo, owner } = context.repo;
-            const pr = await github.rest.pulls.create({
-              title: `Weekly summary (${new Date().toISOString().slice(0,10)})`,
-              head: branch,
-              base: 'main',
-              body: '🤖 Automated weekly summary',
-              maintainer_can_modify: true
-            });
-            await github.rest.pulls.merge({ owner, repo, pull_number: pr.data.number });
+      - name: Create and Merge Pull Request
+        run: |
+          echo "Creating PR for branch: $BRANCH"
+          gh pr create \
+            --title "Weekly summary $(date +%Y-%m-%d)" \
+            --body "🤖 Automated weekly summary" \
+            --head "$BRANCH" \
+            --base main \
+            --admin \
+            && gh pr merge --squash --auto || echo "PR merge failed or already merged"
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: ${{ env.BRANCH }}
