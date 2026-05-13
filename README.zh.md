@@ -115,6 +115,20 @@ Harmes-House/
 - ✅ 提前体验新功能
 - ✅ 专属技能定制（高级赞助者）
 
+## 🔒 私有复刻 / Pro 访问
+
+想要获得**完整源代码**、详细文档和授权系统？
+
+**一次性付费 $20** — 包含：
+- 📂 完整源代码（含所有分支和完整历史）
+- 📖 详细安装和部署指南
+- 🔑 License key 激活系统（hermes-trendradar Pro）
+- 🔄 终身更新和技术支持
+
+**付款方式：** [https://paypal.me/talkcn](https://paypal.me/talkcn)
+
+付款后，通过 Telegram [@Talkcn](https://t.me/Talkcn) 或邮件联系，获取私有复刻邀请。
+
 ## 📝 许可证
 
 MIT License - 详见 [LICENSE](LICENSE)

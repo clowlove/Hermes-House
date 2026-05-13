@@ -115,6 +115,20 @@ Sponsors will appear in our thank-you list and receive:
 - ✅ Early access to new features
 - ✅ Custom skill development (gold sponsors)
 
+## 🔒 Private Fork / Pro Access
+
+Want the **full source code** with complete documentation and licensing system?
+
+**$20 one-time payment** — includes:
+- 📂 Full source code (all branches, complete history)
+- 📖 Detailed setup & deployment guide
+- 🔑 License key activation system (hermes-trendradar Pro)
+- 🔄 Lifetime updates & support
+
+**Payment:** [https://paypal.me/talkcn](https://paypal.me/talkcn)
+
+After payment, contact via Telegram [@Talkcn](https://t.me/Talkcn) or email to receive your private fork invitation.
+
 ## 📝 License
 
 MIT License — see [LICENSE](LICENSE)
