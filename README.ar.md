@@ -1,9 +1,9 @@
 # مرحباً بك في Hermès Agent 👋
 
 <p align="center" dir="rtl">
-  🌐 اللغات:
-  <a href="README.md">中文</a> ·
-  <a href="README.en.md">English</a> ·
+  🌐 Languages:
+  <a href="README.md">English</a> ·
+  <a href="README.zh.md">中文</a> ·
   <a href="README.ru.md">Русский</a> ·
   <a href="README.ar.md"><b>العربية</b></a> ·
   <a href="README.es.md">Español</a> ·
