@@ -115,7 +115,7 @@ jobs:
           git add -A
           if git diff --staged --quiet; then
             echo "No changes to commit"
-            exit 1
+            exit 0
           fi
           git commit -m "Auto-update journal"
           git push -u origin "$BRANCH"
@@ -185,7 +185,7 @@ jobs:
           git add hermes-journal.md
           if git diff --staged --quiet; then
             echo "No changes to commit"
-            exit 1
+            exit 0
           fi
           git commit -m "Weekly summary update"
           git push -u origin "$BRANCH"
