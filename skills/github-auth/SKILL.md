@@ -244,3 +244,5 @@ fi
 | Credentials not persisting | Check `git config --global credential.helper` — must be `store` or `cache` |
 | Multiple GitHub accounts | Use SSH with different keys per host alias in `~/.ssh/config`, or per-repo credential URLs |
 | `gh: command not found` + no sudo | Use git-only Method 1 above — no installation needed |
+| `remote: Permission denied` but `gh auth status` shows correct account | `GH_TOKEN` environment variable overrides git credentials. If `gh auth status` shows the right account but `git push` fails, try `unset GH_TOKEN` before pushing — this forces git to use gh's credential helper instead of the env-var token. Check with `env | grep GH_TOKEN`. |
+| `gh auth switch` fails with "GH_TOKEN is being used" | The `GH_TOKEN` env var is blocking the switch. Run `unset GH_TOKEN` first, then `gh auth switch --user <account>`. |

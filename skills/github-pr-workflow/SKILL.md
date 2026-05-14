@@ -438,6 +438,34 @@ git commit -m "Auto-update journal"
 git push -u origin "$BRANCH"
 ```
 
+**⚠️ Critical: `exit 1` vs `exit 0` depends on workflow type:**
+
+- **Interactive / on-demand workflows** (`workflow_dispatch`, `push`): `exit 1` is correct — if a human triggers the workflow and nothing changed, that's a failure worth surfacing.
+- **Automated scheduled workflows** (`schedule` cron): **use `exit 0`** — a "no changes to commit" result is normal and expected behavior (nothing new happened today). Using `exit 1` here will cause the CI step to fail even when there's no actual problem.
+
+```yaml
+# Example: automated weekly job (use exit 0 for no-change)
+- name: Create Branch and Commit
+  run: |
+    BRANCH="auto/journal-update-$(date +%Y%m%d-%H%M%S)"
+    git checkout -b "$BRANCH"
+    git add -A
+    if git diff --staged --quiet; then
+      echo "No changes to commit"
+      exit 0  # ✓ Correct for scheduled workflows
+    fi
+    git commit -m "Auto-update journal"
+    git push -u origin "$BRANCH"
+
+# Example: interactive fix job (exit 1 is fine here)
+    if git diff --staged --quiet; then
+      echo "No changes to commit"
+      exit 1  # ✓ Correct for on-demand workflows
+    fi
+```
+
+**Failure symptom of wrong exit code in scheduled workflows:** the "Create Branch and Commit" step fails even though the prior "Generate Weekly Summary" step succeeded. Check step timing — if "Generate Weekly Summary" completed in <1s, it likely produced no file changes. The fix is `exit 0`, not `exit 1`.
+
 **Fix for workflows that only update timestamps:** If a workflow only modifies timestamps (e.g., `*最后更新：2026-05-12 16:40 UTC*`), the file content may be identical after regex substitution if the regex doesn't match. The actual file must change — fetch real data (from GitHub API, external sources) and add new content before committing.
 
 ### Use `gh CLI` Over `github-script` for PR Operations
