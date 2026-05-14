@@ -87,9 +87,46 @@ For a B2B/export business landing page:
 
 ## Custom Domain (Optional)
 
-After Pages is live, add custom domain in repo Settings → Pages → Custom domain. Requires:
-- Domain DNS pointing to GitHub IPs
-- Optional HTTPS enforcement
+### DNS Setup (Critical — must match your CDN/registrar)
+
+**GitHub Pages requires one of:**
+- CNAME record pointing to `username.github.io`
+- A records pointing to GitHub's IPs: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+
+**Cloudflare users:** Set proxy mode to **DNS only** (grey cloud) for the A/CNAME records first. After GitHub validates the domain, you can enable Cloudflare proxy (orange cloud) — but Cloudflare's SSL must be set to "Flexible" or "Full" and the origin must be reachable.
+
+**Common DNS patterns:**
+
+| Provider | www (@) | Root (@) | Notes |
+|----------|---------|----------|-------|
+| Cloudflare | CNAME → `username.github.io` (DNS only) | CNAME → `username.github.io` (DNS only) | Proxy OFF until GitHub validates |
+| Namecheap | CNAME → `username.github.io` | URL Redirect → `username.github.io` | Or use A records |
+| 阿里云 | CNAME → `username.github.io` | A → GitHub IP | |
+
+### After DNS Points to GitHub
+
+1. Go to **GitHub repo → Settings → Pages → Custom domain** — enter your domain
+2. Check **Enforce HTTPS** (GitHub auto-provisions Let's Encrypt cert, takes ~5 min)
+3. Test: `curl -sI https://your-domain.com/` — should return HTTP 200
+
+### SSL 525 Error (Cloudflare can't reach GitHub)
+
+```
+HTTP/2 525 SSL handshake failed
+CF-RAY: xxxxx-ICN
+server: cloudflare
+```
+
+**Cause:** Cloudflare is in proxy mode (orange cloud) but cannot establish SSL with GitHub Pages origin.
+
+**Fix in order:**
+1. **Immediately:** In Cloudflare DNS settings, set both `@` and `www` records to **DNS only** (click the orange cloud → grey)
+2. Wait 2-3 min, test `https://your-domain.com/` — should now work over HTTPS
+3. **Then** in GitHub Pages Settings → Custom domain — enter domain, enable HTTPS
+4. GitHub provisions Let's Encrypt cert (takes 5 min)
+5. **Only after** GitHub cert is active: re-enable Cloudflare proxy (orange cloud) if desired
+
+**Root cause:** Cloudflare's default SSL mode ("Full" strict) requires the origin server to have a valid SSL cert. GitHub Pages handles SSL automatically on their end, but the handshake fails if Cloudflare tries to validate against an unconfigured origin.
 
 ## Troubleshooting
 
@@ -100,6 +137,9 @@ After Pages is live, add custom domain in repo Settings → Pages → Custom dom
 | Git push fails | Check token has `repo` scope |
 | Wrong account in gh | `gh auth logout` then `gh auth login` with correct account, OR use token in URL |
 | Pages status shows "building" but never completes | Delete Pages settings first, then re-enable with correct build_type |
+| SSL 525 Cloudflare→GitHub Pages | After GitHub provisions cert, re-enable Cloudflare proxy but keep SSL at **"Full"** (not "Strict"). GitHub's Let's Encrypt rotation can fail Strict mode validation. |
+| SSL 525 Cloudflare→Windows IIS | Server has no SSL cert for that domain. Either set Cloudflare SSL to **"Flexible"** (no server changes), OR install cert via IIS Manager/RDP/control panel. FTP alone cannot install SSL. |
+| Google Search Console verification stuck | Use HTML meta tag method: user copies the `content` value from Google's meta tag, you paste it into `<head>` as `<meta name="google-site-verification" content="VALUE">`. Wait 2-3 min for Pages deploy, user clicks verify. |
 
 **Quick fix for 404:** If site shows 404, disable Pages in Settings → Pages, wait 30s, then re-enable with `build_type: "legacy"`.
 
@@ -223,6 +263,21 @@ Sitemap: https://your-domain.com/sitemap.xml
 - Keep `lastmod` in sitemap.xml updated — stale sitemaps signal abandoned sites
 - Every page needs its own `<title>` and `<meta name="description">` — don't reuse the homepage meta across all pages
 
+### Google Search Console Setup
+
+After domain is live and verified:
+
+1. **Add property** in [Search Console](https://search.google.com/search-console) — use "HTML tag" method (not file upload which GitHub Pages doesn't support)
+2. **Get verification tag:** Google gives `<meta name="google-site-verification" content="XXXX">`
+3. **User sends you the `content` value** (the long string after `content="`)
+4. **You add to index.html** `<head>`: `<meta name="google-site-verification" content="THE_STRING">`
+5. **Push → wait 2-3 min for Pages deploy**
+6. **User clicks "Verify"** in Search Console
+7. **Submit sitemap:** `https://your-domain.com/sitemap.xml` in Search Console → Sitemaps
+8. **Request indexing** for the homepage via URL inspection tool
+
+**SEO is site-dependent, not repo-dependent:** If you have both `githubtalk.github.io/repo` and `custom-domain.com`, they are separate Search Console properties. Set up the custom domain property for SEO tracking on the real domain.
+
 ## Support Files
 
 - `templates/business-landing.html` — Starter business landing page template (copy & modify)
@@ -299,7 +354,82 @@ For product showcase grids, use `contain` with `max-width/max-height` so entire 
 - **Never** use BMP or uncompressed TIFF
 - Target: product card images under 100KB each
 
-### Container Width
+## Server-Agnostic SSL & Cloudflare Troubleshooting
+
+### Identifying Server Type via FTP
+
+FTP directory structure reveals the server OS:
+
+| FTP root contents | Server type | Notes |
+|-------------------|-------------|-------|
+| `wwwroot/`, `aspnet_client/`, `.html` files | **Windows / IIS** | ASP.NET sites; SSL must be installed via IIS Manager or hosting panel |
+| `public_html/`, `logs/`, `.htaccess` | **Linux / Apache** | SSL via `.htaccess` or hosting panel |
+| `wwwroot/`, `databases/`, `logfiles/` | **Windows (hosting provider)** | No RDP/SSH — SSL via control panel only |
+
+**Critical: FTP ≠ server admin.** FTP credentials only allow file transfer. SSL certificate installation requires:
+- RDP/SSH access to the server
+- Hosting control panel (Plesk, cPanel, websitepanel, etc.)
+- OR hosting provider support to install cert on your behalf
+
+If you only have FTP, you **cannot** install SSL certificates yourself. You must ask the hosting provider or use a Cloudflare "Flexible" SSL mode.
+
+### Cloudflare SSL Modes Explained
+
+| Mode | Visitor→CF | CF→Origin | Origin needs SSL cert? |
+|------|-----------|-----------|----------------------|
+| **Flexible** | HTTPS ✅ | HTTP | No |
+| **Full** | HTTPS ✅ | HTTPS | Yes, but cert can be self-signed |
+| **Strict** | HTTPS ✅ | HTTPS | Yes, and must be valid (not self-signed) |
+
+### 525 Error: Cloudflare Can't Reach Origin
+
+```
+HTTP/2 525 SSL handshake failed
+CF-RAY: xxxxx-ICN  
+server: cloudflare
+```
+
+**Generic fix (Cloudflare → any origin):**
+1. Cloudflare DNS → set `@` and `www` to **DNS only** (grey cloud)
+2. Wait 2 min, test HTTPS
+3. Configure origin SSL, then re-enable proxy
+
+**Windows IIS server + Cloudflare — two paths:**
+
+**Path A: Flexible SSL (5 min, no server changes)**
+1. Cloudflare → SSL/TLS → set to **"Flexible"**
+2. Done. No server cert needed.
+
+**Path B: Install SSL on IIS (permanent, requires control panel or RDP)**
+1. Get SSL cert (Let's Encrypt free, or Cloudflare Origin Certificate)
+2. In IIS Manager → Server Certificates → import cert
+3. In site bindings → add HTTPS binding with the cert
+4. Force redirect HTTP→HTTPS in site settings
+5. In Cloudflare SSL/TLS → set to **"Full"** or **"Strict"**
+
+**How to diagnose the origin SSL issue:**
+```bash
+# Test origin SSL directly  
+openssl s_client -connect origin-server.com:443
+
+# Check if cert exists and is valid
+echo | openssl s_client -connect origin-server.com:443 2>&1 | openssl x509 -noout -dates
+```
+
+If `no peer certificate available` or TLS alert 80 appears → origin has no SSL cert for that domain.
+
+### GitHub Pages + Cloudflare (Distinct Case)
+
+For **GitHub Pages** (not self-hosted), the procedure is different:
+1. Set Cloudflare DNS records to **DNS only** (grey cloud) first
+2. GitHub repo → Settings → Pages → Custom domain
+3. GitHub auto-provisions Let's Encrypt cert
+4. Wait 5 min, then optionally re-enable Cloudflare proxy
+5. If 525 persists after re-enabling: Cloudflare SSL → **"Full"** (not "Strict") for GitHub Pages
+
+**Do NOT use Cloudflare "Strict" mode with GitHub Pages** — GitHub's Let's Encrypt cert is valid but Cloudflare Strict mode may fail during cert rotation.
+
+## Performance Checklist
 
 Widen content area to reduce side whitespace:
 
