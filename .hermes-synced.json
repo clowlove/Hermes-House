@@ -85,7 +85,13 @@
   "software-development/debugging-hermes-tui-commands": "0c4d3580e523f9138764e5088a545456",
   "software-development/python-debugpy": "a75ff39233e9d884f75b8739771de0d7",
   "software-development/node-inspect-debugger": "2b820befd6d9c6427af610e1788e57a3",
-  "software-development/hermes-agent-skill-authoring": "0306b14aba1f37c934a5315a42a2e1bf",
+  "software-development/hermes-agent-skill-authoring": "07ed5d79beeadb4d65590388969ed902",
   "software-development/spike": "add90395922642043b7e0e6fb51a9b5a",
-  "github/github-pages-site": "c390d07b6ea74f9d16fb7571a4186e26"
+  "github/github-pages-site": "c390d07b6ea74f9d16fb7571a4186e26",
+  "mlops/models": "55ee80bb04e8f28524a1e93df8a04c6c",
+  "mlops/training": "227107e5914d782abf28cf0284ace7f7",
+  "mlops/vector-databases": "3ee93ae362942b11e5afec018d812d49",
+  "mlops/evaluation": "85b2128ba81e95825f790bdf9ddaf405",
+  "mlops/research": "56103d2142d5e194c3388537d6636182",
+  "mlops/inference": "606a671c8c5d3cc53cbb7bd64b614adc"
 }
