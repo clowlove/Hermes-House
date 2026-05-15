@@ -284,6 +284,7 @@ After domain is live and verified:
 - `references/pages-api.md` — GitHub Pages API endpoints, build types, troubleshooting
 - `references/product-site-verification.md` — **Critical:** How to cross-reference source product HTML pages to get correct product name→image mappings before building a product showcase site. Covers extraction commands, mapping tables, and common mistakes.
 - `references/seo-checklist.md` — Detailed SEO implementation guide for GitHub Pages business sites
+- `references/fork-to-satellite-site.md` — **Fork an existing repo to create a new domain's site** (e.g. mitalkcoin/sd-tractor → www.sadin-tractor.com). Covers DNS setup, search engine re-submission, and common pitfalls.
 - `scripts/compress-images.js` — Node.js image compression script (Sharp) for product showcase sites
 
 ## Performance Optimization
