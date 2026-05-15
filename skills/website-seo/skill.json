@@ -1,0 +1,27 @@
+{
+  "name": "website-seo",
+  "version": "1.0.0",
+  "description": "Domain binding, SSL setup, Cloudflare DNS, search engine submission, sitemap management, and Windows shared hosting FTP workflows",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": [
+    "devops",
+    "website-seo"
+  ],
+  "hermes": {
+    "skill_category": "devops",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
