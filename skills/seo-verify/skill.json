@@ -1,0 +1,24 @@
+{
+  "name": "seo-verify",
+  "version": "1.0.0",
+  "description": "Search engine site verification (Google, Baidu, Bing) + sitemap optimization + domain binding workflow. Covers GitHub Pages, Windows shared hosting with FTP, and Cloudflare DNS setups. Triggers on requests like \"verify site on Google\", \"Baidu site verification\", \"submit sitemap\", \"Google SEO\", \"bind domain to GitHub Pages\".",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[seo, search-engine, verification]",
+  "hermes": {
+    "skill_category": "seo",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
