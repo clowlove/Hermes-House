@@ -227,10 +227,34 @@ pdftoppm -jpeg -r 150 -f N -l N output.pdf slide-fixed
 
 ---
 
+### python-pptx on Hermes
+
+**⚠️ Critical execution path** (not obvious):
+
+```bash
+# WRONG — sandbox python3 (3.11) doesn't have pptx
+python3 script.py   # ModuleNotFoundError: pptx
+
+# CORRECT — use /usr/bin/python3 (3.12) which has pptx installed
+/usr/bin/python3 /tmp/script.py
+
+# Installation (system python pip, not venv pip)
+/usr/bin/pip3 install python-pptx --break-system-packages
+
+# Verify
+/usr/bin/pip3 show python-pptx   # version 1.0.2
+/usr/bin/python3 -c "from pptx import Presentation; print('ok')"
+```
+
+- `execute_code` tool → sandboxed Python (no pptx available)
+- `terminal` with `/usr/bin/python3` → system Python 3.12 (pptx works)
+- `pip install` needs `--break-system-packages` on externally-managed environments
+
 ## Dependencies
 
 - `pip install "markitdown[pptx]"` - text extraction
+- `pip install python-pptx --break-system-packages` - creating from Python
 - `pip install Pillow` - thumbnail grids
-- `npm install -g pptxgenjs` - creating from scratch
+- `npm install -g pptxgenjs` - creating from scratch (Node.js alternative)
 - LibreOffice (`soffice`) - PDF conversion (auto-configured for sandboxed environments via `scripts/office/soffice.py`)
 - Poppler (`pdftoppm`) - PDF to images
