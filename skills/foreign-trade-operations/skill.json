@@ -1,0 +1,27 @@
+{
+  "name": "foreign-trade-operations",
+  "version": "1.0.0",
+  "description": ">-",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": [
+    "productivity",
+    "foreign-trade-operations"
+  ],
+  "hermes": {
+    "skill_category": "productivity",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
