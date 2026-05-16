@@ -100,6 +100,69 @@ Upload via FTP, then trigger verification in Yandex Webmaster.
 
 ---
 
+## Verification Methods
+
+### Choosing a Method
+
+| Method | Best For | Limitations |
+|--------|----------|-------------|
+| **HTML tag** | Any site | Must be able to edit `<head>` |
+| **Cloudflare授权** | Cloudflare-proxied sites | Only works for Google |
+| **File upload** | FTP-accessible sites | Baidu only accepts .txt/.html |
+| **CNAME** | Sites with Cloudflare blocking bots | Most reliable for Baidu |
+
+### Google Verification
+
+**HTML tag method** (most universal):
+```bash
+# Find the <head> tag in index.html, insert meta tag right after <title>
+sed -i 's|<title>|<meta name="google-site-verification" content="XXXXX" />\n<title>|' index.html
+git add index.html && git commit -m "Add Google verification" && git push
+```
+
+**Confirm tag is live** (allow 2-3 min for GitHub Pages rebuild):
+```bash
+curl -s "https://example.com/" | grep "verification_code"
+```
+
+### Baidu Verification (FTP)
+
+Baidu file verification requires **raw text file** (no HTML wrapper):
+```bash
+# Create file with ONLY the verification code string
+echo -n "codeva-XXXXX" > baidu_verify_codeva-XXXXX.html
+curl -u "USER:PASS" -T baidu_verify_codeva-XXXXX.html "ftp://HOST/wwwroot/"
+```
+
+Verify:
+```bash
+curl -s "https://example.com/baidu_verify_codeva-XXXXX.html"
+# Should return: codeva-XXXXX (plain text, no HTML)
+```
+
+### Yandex Verification
+
+Filename must be `yandex_<code>.html` (underscore in middle, not at start):
+```html
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>Verification: 3fdba79f71c66d1b</body>
+</html>
+```
+
+### Bing Verification
+
+Use HTML tag method (same as Google):
+```html
+<meta name="msvalidate.01" content="YOUR_BING_CODE">
+```
+
+---
+
 ## References
 - `references/cloudflare-ssl-modes.md`
 - `references/seo-submission-checklist.md`
+- `references/baidu-verify-ftp.md` — Baidu verification on Windows shared hosting (FTP upload, raw text file)
+- `references/sitemap-template.md` — Optimized sitemap template with priorities
