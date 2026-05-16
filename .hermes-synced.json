@@ -21,7 +21,7 @@
   "productivity/nano-pdf": "697173f20126eea0cf099739d7e6515b",
   "productivity/google-workspace": "2ef7a35942aba123a38205300a552d73",
   "productivity/ocr-and-documents": "c20f1b68b2c7fd50682e2a7ac298061d",
-  "productivity/powerpoint": "9287213efb84523ccf0013045195b6e1",
+  "productivity/powerpoint": "836dd4313155f9b76a5d6e9a7415b7ac",
   "productivity/maps": "262fc1f06aa628c150f81152b3434177",
   "productivity/linear": "acc5edc6c9e5aee04d27dd363bb47f41",
   "mlops/huggingface-hub": "bd347d63456532e9c0139596fd8d0dfa",
@@ -94,7 +94,7 @@
   "mlops/evaluation": "85b2128ba81e95825f790bdf9ddaf405",
   "mlops/research": "56103d2142d5e194c3388537d6636182",
   "mlops/inference": "606a671c8c5d3cc53cbb7bd64b614adc",
-  "devops/website-seo": "ce9ebeb4f3d736eae98386ff755078f7",
+  "devops/website-seo": "0ef5ba01fd27661c076c65fdae3ea2d2",
   "seo/seo-verify": "5dcbae3a323d3770333bf5a6034c3f73",
   "productivity/foreign-trade-operations": "9db8ec4388b6ae77f977ffc76503353b"
 }
