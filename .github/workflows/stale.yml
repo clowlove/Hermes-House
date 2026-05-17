@@ -1,37 +1,57 @@
-name: Manage Stale Issues and PRs
+name: 'Stale Issues & PRs'
 
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
-
-permissions:
-  issues: write
-  pull-requests: write
+  - cron: '0 0 * * *'  # Run daily at midnight
 
 jobs:
   stale:
+    name: 'Mark Stale'
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/stale@v9
-        with:
-          days-before-stale: 60
-          days-before-close: 14
-          stale-issue-label: 'stale'
-          stale-issue-message: |
-            This issue has been automatically marked as stale because it has not had recent activity. It will be closed after 14 days if no further action is taken.
-            *This is an automated message.*
-          close-issue-message: |
-            This issue has been closed because it was marked as stale.
-            *This is an automated message.*
-          days-before-stale-pr: 30
-          days-before-close-pr: 7
-          stale-pr-label: 'stale'
-          stale-pr-message: |
-            This PR has been automatically marked as stale.
-            *This is an automated message.*
-          close-pr-message: |
-            This PR has been closed because it was marked as stale.
-            *This is an automated message.*
-          exempt-issue-labels: 'pinned,security,priority'
-          exempt-pr-labels: 'pinned,security,priority'
+    - uses: actions/stale@v9
+      with:
+        # Days before marking as stale
+        days-before-stale: 30
+        
+        # Days before closing stale issues
+        days-before-close: 7
+        
+        # Issues to check
+        operations-per-run: 100
+        
+        # Stale issue message
+        stale-issue-message: |
+          👋 Hi there! This issue has been open for 30 days.
+          
+          If no one responds within 7 days, we will auto-close this issue.
+          
+          💡 Tips:
+          - Check if the issue still exists
+          - Provide more details if possible
+          - Tag relevant people
+        
+        # Stale PR message
+        stale-pr-message: |
+          👋 This PR has been marked as stale.
+          
+          If no activity in 7 days, we will close it.
+        
+        # Close message
+        close-message: |
+          This issue/PR has been closed due to inactivity.
+          
+          Feel free to reopen if you still need help!
+
+        # Labels
+        stale-issue-label: 'stale'
+        close-issue-label: 'closed-by-stale'
+        
+        # Exempt from being marked stale
+        exempt-issue-labels: 'pinned,security,priority:high'
+        exempt-pr-labels: 'pinned,security'
+        
+        # Only issues/PRs, no pulls from drafts
+        only-labels: ''
+        remove-stale-when-updated: true

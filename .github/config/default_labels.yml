@@ -1,0 +1,47 @@
+# Default labels for the project
+labels:
+  - name: bug
+    color: d73a4a
+    description: Something isn't working
+  
+  - name: enhancement
+    color: a2eeef
+    description: New feature or request
+  
+  - name: documentation
+    color: 0075ca
+    description: Improvements to the documentation
+  
+  - name: question
+    color: d876e3
+    description: Further information is requested
+  
+  - name: skill-request
+    color: fe4a49
+    description: Request for a new skill
+  
+  - name: good first issue
+    color: 7057ff
+    description: Good for newcomers
+  
+  - name: help wanted
+    color: 008672
+    description: Extra attention is needed
+  
+  - name: priority: high
+    color: b60205
+    description: High priority
+  
+  - name: priority: low
+    color: 0e8a16
+    description: Low priority
+
+# Default milestone settings
+milestones:
+  - name: v1.0
+    description: First stable release
+    state: open
+  
+  - name: v2.0
+    description: Next major release
+    state: open
