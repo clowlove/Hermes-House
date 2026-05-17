@@ -474,6 +474,8 @@ gh gist create script.py --public --desc "Useful script"
 gh gist list
 ```
 
+> **Script reference**: For automated repo description updates (hermes_repo_update.py), see `references/hermes_repo_update.md`.
+
 **With curl:**
 
 ```bash
