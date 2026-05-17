@@ -4,9 +4,19 @@ description: Domain binding, SSL setup, Cloudflare DNS, search engine submission
 triggers:
   - bind domain to github pages
   - cloudflare ssl 525 error
+  - cloudflare origin server a record proxy
   - submit sitemap to google
   - baidu verification
   - yandex verification
+  - nginx 403 directory index forbidden
+  - nginx url rewrite query string
+  - mysql root password ubuntu 8.0
+  - install mysql on ubuntu
+  - classic asp iis to linux migration
+  - admin_v19 asp backend not running
+  - sync static files between servers
+  - create index.html for directory listing
+  - biweekly cron sync script
 ---
 
 # Website SEO & Administration
@@ -41,6 +51,127 @@ Cloudflare Flexible/Full SSL already handles HTTP→HTTPS redirect at CDN level.
 - Cloudflare → Origin: HTTP (no cert needed) ✅
 
 **Permanent fix**: Install Let's Encrypt on origin server (requires RDP/SSH access)
+
+---
+
+## Cloudflare Proxy → Origin Server Setup
+
+When your origin is a VPS/root server (not GitHub Pages), Cloudflare proxies traffic to your server's IP.
+
+### Step 1: Start web server on origin FIRST
+```bash
+# On origin server
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo ss -tlnp | grep -E ':80|:443'  # verify listening
+curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1  # should NOT be 000
+```
+
+### Step 2: Check PHP-FPM if site returns 502 Bad Gateway
+```bash
+# If nginx serves 502, PHP-FPM is usually the cause
+sudo systemctl status php8.3-fpm | grep "Active:"
+# Check socket permissions
+ls -la /run/php/php*-fpm.sock
+# If permission denied in error log, fix:
+sudo chmod 660 /run/php/php8.3-fpm.sock
+sudo usermod -a -G www-data nginx
+sudo systemctl restart nginx php8.3-fpm
+```
+
+**Step 2: Cloudflare DNS record**
+| Type | Name | Target | Proxy |
+|------|------|--------|-------|
+| A | sub | `YOUR_SERVER_IP` | Proxied (☁️ orange) |
+
+**Step 3: Verify**
+```bash
+# Test through Cloudflare (not direct IP)
+curl -sI https://your-domain.com/ | grep cf-ray
+```
+
+Full reference: `references/cloudflare-origin-server.md`
+
+---
+
+## Nginx sites-enabled Gotcha (Ubuntu)
+
+On Ubuntu, nginx configs go in `/etc/nginx/sites-enabled/` but **nginx.conf does not include it by default**. If nginx starts but serves nothing on port 80:
+
+1. Check: `grep sites-enabled /etc/nginx/nginx.conf`
+2. If missing, add inside `http {}` block: `include /etc/nginx/sites-enabled/*;`
+3. Test: `sudo nginx -t`
+4. Reload: `sudo systemctl reload nginx`
+
+Note: The `include` line must be INSIDE the `http {}` block, not after the closing `}`. If you see `"server" directive is not allowed here`, the include is outside the http block.
+
+## Creating Directory Index Pages
+
+When migrating from ASP/PHP sites that generate listing pages dynamically, you may need to create static `index.html` for directories:
+
+```bash
+# Generate product list from existing HTML files
+for f in /home/ubuntu/wwwroot/products/*.html; do
+  id=$(basename "$f" .html)
+  title=$(grep -oP '(?<=<title>)[^<]+' "$f" 2>/dev/null | head -1)
+  echo "<li><a href=\"/products/$id.html\">$title</a></li>"
+done > /tmp/product_list.txt
+
+# Combine with HTML template
+cat > /home/ubuntu/wwwroot/products/index.html << HTMLEOF
+<!DOCTYPE html>
+<html><head><title>Product Center</title></head>
+<body>
+<ul>
+$(cat /tmp/product_list.txt)
+</ul>
+</body></html>
+HTMLEOF
+```
+
+Key patterns:
+- Extract title from each HTML file: `grep -oP '(?<=<title>)[^<]+' "$f"`
+- Include navigation from main site
+- Match the visual style of source site
+
+See `references/website-sync-workflow.md` for full sync script template.
+
+---
+
+## Classic ASP (VBScript) Cannot Run on Linux
+
+**Symptom**: ASP files in `/admin_v19/` return as plain text download or show directory listing instead of executing
+
+**Root Cause**: Classic ASP (VBScript/Jet OLEDB, `.asp` files using `Server.CreateObject("ADODB.Connection")`) is **Windows IIS only**. Mono does not support Classic ASP — only ASP.NET (C#/VB.NET).
+
+**Verification**:
+```bash
+# Check if file is being served as text (not executed)
+curl -s "https://domain.com/admin_v19/login.asp" | head -5
+# If you see VBScript code like <% ... %> returned as text, it's not executing
+
+# Check server type
+curl -sI "https://original-site.com/" | grep -i server
+# IIS = Windows, nginx/apache = Linux
+```
+
+**Implications for Migration**:
+| Original Stack | Target Stack | Classic ASP Backend |
+|---------------|--------------|---------------------|
+| Windows + IIS | Linux + Nginx | ❌ **Cannot migrate** — rewrite backend or keep Windows server |
+| Windows + IIS | Windows + IIS | ✅ Works as-is |
+| Linux + Apache | Linux + Nginx | ✅ Works (if ASP.NET, not Classic) |
+
+**Migration Options**:
+1. **Keep original server for admin** — Use `www.shengtuo-tractor.com/admin_v19/` for backend updates, sync static files to new server
+2. **Rebuild backend** — Rewrite ASP admin in PHP/Laravel, point to MySQL database
+3. **Use Windows VPS** — Keep IIS + Classic ASP, add Cloudflare in front
+
+**Key files to check**:
+- `Conn.asp` — Database connection string: `"Provider = Microsoft.Jet.OLEDB.4.0;Data Source="&server.mapPath(...)`
+- This uses Microsoft Access-style Jet OLEDB, which is Windows-only
+
+**Reference**: `references/classic-asp-iis-migration.md`
 
 ---
 
@@ -163,6 +294,11 @@ Use HTML tag method (same as Google):
 
 ## References
 - `references/cloudflare-ssl-modes.md`
+- `references/cloudflare-origin-server.md`
 - `references/seo-submission-checklist.md`
 - `references/baidu-verify-ftp.md` — Baidu verification on Windows shared hosting (FTP upload, raw text file)
 - `references/sitemap-template.md` — Optimized sitemap template with priorities
+- `references/nginx-url-rewrite-static.md` — Rewriting query params (?id=X) to static HTML files
+- `references/mysql-ubuntu-setup.md` — MySQL 8.0 on Ubuntu, root password reset via debian-sys-maint
+- `references/classic-asp-iis-migration.md` — Classic ASP on Windows IIS, cannot run on Linux/Mono
+- `references/website-sync-workflow.md` — Sync script for migrating static content between domains, creating directory index pages
