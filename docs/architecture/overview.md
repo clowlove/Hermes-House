@@ -1,0 +1,77 @@
+# Architecture
+
+> Hermès Agent 系统架构文档
+
+## Overview
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                      Hermès Agent                            │
+├─────────────────────────────────────────────────────────────┤
+│  ┌───────────┐  ┌───────────┐  ┌───────────┐               │
+│  │  Trend    │  │  Review   │  │  Skills   │               │
+│  │  Radar    │  │   Agent   │  │  Manager  │               │
+│  └───────────┘  └───────────┘  └───────────┘               │
+├─────────────────────────────────────────────────────────────┤
+│                      Core Engine                             │
+│  ┌───────────┐  ┌───────────┐  ┌───────────┐               │
+│  │  Memory   │  │  Skills   │  │  Tools    │               │
+│  │  System   │  │  Library  │  │  Executor │               │
+│  └───────────┘  └───────────┘  └───────────┘               │
+├─────────────────────────────────────────────────────────────┤
+│                    External Services                         │
+│  ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐             │
+│  │  GH  │ │ TG   │ │HF Hub│ │ Trend│ │Cloud │             │
+│  │      │ │      │ │      │ │Radar │ │flare │             │
+│  └──────┘ └──────┘ └──────┘ └──────┘ └──────┘             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## Components
+
+### 1. Agent Core
+- **Session Management**: Handles conversation state
+- **Context Compaction**: Long context optimization
+- **Tool Orchestration**: Coordinates tool execution
+
+### 2. Memory System
+| Level | Purpose | Persistence |
+|-------|---------|-------------|
+| L0 | Working context | Session |
+| L1 | Scene memory | Short-term |
+| L2 | Episodic memory | Medium-term |
+| L3 | Semantic memory | Long-term |
+
+### 3. Skills Engine
+- Dynamic skill loading
+- Context-aware skill matching
+- Skill chaining for complex tasks
+
+### 4. External Integrations
+- **GitHub**: Repo management, PR workflow
+- **Telegram**: Notifications, commands
+- **HuggingFace**: Model Hub, datasets
+- **TrendRadar**: News aggregation
+
+---
+
+## Data Flow
+
+```
+User Input → Context Builder → Agent Core → Skills/Tools → Response
+     ↑                                    ↓
+     └────────── Memory System ←─────────┘
+```
+
+---
+
+## Security
+
+- Environment variable isolation
+- API key encryption
+- GitHub token scopes
+- Branch protection rules
+
+---
+
+*Last Updated: 2026-05-17*

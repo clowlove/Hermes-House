@@ -1,6 +1,8 @@
+# License
+
 MIT License
 
-Copyright (c) 2024 Hermes House Contributors
+Copyright (c) 2026 Hermès Agent Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +21,18 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## Third-Party Licenses
+
+This project uses the following open-source components:
+
+| Component | License | Version |
+|-----------|---------|---------|
+| Node.js | MIT | 22.x |
+| npm | Artistic 2.0 | 10.x |
+| Claude SDK | Apache 2.0 | Latest |
+| TrendRadar MCP | MIT | Latest |
+
+*Full license texts available in respective project directories.*
