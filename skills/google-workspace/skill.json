@@ -1,7 +1,7 @@
 {
   "name": "google-workspace",
-  "version": "1.0.1",
-  "description": "Google OAuth2 client credentials (downloaded from Google Cloud Console)",
+  "version": "1.0.0",
+  "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
   "author": "Nous Research",
   "license": "MIT",
   "platforms": [
