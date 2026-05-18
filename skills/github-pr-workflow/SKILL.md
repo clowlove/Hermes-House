@@ -472,7 +472,28 @@ git push -u origin "$BRANCH"
 
 `actions/github-script` is unreliable for PR creation and merge — it can fail without clear error messages. Prefer `gh pr create` + `gh pr merge` in a run step:
 
-```yaml
+### Git Push with Token-in-URL Fails
+
+When the git remote URL embeds a token (e.g., `https://ghp_TOKEN@github.com/owner/repo.git`), `git push` may fail with:
+```
+fatal: could not read Password for 'https://ghp_TOKEN@github.com': No such device or address
+```
+
+**Workarounds (pick one):**
+
+```bash
+# Option 1: Remove token from remote URL — let gh handle auth
+git remote set-url origin https://github.com/owner/repo.git
+git push -u origin HEAD
+
+# Option 2: Skip git push entirely — use gh pr create directly (preferred)
+git checkout -b evolution/2026-05-18
+git add . && git commit -m "docs: update evolution log"
+gh pr create --repo owner/repo --base main --head evolution/2026-05-18 \
+  --title "docs: update evolution log" --body "..."
+```
+
+**Rule:** Prefer `gh pr create` over `git push` + separate PR creation when the remote requires token auth. `gh` manages its own credential flow reliably; embedding tokens in URLs is fragile.
 - name: Create and Merge Pull Request
   run: |
     gh pr create \

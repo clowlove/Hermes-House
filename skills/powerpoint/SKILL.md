@@ -70,15 +70,17 @@ Choose colors that match your topic — don't default to generic blue. Use these
 | Theme | Primary | Secondary | Accent |
 |-------|---------|-----------|--------|
 | **Midnight Executive** | `1E2761` (navy) | `CADCFC` (ice blue) | `FFFFFF` (white) |
+| **Chinese Aerospace** | `0A1628` (deep blue starfield) | `B80000` (Chinese red) | `E6B800` (gold) |
 | **Forest & Moss** | `2C5F2D` (forest) | `97BC62` (moss) | `F5F5F5` (cream) |
-| **Coral Energy** | `F96167` (coral) | `F9E795` (gold) | `2F3C7E` (navy) |
-| **Warm Terracotta** | `B85042` (terracotta) | `E7E8D1` (sand) | `A7BEAE` (sage) |
 | **Ocean Gradient** | `065A82` (deep blue) | `1C7293` (teal) | `21295C` (midnight) |
-| **Charcoal Minimal** | `36454F` (charcoal) | `F2F2F2` (off-white) | `212121` (black) |
-| **Teal Trust** | `028090` (teal) | `00A896` (seafoam) | `02C39A` (mint) |
-| **Berry & Cream** | `6D2E46` (berry) | `A26769` (dusty rose) | `ECE2D0` (cream) |
-| **Sage Calm** | `84B59F` (sage) | `69A297` (eucalyptus) | `50808E` (slate) |
-| **Cherry Bold** | `990011` (cherry) | `FCF6F5` (off-white) | `2F3C7E` (navy) |
+
+**Chinese Aerospace theme** (used for 航天/space topics):
+- Background: `#0A1628` (deep blue starfield)
+- Primary: `#B80000` (Chinese red)
+- Accent: `#E6B800` (gold)
+- Text on dark: `#FFFFFF` / `#8899AA`
+- Text on light: `#2D2D2D`
+- Use for: 深蓝星空背景 + 中国红金色主题 presentations
 
 ### For Each Slide
 
@@ -229,22 +231,26 @@ pdftoppm -jpeg -r 150 -f N -l N output.pdf slide-fixed
 
 ### python-pptx on Hermes
 
-**⚠️ Critical execution path** (not obvious):
+**⚠️ Critical execution path** (verified 2026-05-18):
 
 ```bash
 # WRONG — sandbox python3 (3.11) doesn't have pptx
 python3 script.py   # ModuleNotFoundError: pptx
 
-# CORRECT — use /usr/bin/python3 (3.12) which has pptx installed
-/usr/bin/python3 /tmp/script.py
+# WRONG — system python3 (3.12) also lacks pptx by default
+/usr/bin/python3 script.py   # ModuleNotFoundError
 
-# Installation (system python pip, not venv pip)
-/usr/bin/pip3 install python-pptx --break-system-packages
+# CORRECT — use hermes-agent venv python with uv-installed pptx
+/home/ubuntu/.hermes/hermes-agent/venv/bin/python3 /tmp/script.py
+
+# Installation
+uv pip install python-pptx   # installs into hermes-agent venv
 
 # Verify
-/usr/bin/pip3 show python-pptx   # version 1.0.2
-/usr/bin/python3 -c "from pptx import Presentation; print('ok')"
+/home/ubuntu/.hermes/hermes-agent/venv/bin/python3 -c "from pptx import Presentation; print('ok')"
 ```
+
+**Key insight**: `execute_code` tool uses sandboxed Python without pptx. Use `terminal` with the venv python path.
 
 - `execute_code` tool → sandboxed Python (no pptx available)
 - `terminal` with `/usr/bin/python3` → system Python 3.12 (pptx works)
