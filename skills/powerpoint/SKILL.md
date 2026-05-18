@@ -256,7 +256,52 @@ uv pip install python-pptx   # installs into hermes-agent venv
 - `terminal` with `/usr/bin/python3` → system Python 3.12 (pptx works)
 - `pip install` needs `--break-system-packages` on externally-managed environments
 
-## Dependencies
+### Content Verification Workflow (for factual content)
+
+When creating presentations with real-world data (航天, 时事, 科技, etc.), always verify against authoritative sources:
+
+**Step 1: Extract verification targets**
+- Identify claims needing verification (dates, numbers, names, technical specs)
+
+**Step 2: Search authoritative sources**
+```bash
+# Preferred sources (in order):
+# 1. 澎湃新闻 (thepaper.cn) — 中国领先媒体
+# 2. 央视新闻 (cctv.com)
+# 3. 新华视点 (xinhuanet.com)
+# 4. 人民日报
+
+# Use trendradar for searches
+mcp_trendradar_search_news(query="神舟二十三号 发射", limit=5, include_url=true)
+```
+
+**Step 3: Correct and annotate**
+- Update data in script with verified values
+- Add inline annotation like `[已核实]` or `[来源：澎湃新闻 2026-05-16]`
+- Preserve original text style/format — don't rephrase user's phrasing
+
+**Step 4: Generate corrected version**
+- Re-run script with verified data
+- Send to user with summary of corrections
+
+### Format Preservation (docx/pptx)
+
+When user says **"格式保持不变"** or similar:
+- Only correct verifiable factual errors (wrong dates, numbers, names)
+- Do NOT rewrite, rephrase, or restructure user's content
+- Keep original text style, paragraph breaks, bullet structure
+- Add corrections inline with minimal markers like `[已核实]` or `[修正]`
+- Preserve all original formatting (fonts, colors, spacing)
+
+**What to fix vs. preserve:**
+| Fix | Preserve |
+|-----|----------|
+| Wrong dates/numbers | Original phrasing |
+| Incorrect names | Paragraph structure |
+| Verifiable factual errors | Bullet style |
+| Outdated statistics (with source) | Section order |
+
+### PPT + docx Decision Tree
 
 - `pip install "markitdown[pptx]"` - text extraction
 - `pip install python-pptx --break-system-packages` - creating from Python

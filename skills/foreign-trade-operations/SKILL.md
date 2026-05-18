@@ -17,13 +17,36 @@ triggers:
 
 ## Website Overview
 
-| Site | Platform | Domain | Status |
-|------|----------|--------|--------|
-| 主站 | GitHub Pages + Cloudflare | shengtuo-tractor.com | HTTPS ✅ |
-| 产品站 | GitHub Pages + Cloudflare | farm-implement.com | HTTPS ✅ |
-| SADIN站 | GitHub Pages + Cloudflare | sadin-tractor.com | HTTPS ✅ |
+| Site | Platform | Domain | Canonical | Notes |
+|------|----------|--------|----------|-------|
+| 主站 | GitHub Pages + Cloudflare | shengtuo-tractor.com | → farm-implement.com | 已重定向 |
+| 产品站 | GitHub Pages + Cloudflare | farm-implement.com | ✅ self | 主站，SEO 所有指向这里 |
+| SADIN站 | GitHub Pages + Cloudflare | sadin-tractor.com | → farm-implement.com | 内容重复，通过 canonical 避免问题 |
+| AIV站 | 本地服务器 + Cloudflare | aiv.qzz.io | ✅ self | 源码在 `/home/ubuntu/wwwroot/` |
+
+**2026-05-18 SEO 优化完成:**
+- farm-implement.com: canonical/sitemap/OG/JSON-LD 全部指向正式域名 ✅
+- sadin-tractor.com: 通过 canonical 指向 farm-implement.com 避免重复内容
+- aiv.qzz.io: 独立优化，添加完整 OGP/JSON-LD，源码本地
+
+⚠️ **Cloudflare 覆盖 robots.txt**：Cloudflare Dashboard 的 Rules 可以覆盖源站 robots.txt。更新后不生效请检查 Cloudflare 设置。
 
 **代码库：** `githubtalk/shengtuo-tractor`
+
+### 重要：SEO canonical 指向
+
+- **farm-implement.com** — 主站，所有 canonical/OG/sitemap 指向这里
+- **sadin-tractor.com** — 内容相同，通过 canonical 避免重复内容问题
+- **aiv.qzz.io** — 独立站，有自己的源码和 sitemap
+
+> ⚠️ **GitHub Pages 部署需要 ~5分钟**，不是 1-2 分钟。推送后不能立即验证。
+
+### 源文件路径
+
+| 站点 | 源文件位置 | 部署方式 |
+|------|-----------|----------|
+| farm/sadin | `/home/ubuntu/shengtuo-tractor/` | GitHub Pages |
+| aiv.qzz.io | `/home/ubuntu/wwwroot/` | FTP上传到 Windows 主机 |
 
 ---
 
@@ -129,22 +152,58 @@ URL: https://ziyuan.baidu.com
 
 ---
 
-## GitHub Pages 部署流程
+## SEO 优化标准流程（GitHub Pages）
+
+当修改 GitHub Pages 站点时，所有 SEO 相关文件必须同步更新：
+
+### 必须更新的 4 个文件
 
 ```bash
-# 1. 克隆仓库
-git clone https://github.com/githubtalk/shengtuo-tractor.git
-cd shengtuo-tractor
+cd /home/ubuntu/shengtuo-tractor
 
-# 2. 修改文件后添加
+# 1. index.html - canonical/OG/JSON-LD/sitemap/robots.txt
+sed -i 's|old-domain|new-domain|g' index.html
+
+# 2. categories.html（如有）
+sed -i 's|old-domain|new-domain|g' categories.html
+
+# 3. sitemap.xml
+# 手动更新 <loc> 标签中的域名
+
+# 4. robots.txt
+# 更新 Sitemap 行
+```
+
+### GitHub Pages 部署流程
+
+```bash
+# 1. 修改文件
 git add .
+git commit -m "SEO update: canonical/OG/JSON-LD"
 
-# 3. 提交
-git commit -m "描述：做了哪些修改"
+# 2. 推送到 GitHub（如有冲突）
+git pull --rebase origin master
+# 如有冲突：
+# - 解决冲突
+# - git add .
+# - git rebase --skip  # 当无法设置 EDITOR 时用 skip
 
-# 4. 推送
-git push origin main
-# GitHub Pages 自动构建，约 1-2 分钟生效
+# 3. 推送
+git push origin master
+
+# 4. 等待 ~5 分钟生效
+# 验证：curl https://raw.githubusercontent.com/USER/REPO/master/robots.txt
+```
+
+### AIV 站优化流程（本地服务器）
+
+```bash
+# 源文件在 /home/ubuntu/wwwroot/
+# nginx root 已配置为 /home/ubuntu/wwwroot
+# 修改后直接生效（无需上传）
+
+# 更新包打包（需手动上传到其他服务器时）：
+tar -czvf /tmp/aiv_seo_update.tar.gz index.html robots.txt sitemap.xml
 ```
 
 ### 域名绑定状态

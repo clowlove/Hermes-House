@@ -91,9 +91,16 @@ ZH_DESC = {
 - **⚠️ Unicode heredoc 安全扫描**：使用 shell heredoc (`cat >> file << EOF`) 写入包含 emoji/Unicode 的内容时，会触发安全扫描拦截。解决方法：使用 Python `execute_code` 写入文件，而非 shell heredoc
 
 ## 脚本位置
-`~/.hermes/scripts/hermes_evolution_sync.py`
+`~/.hermes/scripts/hermes_evolution_system.py`
 
-执行：`python3 ~/.hermes/scripts/hermes_evolution_sync.py`
+执行：`python3 ~/.hermes/scripts/hermes_evolution_system.py`
+
+**功能：**
+- GitHub AI 热点发现（7大类别，42个项目）
+- AI 智能分类
+- GitHub Profile README 更新
+- 进化日志生成 → ~/.hermes/logs/evolution/
+- 定时推送到 Telegram
 
 ## Automation (Cron Job)
 
