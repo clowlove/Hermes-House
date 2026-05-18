@@ -21,7 +21,7 @@
   "productivity/nano-pdf": "697173f20126eea0cf099739d7e6515b",
   "productivity/google-workspace": "20da33245e27e751f4e9a260b3c16ebe",
   "productivity/ocr-and-documents": "c20f1b68b2c7fd50682e2a7ac298061d",
-  "productivity/powerpoint": "cec44f9ea039a6058b5f61052b4fa5cd",
+  "productivity/powerpoint": "21fab93da2168c3e31f2112a0f77a4f2",
   "productivity/maps": "262fc1f06aa628c150f81152b3434177",
   "productivity/linear": "2c773d83ca0e95531e0aedfd58eb413c",
   "mlops/huggingface-hub": "bd347d63456532e9c0139596fd8d0dfa",
@@ -94,8 +94,8 @@
   "mlops/evaluation": "85b2128ba81e95825f790bdf9ddaf405",
   "mlops/research": "56103d2142d5e194c3388537d6636182",
   "mlops/inference": "606a671c8c5d3cc53cbb7bd64b614adc",
-  "devops/website-seo": "c70c6d0cbd6b0d68c22efd16ace5d843",
+  "devops/website-seo": "7101fe8fa51197824b375c8fef2fa6a4",
   "seo/seo-verify": "5dcbae3a323d3770333bf5a6034c3f73",
-  "productivity/foreign-trade-operations": "9db8ec4388b6ae77f977ffc76503353b",
-  "social-media/github-trend-daily": "33384f956b39d8922e45276c625c4dcd"
+  "productivity/foreign-trade-operations": "4115400d2a42714034b27ee5ca985b4e",
+  "social-media/github-trend-daily": "9f38b0c020eef16c7da131938eca4614"
 }
