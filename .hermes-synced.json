@@ -21,7 +21,7 @@
   "productivity/nano-pdf": "697173f20126eea0cf099739d7e6515b",
   "productivity/google-workspace": "20da33245e27e751f4e9a260b3c16ebe",
   "productivity/ocr-and-documents": "c20f1b68b2c7fd50682e2a7ac298061d",
-  "productivity/powerpoint": "836dd4313155f9b76a5d6e9a7415b7ac",
+  "productivity/powerpoint": "cec44f9ea039a6058b5f61052b4fa5cd",
   "productivity/maps": "262fc1f06aa628c150f81152b3434177",
   "productivity/linear": "2c773d83ca0e95531e0aedfd58eb413c",
   "mlops/huggingface-hub": "bd347d63456532e9c0139596fd8d0dfa",
@@ -55,7 +55,7 @@
   "software-development/systematic-debugging": "a69747b2be599ccd22e23afa5a8acf76",
   "software-development/subagent-driven-development": "5f462f8ca1015205aad93bda5254da99",
   "email/himalaya": "5c1351db78f4d327e5645d5ae202dde7",
-  "github/github-pr-workflow": "ca725dfc20e4d1b7cd1909ec6a967ad7",
+  "github/github-pr-workflow": "9bc1e22aa83b84b115316eca1bd497b6",
   "github/github-code-review": "1fec17c4683655b2c667626dc381569d",
   "github/github-repo-management": "c87b164a768c5a4765071aecf1f3c124",
   "github/github-issues": "339ababb50c5cd6f8530ae3c3b453b68",
@@ -97,5 +97,5 @@
   "devops/website-seo": "c70c6d0cbd6b0d68c22efd16ace5d843",
   "seo/seo-verify": "5dcbae3a323d3770333bf5a6034c3f73",
   "productivity/foreign-trade-operations": "9db8ec4388b6ae77f977ffc76503353b",
-  "social-media/github-trend-daily": "3c6f76ad66a7ed29d31b4d6f02645d6d"
+  "social-media/github-trend-daily": "33384f956b39d8922e45276c625c4dcd"
 }
