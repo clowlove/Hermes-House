@@ -17,6 +17,11 @@ triggers:
   - sync static files between servers
   - create index.html for directory listing
   - biweekly cron sync script
+  - canonical points to github io instead of production domain
+  - github pages seo custom domain
+  - sitemap still has github io url after domain change
+  - cloudflare overrides robots txt
+  - git rebase conflict sitemap xml
 ---
 
 # Website SEO & Administration
@@ -181,8 +186,11 @@ curl -sI "https://original-site.com/" | grep -i server
 
 **Fix**:
 1. Update `sitemap.xml` in the GitHub repository with new domain URLs
-2. GitHub Pages automatically redirects `/sitemap.xml` from parked URL to custom domain
-3. Search Console "Couldn't fetch" = CDN cache delay, refreshes in 2-5 min
+2. Also update `canonical`, JSON-LD `@id`/`url`, `og:url`, `og:image`, `twitter:image` — all must reference production domain
+3. GitHub Pages automatically redirects `/sitemap.xml` from parked URL to custom domain
+4. Search Console "Couldn't fetch" = CDN cache delay, refreshes in 2-5 min
+
+> ⚠️ **Cloudflare can override robots.txt**: Cloudflare Dashboard Rules can control robots.txt at CDN level, ignoring your origin file. If changes don't appear, check Cloudflare Dashboard → Rules. See `references/github-pages-seo.md`.
 
 ---
 
@@ -302,3 +310,4 @@ Use HTML tag method (same as Google):
 - `references/mysql-ubuntu-setup.md` — MySQL 8.0 on Ubuntu, root password reset via debian-sys-maint
 - `references/classic-asp-iis-migration.md` — Classic ASP on Windows IIS, cannot run on Linux/Mono
 - `references/website-sync-workflow.md` — Sync script for migrating static content between domains, creating directory index pages
+- `references/github-pages-seo.md` — GitHub Pages custom domain SEO: canonical/sitemap/OG tags must point to production domain, Cloudflare overrides, git rebase conflicts
