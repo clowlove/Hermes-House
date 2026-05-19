@@ -9,7 +9,7 @@
 https://github.com/sponsors/clowlove
 
 ### 一次性赞助
-- ☕ Buy Me a Coffee: https://buymeacoff.ee/hermes
+- ☕ Buy Me a Coffee: https://buymeacoffee.com/mitalk
 - 💜 PayPal: https://paypal.me/hermesagent
 
 ## 为什么赞助？
