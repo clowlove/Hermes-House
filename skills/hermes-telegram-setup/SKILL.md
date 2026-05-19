@@ -82,6 +82,7 @@ hermes config set telegram.home_channel "-1001234567890"
 | "No messaging platforms enabled" | No valid token configured | Check TELEGRAM_BOT_TOKEN is set via `hermes config env-path` |
 | "Unauthorized user" | User not paired | Run `hermes pairing approve telegram CODE` |
 | Gateway exits with code 75 (TEMPFAIL) | Usually auth/config issue | Check journalctl logs |
+| `[TOOL_CALLS]` appears in bot replies | MiniMax model bug via NVIDIA NIM; model outputs tool call XML as plain text | 1) Reduce exposed tools (disable unused toolsets via `hermes tools`); 2) Switch to other model (NVIDIA Llama / Xiaomi MiMo); 3) This is a model-side issue, not a gateway config issue |
 | Gateway exits with code 1 (FAILURE) | Token invalid or network issue | Verify token, check connectivity |
 | patch tool denied on env file | Protected file | Use terminal + sed instead |
 | hermes update says "Already up to date" but origin is local | origin points to local path | Add upstream: `cd ~/.hermes/hermes-agent && git remote add upstream https://github.com/NousResearch/hermes-agent.git` |
