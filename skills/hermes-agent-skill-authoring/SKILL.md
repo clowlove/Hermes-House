@@ -101,6 +101,87 @@ Categories currently in repo (confirm with `ls skills/`): `autonomous-ai-agents`
 
 Pick the closest existing category. Don't invent new top-level categories casually.
 
+## CLI-Anything-Inspired Agent-Friendly Format
+
+There's also an **agent-friendly format** inspired by [CLI-Anything](https://github.com/HKUDS/CLI-Anything). Use this when you want other AI agents to easily discover and use the skill's capabilities.
+
+### Format Pattern
+
+```yaml
+---
+name: "hermes-<capability>"
+description: >-
+  One-line description of what this capability does
+---
+
+# hermes-<capability>
+
+[Description paragraph]
+
+## Installation
+[Prerequisites if any]
+
+## Usage
+
+### Basic Commands
+
+```bash
+# Example commands
+hermes <capability> --help
+```
+
+## Command Groups
+
+### Group Name
+
+| Command | Description |
+|---------|-------------|
+| `subcommand` | What it does |
+
+## Examples
+
+### Example Title
+
+```bash
+hermes <capability> subcommand --arg value
+```
+
+## For AI Agents
+
+When using programmatically:
+
+1. **Use `--json`** — Get parseable output
+2. **Check return codes** — 0 for success
+3. **Use absolute paths** — For file operations
+4. **Set timeout** — Prevent hanging
+5. **Use `--help`** — Always available
+
+## Output Formats
+
+- **Human-readable** (default): Formatted tables/text
+- **JSON** (`--json` flag): Structured for agent consumption
+
+## More Information
+
+[Links]
+```
+
+### When to Use This Format
+
+- Skill will be used by other AI agents (Claude Code, Copilot, etc.)
+- Need standardized command interface
+- Want `--json` output mode support
+- Commands need structured documentation
+
+### Key Differences from Standard Format
+
+| Aspect | Standard | Agent-Friendly |
+|--------|----------|----------------|
+| Trigger | "Use when ..." | "For AI agents" section |
+| Examples | Generic | Real CLI commands |
+| Output | Implicit | Explicit `--json` docs |
+| Audience | Human | Human + Agent |
+
 ## Workflow
 
 1. **Survey peers** in the target category:

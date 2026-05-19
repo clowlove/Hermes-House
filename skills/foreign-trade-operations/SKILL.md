@@ -282,3 +282,176 @@ and [其他卖点].</p>
 | 主页 | `/home/ubuntu/shengtuo-tractor/index.html` |
 | GitHub 仓库 | https://github.com/githubtalk/shengtuo-tractor |
 | Cloudflare | https://dash.cloudflare.com |
+
+---
+
+### 报价单翻译工作流
+
+将盛拓农机报价单（`.docx`）翻译为法语、西班牙语等版本，保持格式不变。
+
+### 盛拓报价单结构（实际文档）
+
+共有 **13个表格**，按马力段分布：
+
+| 表格 | 产品系列 | 马力范围 |
+|------|----------|----------|
+| Table 0 | TS170-ST200 | 17-20HP |
+| Table 1 | ST254Y-ST504Y | 25-50HP |
+| Table 2 | ST304-ST504 | 30-50HP |
+| Table 3 | ST504D MINI.GARDEN | 50HP |
+| Table 4 | ST504-ST704 GARDEN | 50-70HP |
+| Table 5 | ST504-ST704 | 50-70HP |
+| Table 6 | ST604-ST704 | 60-70HP |
+| Table 7 | ST504B-ST1004B | 50-100HP |
+| Table 8 | ST904-ST1304 | 90-130HP |
+| Table 9 | ST1404-ST1804 | 140-180HP |
+| Table 10 | ST2004-ST2104 | 200-210HP |
+| Table 11 | ST2204-ST2404 | 220-240HP |
+| Table 12 | ST2604 | 260HP |
+
+**段落内容（需翻译）：**
+- Paragraph 1: 公司介绍（长段落，包含多句）
+- Paragraph 2: "We are looking forward to cooperating with you!"
+
+**不翻译内容：**
+- Heading 1: 文档标题（"Shengtuo" Company Profile...）
+- Heading 3: "Get in Touch:" / "Follow Us for Updates & Videos:"
+- 联系信息段落（人名 Henry、电话、邮箱、地址、社交媒体）
+
+### 扩展技术词汇（英→法）
+
+| 英文 | 法语 |
+|------|------|
+| 2WD / TWO WHEEL DRIVE | 2RM / DEUX ROUES MOTRICES |
+| 4WD / FOUR WHEEL DRIVE | 4RM / QUATRE ROUES MOTRICES |
+| Type de roues | Type de roues |
+| Empattement | wheel base |
+| Garde au sol | Ground Clearance |
+| Masse | Structure mass |
+| Lest roue avant/arrière | Front/Rear Wheel ballast |
+| Marque moteur | Engine Brand |
+| Type moteur | Engine Type |
+| Carburant | Fuel |
+| Gasole | Diesel oil |
+| Pneumatique | Tyre |
+| Roue avant/arrière | Front/Rear wheel |
+| Embrayage mono-disque | Single-stage clutch |
+| Direction mécanique | Mechanical steering |
+| Direction assistée | Power steering |
+| Boîte de vitesses | Transmission box |
+| Méthode de transmission | Transmission method |
+| Courroie trapézoïdale | V-belt |
+| Suspension trois points | Tri-point suspension |
+| PDF latérale / Prise de force | SIDE PTO |
+| Type semi-indépendant | Semi-indenendent type |
+| Cadre métallique | iron frame |
+| Conteneur | container |
+| Conteneur 40' | 40' container / 40HQ |
+| Tracteur de jardin | Garden tractor |
+| Mini tracteur | Mini tractor |
+| AVEC CABINE | CABIN ADD |
+| CLIMATISATION | A/C |
+| PDF AVANT ET SUSPENSION | FRONT PTO AND SUSPENSION |
+| ARCEAU | ROPS |
+| Toit solaire | Sun canopy |
+| INVERSEUR | SHUTTLE SHIFTS |
+| Secteur denté | Gear sector |
+| REFROIDISSEUR | water cooled |
+| Refroidi par eau | water cooled |
+| Cylindre unique horizontal | Single cylinder Horizontal |
+| Frein sec, disques | Dry brake,discs |
+| Type suralimenté | Turbo / Aspiration |
+| Jusqu'à l'évent d'échappement | to the exhaust vent |
+| Jusqu'au lest avant | to front ballast |
+
+### 段落翻译示例（公司介绍）
+
+**原文：**
+> Shandong Shengtuo Heavy Industry Co.,Ltd.(short for Shengtuo) is a high-level agricultural equipment manufacturer. Shengtuo is located in Weifang City Shandong province, with investment amount of one hundred million Yuan, covers an area of 25,000 square meters, The annual production capacity is 15,000 sets of agricultural machines. The main product is tractor of 25hp--260hp. All the tractor models have been in the List of Government subsidies. Shengtuo has marketing network all over the China, and the tractors have been exported to more than 20 countries. Shengtuo, believes in "honesty, innovation, quality and win-win", for us, the responsibility is the most important, and we will never change the first mind to con-centrate on making tractors, to push the modern Mechanized agriculture!
+
+**译文：**
+> Shandong Shengtuo Heavy Industry Co., Ltd. (abréviation : Shengtuo) est un fabricant d'équipements agricoles de haut niveau. Shengtuo est situé dans la ville de Weifang, province du Shandong, avec un investissement de cent millions de yuans, couvrant une superficie de 25 000 mètres carrés. La capacité de production annuelle est de 15 000 ensembles de machines agricoles. Le produit principal est le tracteur de 25 à 260 ch. Tous les modèles de tracteurs sont inscrits sur la liste des subventions gouvernementales. Shengtuo dispose d'un réseau commercial dans toute la Chine, et les tracteurs ont été exportés vers plus de 20 pays. Shengtuo croit en « honnêteté, innovation, qualité et gain partagé » ; pour nous, la responsabilité est la plus importante, et nous ne changerons jamais notre engagement à nous concentrer sur la fabrication de tracteurs, pour promouvoir l'agriculture mécanisée moderne !
+
+### Python 环境注意
+
+**关键发现：** Hermes Agent 的 venv 在 `/home/ubuntu/.hermes/hermes-agent/venv/bin/python3` 没有 python-docx。系统 Python 在 `/usr/bin/python3` 有（通过 pip install --user 安装）。
+
+**运行翻译脚本必须用：**
+```bash
+/usr/bin/python3 /path/to/translate_script.py
+```
+
+不要用 `hermes-agent` 的 venv Python，会报 `ModuleNotFoundError: No module named 'docx'`。
+
+### 翻译脚本模板
+
+```python
+#!/usr/bin/env python3
+"""Translate document to target language"""
+
+from docx import Document
+
+TRANSLATIONS = {
+    # 原文: 译文
+    "Original English text": "Translated text",
+}
+
+def translate_text(text):
+    if not text:
+        return text
+    for eng, fr in TRANSLATIONS.items():
+        if eng in text:
+            text = text.replace(eng, fr)
+    return text
+
+def process_document(input_path, output_path):
+    doc = Document(input_path)
+    
+    for para in doc.paragraphs:
+        # Skip headers
+        if para.style and 'Heading' in para.style.name:
+            continue
+        original = para.text
+        if original.strip():
+            translated = translate_text(original)
+            if translated != original:
+                for run in para.runs:
+                    run.text = ""
+                para.runs[0].text = translated if para.runs else translated
+    
+    for table in doc.tables:
+        for row in table.rows:
+            for cell in row.cells:
+                for para in cell.paragraphs:
+                    if para.style and 'Heading' in para.style.name:
+                        continue
+                    original = para.text.strip()
+                    if original:
+                        translated = translate_text(original)
+                        if translated != original:
+                            for run in para.runs:
+                                run.text = ""
+                            para.runs[0].text = translated if para.runs else translated
+    
+    doc.save(output_path)
+
+if __name__ == "__main__":
+    import sys
+    input_file = sys.argv[1]
+    output_file = sys.argv[2]
+    process_document(input_file, output_file)
+```
+
+**运行：**
+```bash
+/usr/bin/python3 translate_doc.py input.docx output.docx
+```
+
+### 关键原则
+
+1. **参数标签翻译**：Horsepower → Puissance，但数值和单位保留
+2. **型号名称不翻译**：TS904、ST504D 等保持原样
+3. **价格不翻译**：US$、FOB QINGDAO 保留
+4. **技术规格不翻译**：发动机品牌、型号、轮胎规格等
+5. **人名/联系信息不翻译**：Henry、电话、邮箱、地址
+6. **页眉不翻译**：Heading 样式跳过
