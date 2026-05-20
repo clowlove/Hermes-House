@@ -87,16 +87,20 @@ def add_entry(title, content, commit=False):
     section = format_section(title, content)
     
     # 读取现有内容
+    if not JOURNAL_FILE.exists():
+        JOURNAL_FILE.parent.mkdir(parents=True, exist_ok=True)
+        JOURNAL_FILE.write_text("# Hermès Journal\n\n---\n\n*本日志由 Hermès 自动生成*\n", encoding="utf-8")
+
     with open(JOURNAL_FILE, 'r', encoding='utf-8') as f:
-        content = f.read()
+        existing = f.read()
     
-    # 找到 "---" 分隔符，在其前插入新内容
+# 找到 "---\n\n*本日志由" 分隔符，在其前插入新内容
     marker = "\n---\n\n*本日志由"
-    if marker in content:
-        parts = content.split(marker)
+    if marker in existing:
+        parts = existing.split(marker)
         new_content = parts[0] + section + "---\n" + marker + parts[1]
     else:
-        new_content = section + "\n---\n" + content
+        new_content = section + "\n---\n" + existing
     
     # 写入
     with open(JOURNAL_FILE, 'w', encoding='utf-8') as f:
