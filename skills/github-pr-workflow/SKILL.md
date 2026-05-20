@@ -275,7 +275,24 @@ When asked to auto-fix CI, follow this loop:
 
 ## 6. Merging
 
-**With gh:**
+### The `gh pr merge` Command — What Works and What Doesn't
+
+```bash
+# ✓ This works: squash + delete branch (non-interactive on most gh versions)
+gh pr merge N --squash --delete-branch
+
+# ✗ This flag DOES NOT EXIST — don't use it:
+gh pr merge N --no-editor    # unknown flag — will error
+
+# ✓ For fully non-interactive programmatic merge, use the REST API directly:
+gh api --method PUT repos/$OWNER/$REPO/pulls/$PR_NUMBER/merge \
+  -f merge_method=squash -f delete_branch=true
+# Returns: {"merged": true, "message": "Pull Request successfully merged"}
+```
+
+> **Key insight:** When scripting batch merges (e.g., merging all dependabot CI bumps), prefer the REST API over `gh pr merge` CLI. The API call is deterministic, returns JSON, and has no flag compatibility issues across gh versions.
+
+### Merge with gh (CLI)
 
 ```bash
 # Squash merge + delete branch (cleanest for feature branches)
@@ -284,11 +301,11 @@ gh pr merge --squash --delete-branch
 # Enable auto-merge (merges when all checks pass)
 gh pr merge --auto --squash --delete-branch
 
-# Merge when PR is already approved (no interactive prompts needed)
+# Merge when PR is already approved from a reviewer who is also admin
 gh pr merge --admin --merge
 ```
 
-> **Note:** When the PR already has approval from a reviewer and you want to merge immediately without any prompts, use `--admin --merge`. This is faster than `--squash --delete-branch` which prompts for confirmation.
+> **Note:** When the PR already has approval and you want to merge immediately without prompts, use `--admin --merge`. Faster than `--squash --delete-branch` which may prompt depending on gh version.
 
 **With git + curl:**
 
