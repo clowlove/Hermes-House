@@ -1,0 +1,24 @@
+{
+  "name": "trendradar",
+  "version": "1.0.0",
+  "description": "TrendRadar trend monitoring and Telegram push — trigger crawl, fetch news, categorize, send multi-message Telegram notifications, archive to Obsidian, sync to GitHub. Use when asked to run daily trend reports or push trending news to Telegram.",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "",
+  "hermes": {
+    "skill_category": "social-media",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
