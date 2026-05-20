@@ -26,7 +26,7 @@
   "productivity/linear": "2c773d83ca0e95531e0aedfd58eb413c",
   "mlops/huggingface-hub": "bd347d63456532e9c0139596fd8d0dfa",
   "devops/custom-openai-provider": "ef332d12e8a85d48af75926d1ae16cad",
-  "devops/hermes-telegram-setup": "340c1b283cdd6145b509e7b5cdf986eb",
+  "devops/hermes-telegram-setup": "aa612aa2cdb451488bffbacd5faf02ea",
   "devops/webhook-subscriptions": "b72584938b1910d80cb251c7981d7803",
   "devops/scrapling": "1d76fb838f74247b236ca12db39f07d4",
   "devops/model-fallback": "a760e29f1c61bb706b19f739680445c4",
@@ -93,9 +93,9 @@
   "mlops/vector-databases": "3ee93ae362942b11e5afec018d812d49",
   "mlops/evaluation": "85b2128ba81e95825f790bdf9ddaf405",
   "mlops/research": "56103d2142d5e194c3388537d6636182",
-  "mlops/inference": "606a671c8c5d3cc53cbb7bd64b614adc",
+  "mlops/inference": "4b62500a7b91f3f50780e6426cc13754",
   "devops/website-seo": "7101fe8fa51197824b375c8fef2fa6a4",
   "seo/seo-verify": "5dcbae3a323d3770333bf5a6034c3f73",
-  "productivity/foreign-trade-operations": "4115400d2a42714034b27ee5ca985b4e",
+  "productivity/foreign-trade-operations": "bdcd55336de78f74a4dc2abfaa389fcf",
   "social-media/github-trend-daily": "9f38b0c020eef16c7da131938eca4614"
 }
