@@ -238,6 +238,60 @@ pip install --upgrade mcp
 - Look at Hermes Agent startup logs for connection messages
 - Tool names are prefixed with `mcp_{server}_{tool}` -- look for that pattern
 
+### "MCP server 'X' is unreachable after N consecutive failures"
+
+**Symptoms:** `ps aux` shows the server process running, but hermes-agent tool calls fail with `TimeoutError`. Direct `curl` to the server's HTTP endpoint returns `Not Found` or other unexpected responses.
+
+**Root cause patterns:**
+
+1. **Server running but not responding to MCP protocol** — `curl http://localhost:3333/` returns something like "Not Found" even though the process is alive. This means the server is running but the endpoint path or headers are wrong.
+
+2. **Missing HTTP protocol headers** — MCP HTTP servers (especially StreamableHTTP transport) require specific headers on every request:
+   - `Accept: application/json, text/event-stream` — server rejects requests without this
+   - `Content-Type: application/json`
+   
+   Without these, the server returns 406 or other errors.
+
+3. **Missing session ID** — StreamableHTTP MCP servers require an `MCP-Session-ID` header, obtained from the `initialize` response's `mcp-session-id` header. Without it, subsequent calls fail with `Invalid request parameters`.
+
+**Diagnosis with curl (HTTP servers):**
+
+```bash
+# Test if server is alive at all
+curl -s --max-time 5 http://localhost:3333/ && echo "Server alive"
+
+# Test MCP initialize (check response headers for mcp-session-id)
+curl -s --max-time 10 -i -X POST http://localhost:3333/mcp \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json, text/event-stream" \
+  -d '{"jsonrpc":"2.0","method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"test","version":"1.0"}},"id":1}' 2>&1
+
+# If you see "Not Acceptable" → missing Accept header
+# If you see "Missing session ID" → server requires MCP-Session-ID header
+# If you see a valid JSON response with serverInfo → server is healthy
+```
+
+**Fix approaches (in order of preference):**
+
+1. **Restart the MCP server process** — often resolves transient state issues:
+   ```bash
+   pkill -f "mcp_server.server --transport=http --port=3333"
+   sleep 2
+   # Restart with same command from original launch
+   ```
+
+2. **Check server logs** — look for startup errors, port conflicts, import failures:
+   ```bash
+   cat /tmp/trendradar_mcp.log 2>/dev/null || journalctl | grep mcp
+   ```
+
+3. **Verify config.yaml** — some MCP servers require a config file:
+   ```bash
+   cd /path/to/mcp/server && ls -la config.yaml 2>/dev/null
+   ```
+
+**Important:** If `ps aux` shows the server running but hermes-agent still fails, the server process may be in a broken state (e.g., an import error at startup that caused it to crash after backgrounding). Restarting the process often fixes it. Do NOT assume "process running = working."
+
 ### Connection keeps dropping
 
 The client retries up to 5 times with exponential backoff (1s, 2s, 4s, 8s, 16s, capped at 60s). If the server is fundamentally unreachable, it gives up after 5 attempts. Check the server process and network connectivity.
