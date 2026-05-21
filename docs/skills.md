@@ -1,5 +1,15 @@
 # 技能索引
 
+Harmes-House 当前包含 101 个技能。默认安装只启用推荐的 A+B 档，避免把强场景/个人化/C 档技能全部塞进 Hermes。
+
+```bash
+bash scripts/install.sh --core      # A 档核心，32 个
+bash scripts/install.sh --standard  # A+B 推荐，78 个，默认
+bash scripts/install.sh --full      # 全量，101 个
+```
+
+完整分级见 [SKILLS_AUDIT.md](SKILLS_AUDIT.md)。
+
 ## devops
 
 | 技能 | 描述 | 状态 |

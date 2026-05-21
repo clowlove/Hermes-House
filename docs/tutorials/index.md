@@ -1,24 +1,26 @@
 # Tutorials
 
-Collection of step-by-step guides for using Hermès Agent.
+Collection of step-by-step guides for using Hermès Agent and Harmes-House.
 
-## Getting Started
+## Available
 
-1. [Quick Start Guide](./getting-started.md) - Set up your first agent
-2. [First Skill](./first-skill.md) - Create your first skill
-3. [Memory System](./memory-system.md) - Understand the 4-layer memory
+1. [Quick Start Guide](./getting-started.md) — install Hermes Agent and sync the Harmes-House skill pack
+2. [Skills Index](../skills.md) — browse the available skills
+3. [Architecture Patterns](../evolution/architecture-patterns.md) — understand the agent patterns used by the project
+4. [Evolution Log](../evolution/log-2026-05.md) — follow the project growth history
 
-## Intermediate
+## Planned
 
-4. [Using TrendRadar](./trendradar-guide.md) - Master news aggregation
-5. [GitHub Automation](./github-automation.md) - Automate repo management
-6. [Cron Jobs](./cron-jobs.md) - Schedule recurring tasks
+These tutorials are planned but not written yet:
 
-## Advanced
-
-7. [Multi-Agent Architecture](./multi-agent.md) - Design agent systems
-8. [Custom MCP Integration](./mcp-integration.md) - Extend capabilities
-9. [Performance Optimization](./optimization.md) - Fine-tune your agent
+- Create your first skill
+- Set up TrendRadar
+- Configure notifications
+- GitHub automation
+- Cron jobs
+- Multi-agent architecture
+- Custom MCP integration
+- Performance optimization
 
 ---
 

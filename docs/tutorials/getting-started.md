@@ -1,62 +1,74 @@
 # Quick Start Guide
 
-Get Hermès Agent running in 5 minutes.
+Get Hermès Agent + the Harmes-House skill pack running in 5 minutes.
 
 ## Prerequisites
 
-- Node.js 22.x
-- npm 10.x
-- Telegram account
-- GitHub account (for integrations)
+- Hermes Agent CLI
+- Git + Bash
+- Telegram account (optional)
+- GitHub account / PAT (optional, for integrations)
+- Node.js 22.x only for `projects/*` sub-projects
 
 ## Step 1: Installation
 
 ```bash
-# Clone the repository
+# Install Hermes Agent core
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+
+# Clone the Harmes-House skill/evolution hub
 git clone https://github.com/clowlove/Harmes-House.git
 cd Harmes-House
 
-# Install dependencies
-npm install
+# Install recommended A+B skills into the active Hermes home
+bash scripts/install.sh
+
+# Optional install modes:
+# bash scripts/install.sh --core      # 32 core skills
+# bash scripts/install.sh --standard  # 78 recommended skills (default)
+# bash scripts/install.sh --full      # all 101 skills
 ```
 
 ## Step 2: Configuration
 
 ```bash
-# Copy environment template
+# Copy environment template when using Telegram / GitHub integrations
 cp .env.example .env
 
 # Edit with your API keys
 nano .env
 ```
 
-Required environment variables:
+Common environment variables:
 - `ANTHROPIC_API_KEY` - Claude API key
 - `TELEGRAM_BOT_TOKEN` - Telegram bot token
 - `GITHUB_TOKEN` - GitHub PAT
+- `OPENROUTER_API_KEY` / `MINIMAX_API_KEY` - optional model providers
 
 ## Step 3: Start
 
 ```bash
-# Run in development
-npm run dev
+# Start Hermes normally
+hermes
 
-# Or run in production
-npm start
+# Or preload one or more installed skills
+hermes -s hermes-agent,github-pr-workflow
 ```
 
 ## Step 4: Verify
 
-1. Open Telegram
-2. Send `/start` to your bot
-3. You should receive a welcome message
+```bash
+hermes skills list
+```
+
+You should see Harmes-House skills available from your Hermes installation.
 
 ## What's Next?
 
-- [Create your first skill](../tutorials/first-skill.md)
-- [Set up TrendRadar](../tutorials/trendradar-guide.md)
-- [Configure notifications](../guides/notifications.md)
+- [Browse available skills](../skills.md)
+- [Read the architecture patterns](../evolution/architecture-patterns.md)
+- [Review the evolution log](../evolution/log-2026-05.md)
 
 ---
 
-*Stuck? Check [Troubleshooting](./troubleshooting.md) or ask on Telegram.*
+*Stuck? Run `hermes doctor` first, then check the repository issues or ask on Telegram.*
