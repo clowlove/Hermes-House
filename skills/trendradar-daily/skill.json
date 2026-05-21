@@ -1,0 +1,27 @@
+{
+  "name": "trendradar-daily",
+  "version": "1.0.0",
+  "description": "TrendRadar 多平台热点监控日报生成与 Telegram 推送",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": [
+    "social-media",
+    "trendradar-daily"
+  ],
+  "hermes": {
+    "skill_category": "social-media",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
