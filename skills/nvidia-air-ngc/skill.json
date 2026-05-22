@@ -1,0 +1,27 @@
+{
+  "name": "nvidia-air-ngc",
+  "version": "1.0.0",
+  "description": "NVIDIA Air (air-ngc.nvidia.com) API 操作 — 认证、端点、服务器实例创建。NVIDIA GPU 云仿真平台，支持 GPU 驱动的云端仿真环境。",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": [
+    "devops",
+    "nvidia-air-ngc"
+  ],
+  "hermes": {
+    "skill_category": "devops",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
