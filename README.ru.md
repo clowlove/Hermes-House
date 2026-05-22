@@ -13,13 +13,13 @@
   <a href="README.ko.md">한국어</a>
 </p>
 
-<a href="https://github.com/sponsors/clowlove">
+<a href="https://github.com/sponsors/[REDACTED]">
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge&logo=github-sponsors" alt="Sponsor">
 </a>
-<a href="https://github.com/clowlove/Harmes-House/stargazers">
+<a href="https://github.com/[REDACTED]/Harmes-House/stargazers">
   <img src="https://img.shields.io/github/stars/clowlove/Harmes-House?style=for-the-badge" alt="Stars">
 </a>
-<a href="https://github.com/clowlove/Harmes-House/network/members">
+<a href="https://github.com/[REDACTED]/Harmes-House/network/members">
   <img src="https://img.shields.io/github/forks/clowlove/Harmes-House?style=for-the-badge" alt="Forks">
 </a>
 
@@ -38,7 +38,7 @@
 
 ```bash
 # Клонировать репозиторий
-git clone https://github.com/clowlove/Harmes-House.git
+git clone https://github.com/[REDACTED]/Harmes-House.git
 cd Harmes-House
 
 # Список доступных навыков
@@ -108,7 +108,7 @@ Harmes-House/
 
 Если проект полезен, рассмотрите спонсорскую поддержку:
 
-[![Sponsor](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge)](https://github.com/sponsors/clowlove)
+[![Sponsor](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge)](https://github.com/sponsors/[REDACTED])
 
 Спонсоры появятся в списке благодарностей и получат:
 - ✅ Приоритетные запросы функций

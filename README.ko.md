@@ -13,13 +13,13 @@
   <a href="README.ko.md"><b>한국어</b></a>
 </p>
 
-<a href="https://github.com/sponsors/clowlove">
+<a href="https://github.com/sponsors/[REDACTED]">
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-후원-orange?style=for-the-badge&logo=github-sponsors" alt="후원">
 </a>
-<a href="https://github.com/clowlove/Harmes-House/stargazers">
+<a href="https://github.com/[REDACTED]/Harmes-House/stargazers">
   <img src="https://img.shields.io/github/stars/clowlove/Harmes-House?style=for-the-badge" alt="스타">
 </a>
-<a href="https://github.com/clowlove/Harmes-House/network/members">
+<a href="https://github.com/[REDACTED]/Harmes-House/network/members">
   <img src="https://img.shields.io/github/forks/clowlove/Harmes-House?style=for-the-badge" alt="포크">
 </a>
 
@@ -38,7 +38,7 @@
 
 ```bash
 # 레포 클론
-git clone https://github.com/clowlove/Harmes-House.git
+git clone https://github.com/[REDACTED]/Harmes-House.git
 cd Harmes-House
 
 # 사용 가능한 스킬 목록
@@ -108,7 +108,7 @@ Harmes-House/
 
 이 프로젝트가 유용하다면 후원을 고려해 주세요:
 
-[![후원](https://img.shields.io/badge/GitHub%20Sponsors-후원-orange?style=for-the-badge)](https://github.com/sponsors/clowlove)
+[![후원](https://img.shields.io/badge/GitHub%20Sponsors-후원-orange?style=for-the-badge)](https://github.com/sponsors/[REDACTED])
 
 후원자는 감사 리스트에 표시되며 다음을 받습니다:
 - ✅ 우선 기능 요청

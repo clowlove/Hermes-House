@@ -13,7 +13,7 @@ Get Hermès Agent running in 5 minutes.
 
 ```bash
 # Clone the repository
-git clone https://github.com/clowlove/Harmes-House.git
+git clone https://github.com/[REDACTED]/Harmes-House.git
 cd Harmes-House
 
 # Install dependencies

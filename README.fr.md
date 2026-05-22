@@ -13,13 +13,13 @@
   <a href="README.ko.md">한국어</a>
 </p>
 
-<a href="https://github.com/sponsors/clowlove">
+<a href="https://github.com/sponsors/[REDACTED]">
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge&logo=github-sponsors" alt="Sponsoriser">
 </a>
-<a href="https://github.com/clowlove/Harmes-House/stargazers">
+<a href="https://github.com/[REDACTED]/Harmes-House/stargazers">
   <img src="https://img.shields.io/github/stars/clowlove/Harmes-House?style=for-the-badge" alt="Étoiles">
 </a>
-<a href="https://github.com/clowlove/Harmes-House/network/members">
+<a href="https://github.com/[REDACTED]/Harmes-House/network/members">
   <img src="https://img.shields.io/github/forks/clowlove/Harmes-House?style=for-the-badge" alt="Forks">
 </a>
 
@@ -38,7 +38,7 @@
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/clowlove/Harmes-House.git
+git clone https://github.com/[REDACTED]/Harmes-House.git
 cd Harmes-House
 
 # Lister les compétences disponibles
@@ -108,7 +108,7 @@ Journal complet : [hermes-journal.md](hermes-journal.md)
 
 Si ce projet vous est utile, veuillez envisager de le sponsoriser :
 
-[![Sponsoriser](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge)](https://github.com/sponsors/clowlove)
+[![Sponsoriser](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge)](https://github.com/sponsors/[REDACTED])
 
 Les sponsors apparaîtront dans notre liste de remerciements et recevront :
 - ✅ Demandes de fonctionnalités prioritaires

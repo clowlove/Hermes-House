@@ -111,7 +111,7 @@ jobs:
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
           git checkout -b "$BRANCH"
           git config user.name "Hermès Agent"
-          git config user.email "hermes@clowlove.dev"
+          git config user.email "[REDACTED]"
           git add -A
           if git diff --staged --quiet; then
             echo "No changes to commit"
@@ -181,7 +181,7 @@ jobs:
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
           git checkout -b "$BRANCH"
           git config user.name "Hermès Agent"
-          git config user.email "hermes@clowlove.dev"
+          git config user.email "[REDACTED]"
           git add hermes-journal.md
           if git diff --staged --quiet; then
             echo "No changes to commit"

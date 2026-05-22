@@ -44,7 +44,7 @@ npm run build
 
 如果你觉得这个工具对你有帮助：
 
-[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge&logo=github-sponsors)](https://github.com/sponsors/clowlove)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge&logo=github-sponsors)](https://github.com/sponsors/[REDACTED])
 
 ## 许可证
 
