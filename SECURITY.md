@@ -13,7 +13,7 @@ If you discover a security vulnerability, please report it responsibly.
 ### How to Report
 
 1. **Do NOT** create a public GitHub issue
-2. Send details to: @talkcn (Telegram)
+2. Send details to: [Telegram Handle] (Telegram)
 3. Include:
    - Description of the vulnerability
    - Steps to reproduce

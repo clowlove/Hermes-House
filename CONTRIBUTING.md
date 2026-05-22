@@ -70,7 +70,7 @@ npm run lint
 ## Questions?
 
 - GitHub Issues: Bug reports & feature requests
-- Telegram: @talkcn
+- Telegram: [Telegram Handle]
 
 ---
 

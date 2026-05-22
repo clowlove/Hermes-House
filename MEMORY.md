@@ -9,7 +9,7 @@
 - **用户**: 亨利 (Henry)，GitHub: clowlove
 - **语言**: 中文
 - **沟通风格**: 简洁直接，不废话
-- **Telegram**: @talkcn（已连接）
+- **Telegram**: [Telegram Handle]（已连接）
 - **时区**: 中国（晚间休息）
 
 ---

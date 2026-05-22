@@ -125,9 +125,9 @@ Harmes-House/
 - 🔑 License key 激活系统（hermes-trendradar Pro）
 - 🔄 终身更新和技术支持
 
-**付款方式：** [https://paypal.me/talkcn](https://paypal.me/talkcn)
+**付款方式：** [https://paypal.me/[PayPal Handle]](https://paypal.me/[PayPal Handle])
 
-付款后，通过 Telegram [@Talkcn](https://t.me/Talkcn) 或邮件联系，获取私有复刻邀请。
+付款后，通过 Telegram [[Telegram Handle]](https://t.me/Talkcn) 或邮件联系，获取私有复刻邀请。
 
 ## 📝 许可证
 
