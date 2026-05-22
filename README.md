@@ -328,7 +328,7 @@ Want the **full source code** with complete documentation?
 - 🔑 License key activation system
 - 🔄 Lifetime updates
 
-**Payment:** [https://paypal.me/[PayPal Handle]](https://paypal.me/[PayPal Handle])
+**Payment:** [https://paypal.me/[REDACTED]](https://paypal.me/[REDACTED])
 
 After payment, contact via Telegram [[Telegram Handle]](https://t.me/Talkcn) or email to receive your private fork invitation.
 
