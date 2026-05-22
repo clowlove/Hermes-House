@@ -53,7 +53,11 @@ Persistent, layered memory architecture:
 | L3 | Semantic | Knowledge | Long-term |
 
 ### 🛠️ Modular Skills Library
-**63+ pre-built skills** ready to use:
+**101 pre-built skills** with tiered installation:
+
+- `--core` — 32 A-tier core skills
+- `--standard` — 78 A+B recommended skills (default)
+- `--full` — all 101 skills, including specialized/personal C-tier skills
 
 | Category | Skills |
 |----------|--------|
@@ -115,48 +119,58 @@ Persistent, layered memory architecture:
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 22.x or higher
-- npm 10.x or higher
-- Telegram account (for bot integration)
-- GitHub account (for automation)
+- Hermes Agent CLI installed
+- Git + Bash
+- Telegram account (optional, for bot integration)
+- GitHub account / PAT (optional, for automation)
+- Node.js 22.x only if you plan to run the `projects/*` sub-projects
 
 ### Installation
 
 ```bash
-# Clone the repository
+# 1) Install Hermes Agent core first
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+
+# 2) Clone the Harmes-House skill/evolution hub
 git clone https://github.com/clowlove/Harmes-House.git
 cd Harmes-House
 
-# Explore available skills
-ls skills/
+# 3) Install the recommended A+B skill pack into the active Hermes home
+bash scripts/install.sh
 
-# View AI growth journal
-cat hermes-journal.md
+# Optional install modes:
+# bash scripts/install.sh --core      # 32 core skills
+# bash scripts/install.sh --standard  # 78 recommended skills (default)
+# bash scripts/install.sh --full      # all 101 skills
+
+# 4) Verify
+hermes skills list
 ```
 
 ### Configuration
 
 ```bash
-# Copy environment template
+# Copy environment template when using Telegram / GitHub integrations
 cp .env.example .env
 
 # Edit with your API keys
 nano .env
 ```
 
-Required environment variables:
+Common environment variables:
 - `ANTHROPIC_API_KEY` — Claude API key
-- `TELEGRAM_BOT_TOKEN` — Telegram bot token  
+- `TELEGRAM_BOT_TOKEN` — Telegram bot token
 - `GITHUB_TOKEN` — GitHub Personal Access Token
+- `OPENROUTER_API_KEY` / `MINIMAX_API_KEY` — optional model providers
 
 ### Running
 
 ```bash
-# Development mode
-npm run dev
+# Start Hermes normally
+hermes
 
-# Production mode
-npm start
+# Or preload one or more installed skills
+hermes -s hermes-agent,github-pr-workflow
 ```
 
 ---
@@ -168,11 +182,11 @@ Harmes-House/
 ├── AGENTS.md              # AI identity definition
 ├── hermes-journal.md      # AI self-recorded growth journal
 │
-├── skills/                # 63+ modular skills
+├── skills/                # 101 modular skills
 │   ├── trendradar/        # News aggregation skill
 │   ├── github/            # GitHub automation
 │   ├── data-science/      # Data analysis tools
-│   └── ...                # 60+ more skills
+│   └── ...                # more skills
 │
 ├── docs/                  # Documentation
 │   ├── architecture/     # System architecture
@@ -203,7 +217,7 @@ Harmes-House/
 Latest entries from [hermes-journal.md](hermes-journal.md):
 
 <!-- JOURNAL_PREVIEW -->
-- **2026-05-17** — Skill library expanded to 63+ skills
+- **2026-05-17** — Skill library expanded to 101 skills
 - **2026-05-15** — GitHub monetization infrastructure deployed
 - **2026-05-12** — Self-improvement engine v2 complete
 - **2026-05-10** — Documentation site launched
@@ -215,7 +229,7 @@ Latest entries from [hermes-journal.md](hermes-journal.md):
 | Metric | Value |
 |--------|-------|
 | Days Running | 14+ |
-| Skills Available | 63+ |
+| Skills Available | 101 |
 | Git Commits | 200+ |
 | Sub-projects | 2 |
 | Code Review PRs | 20+ |
@@ -235,7 +249,7 @@ Latest entries from [hermes-journal.md](hermes-journal.md):
 | `huggingface` | Model Hub integration | ML/AI |
 | `telegram` | Bot commands & notifications | Automation |
 
-**[View all 63+ skills →](docs/skills.md)**
+**[View skills →](docs/skills.md)** — full tier audit: [docs/SKILLS_AUDIT.md](docs/SKILLS_AUDIT.md)
 
 ---
 
