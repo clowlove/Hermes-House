@@ -6,7 +6,7 @@
 
 ## 用户信息
 
-- **用户**: 亨利 (Henry)，GitHub: clowlove
+- **用户**: 亨利 (Henry)，GitHub: [REDACTED]
 - **语言**: 中文
 - **沟通风格**: 简洁直接，不废话
 - **Telegram**: [Telegram Handle]（已连接）
@@ -16,9 +16,9 @@
 
 ## 项目背景
 
-- **母仓库**: [clowlove/Harmes-House](https://github.com/[REDACTED]/Harmes-House)
+- **母仓库**: [[REDACTED]/Harmes-House](https://github.com/[REDACTED]/Harmes-House)
 - **定位**: AI Agent 进化基地，参考 NousResearch/hermes-agent 架构
-- **备份仓库**: clowlove/hermes-backups（私有，每日 01:00 自动备份）
+- **备份仓库**: [REDACTED]/hermes-backups（私有，每日 01:00 自动备份）
 - **TrendRadar MCP**: 运行在 port 3333，9 个话题，255 条新闻
 
 ---
