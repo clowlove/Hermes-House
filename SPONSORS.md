@@ -9,8 +9,8 @@
 https://github.com/sponsors/[REDACTED]
 
 ### 一次性赞助
-- ☕ Buy Me a Coffee: https://[REDACTED]
-- 💜 PayPal: https://[REDACTED]
+- ☕ Buy Me a Coffee: https://github.com/sponsors
+- 💜 PayPal: https://github.com/sponsors
 
 ## 为什么赞助？
 

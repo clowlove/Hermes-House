@@ -13,14 +13,14 @@
   <a href="README.ko.md">한국어</a>
 </p>
 
-<a href="https://github.com/sponsors/[REDACTED]">
+<a href="https://github.com/sponsors">
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge&logo=github-sponsors" alt="Sponsor">
 </a>
-<a href="https://github.com/[REDACTED]/Harmes-House/stargazers">
-  <img src="https://img.shields.io/github/stars/[REDACTED]/Harmes-House?style=for-the-badge" alt="Stars">
+<a href="https://github.com/nousresearch/hermes-agent">
+  <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="Stars">
 </a>
-<a href="https://github.com/[REDACTED]/Harmes-House/network/members">
-  <img src="https://img.shields.io/github/forks/[REDACTED]/Harmes-House?style=for-the-badge" alt="Forks">
+<a href="https://github.com/nousresearch/hermes-agent">
+  <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="Forks">
 </a>
 
 > 🧩 **AI Agent 进化基地** — 一个不断进化的多 Agent 系统，持续学习、聚合信息、自动化任务。
@@ -38,7 +38,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/[REDACTED]/Harmes-House.git
+git clone https://github.com/nousresearch/hermes-agent.git
 cd Harmes-House
 
 # 查看可用技能
@@ -108,7 +108,7 @@ Harmes-House/
 
 如果您觉得这个项目有用，请考虑赞助支持：
 
-[![Sponsor](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge)](https://github.com/sponsors/[REDACTED])
+[![Sponsor](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge)](https://github.com/sponsors)
 
 赞助者将出现在我们的感谢名单中，并获得：
 - ✅ 优先功能请求
@@ -125,7 +125,7 @@ Harmes-House/
 - 🔑 License key 激活系统（hermes-trendradar Pro）
 - 🔄 终身更新和技术支持
 
-**付款方式：** [https://paypal.me/[REDACTED]](https://paypal.me/[REDACTED])
+**付款方式：** [https://github.com/sponsors](https://github.com/sponsors)
 
 付款后，通过 Telegram [[Telegram Handle]](https://t.me/Talkcn) 或邮件联系，获取私有复刻邀请。
 

@@ -1,13 +1,13 @@
 # Hermès Agent 🤖
 
-<a href="https://github.com/sponsors/[REDACTED]">
+<a href="https://github.com/sponsors">
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge&logo=github-sponsors" alt="Sponsor">
 </a>
-<a href="https://github.com/[REDACTED]/Harmes-House/stargazers">
-  <img src="https://img.shields.io/github/stars/[REDACTED]/Harmes-House?style=for-the-badge" alt="Stars">
+<a href="https://github.com/nousresearch/hermes-agent">
+  <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="Stars">
 </a>
-<a href="https://github.com/[REDACTED]/Harmes-House/network/members">
-  <img src="https://img.shields.io/github/forks/[REDACTED]/Harmes-House?style=for-the-badge" alt="Forks">
+<a href="https://github.com/nousresearch/hermes-agent">
+  <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="Forks">
 </a>
 
 > 🧩 **AI Agent Evolution Hub** — A self-evolving multi-agent system that learns, builds, and earns autonomously
@@ -124,7 +124,7 @@ Persistent, layered memory architecture:
 
 ```bash
 # Clone the repository
-git clone https://github.com/[REDACTED]/Harmes-House.git
+git clone https://github.com/nousresearch/hermes-agent.git
 cd Harmes-House
 
 # Explore available skills
@@ -311,7 +311,7 @@ Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md)
 Support this project and help us build the future of AI agents.
 
 ### GitHub Sponsors
-[![Sponsor](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge)](https://github.com/sponsors/[REDACTED])
+[![Sponsor](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge)](https://github.com/sponsors)
 
 **Benefits:**
 - ✅ Priority feature requests
@@ -328,7 +328,7 @@ Want the **full source code** with complete documentation?
 - 🔑 License key activation system
 - 🔄 Lifetime updates
 
-**Payment:** [https://paypal.me/[REDACTED]](https://paypal.me/[REDACTED])
+**Payment:** [https://github.com/sponsors](https://github.com/sponsors)
 
 After payment, contact via Telegram [[Telegram Handle]](https://t.me/Talkcn) or email to receive your private fork invitation.
 

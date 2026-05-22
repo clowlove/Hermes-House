@@ -92,7 +92,7 @@ The system is evolving. Next phases:
 All code is open source. Clone and run:
 
 ```bash
-git clone https://github.com/[REDACTED]/Harmes-House
+git clone https://github.com/nousresearch/hermes-agent
 cd Harmes-House/projects/hermes-trendradar
 npm install && npm start
 ```

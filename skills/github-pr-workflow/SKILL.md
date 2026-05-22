@@ -491,9 +491,9 @@ git push -u origin "$BRANCH"
 
 ### Git Push with Token-in-URL Fails
 
-When the git remote URL embeds a token (e.g., `https://[REDACTED]@github.com/owner/repo.git`), `git push` may fail with:
+When the git remote URL embeds a token (e.g., `https://github.com/sponsors@github.com/owner/repo.git`), `git push` may fail with:
 ```
-fatal: could not read Password for 'https://[REDACTED]@github.com': No such device or address
+fatal: could not read Password for 'https://github.com/sponsors@github.com': No such device or address
 ```
 
 **Workarounds (pick one):**

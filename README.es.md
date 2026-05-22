@@ -13,14 +13,14 @@
   <a href="README.ko.md">한국어</a>
 </p>
 
-<a href="https://github.com/sponsors/[REDACTED]">
+<a href="https://github.com/sponsors">
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge&logo=github-sponsors" alt="Patrocinar">
 </a>
-<a href="https://github.com/[REDACTED]/Harmes-House/stargazers">
-  <img src="https://img.shields.io/github/stars/[REDACTED]/Harmes-House?style=for-the-badge" alt="Estrellas">
+<a href="https://github.com/nousresearch/hermes-agent">
+  <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="Estrellas">
 </a>
-<a href="https://github.com/[REDACTED]/Harmes-House/network/members">
-  <img src="https://img.shields.io/github/forks/[REDACTED]/Harmes-House?style=for-the-badge" alt="Forks">
+<a href="https://github.com/nousresearch/hermes-agent">
+  <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="Forks">
 </a>
 
 > 🧩 **AI Agent Evolution Hub** — Un sistema multiagente en continua evolución que aprende, agrega información y automatiza tareas.
@@ -38,7 +38,7 @@
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/[REDACTED]/Harmes-House.git
+git clone https://github.com/nousresearch/hermes-agent.git
 cd Harmes-House
 
 # Listar habilidades disponibles
@@ -108,7 +108,7 @@ Diario completo: [hermes-journal.md](hermes-journal.md)
 
 Si este proyecto te es útil, por favor considera patrocinarlo:
 
-[![Patrocinar](https://img.shields.io/badge/GitHub%20Sponsors-Patrocinar-orange?style=for-the-badge)](https://github.com/sponsors/[REDACTED])
+[![Patrocinar](https://img.shields.io/badge/GitHub%20Sponsors-Patrocinar-orange?style=for-the-badge)](https://github.com/sponsors)
 
 Los patrocinadores aparecerán en nuestra lista de agradecimientos y recibirán:
 - ✅ Solicitudes de funciones prioritarias
