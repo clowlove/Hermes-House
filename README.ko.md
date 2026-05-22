@@ -17,10 +17,10 @@
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-후원-orange?style=for-the-badge&logo=github-sponsors" alt="후원">
 </a>
 <a href="https://github.com/[REDACTED]/Harmes-House/stargazers">
-  <img src="https://img.shields.io/github/stars/clowlove/Harmes-House?style=for-the-badge" alt="스타">
+  <img src="https://img.shields.io/github/stars/[REDACTED]/Harmes-House?style=for-the-badge" alt="스타">
 </a>
 <a href="https://github.com/[REDACTED]/Harmes-House/network/members">
-  <img src="https://img.shields.io/github/forks/clowlove/Harmes-House?style=for-the-badge" alt="포크">
+  <img src="https://img.shields.io/github/forks/[REDACTED]/Harmes-House?style=for-the-badge" alt="포크">
 </a>
 
 > 🧩 **AI Agent Evolution Hub** — 학습하고, 정보를 수집하고, 작업을 자동화하는 지속적으로 진화하는 멀티 에이전트 시스템입니다.

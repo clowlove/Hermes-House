@@ -17,10 +17,10 @@
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge&logo=github-sponsors" alt="Sponsoriser">
 </a>
 <a href="https://github.com/[REDACTED]/Harmes-House/stargazers">
-  <img src="https://img.shields.io/github/stars/clowlove/Harmes-House?style=for-the-badge" alt="Étoiles">
+  <img src="https://img.shields.io/github/stars/[REDACTED]/Harmes-House?style=for-the-badge" alt="Étoiles">
 </a>
 <a href="https://github.com/[REDACTED]/Harmes-House/network/members">
-  <img src="https://img.shields.io/github/forks/clowlove/Harmes-House?style=for-the-badge" alt="Forks">
+  <img src="https://img.shields.io/github/forks/[REDACTED]/Harmes-House?style=for-the-badge" alt="Forks">
 </a>
 
 > 🧩 **AI Agent Evolution Hub** — Un système multi-agent en évolution constante qui apprend, agrège des informations et automatise les tâches.
