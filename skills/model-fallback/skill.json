@@ -1,0 +1,24 @@
+{
+  "name": "model-fallback",
+  "version": "1.0.0",
+  "description": "为 Hermes Agent 配置模型故障转移，自动切换到备用模型。类似于 FreeRide 的\"速率限制自动切换\"概念，但专为 Hermes Agent 设计。",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[model, fallback, openrouter, free-ai, redundancy]",
+  "hermes": {
+    "skill_category": ".archive",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

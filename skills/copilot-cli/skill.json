@@ -1,0 +1,24 @@
+{
+  "name": "copilot-cli",
+  "version": "1.1.0",
+  "description": "GitHub Copilot CLI — 安装、认证、三种模式、工具权限、上下文管理、GitHub 集成、Custom Agents、MCP、Hooks",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[copilot, github, cli, agent, mcp]",
+  "hermes": {
+    "skill_category": ".archive",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
