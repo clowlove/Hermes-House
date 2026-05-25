@@ -1,51 +1,86 @@
+# 三 Agent 协作流水线配置
+# 角色分工：
+# - Hermes-A: 数据采集者 (爬取数据、监控趋势)
+# - Hermes-B: 数据分析师 (分析数据、整理报告)
+# - Hermes-C: 结果审核者 (审核结果、决定行动)
+
 pipelines:
-  # 趋势报告流水线
-  # Hermes-A 采集数据 → Hermes-B 分析 → 用户收到报告
-  trend-report:
-    name: "每日趋势报告"
+  # ========== 趋势监控流水线 ==========
+  trend-monitor:
+    name: "多平台趋势监控"
+    description: "A爬数据 → B分析 → C审核 → 用户收到报告"
     stages:
-      - raw:      "Hermes-A 爬取数据"
-      - analyzed: "Hermes-B 分析"
-      - report:   "Hermes-B 生成报告"
-    producers: [hermes-a]
-    consumers: [hermes-b]
-    schedule: "0 8,17 * * *"
+      - stage: raw
+        name: "爬取数据"
+        owner: hermes-a
+      - stage: analyzed
+        name: "分析趋势"
+        owner: hermes-b
+      - stage: reviewed
+        name: "审核确认"
+        owner: hermes-c
+    pipeline: [hermes-a, hermes-b, hermes-c]
+    schedule: "0 */4 * * *"
     deliver_to: telegram
     output_format: markdown
     
-  # 代码扫描流水线
-  # Hermes-A 扫描代码 → Hermes-B 审查 → 创建 PR 评论
-  code-scan:
-    name: "代码质量扫描"
+  # ========== 代码审查流水线 ==========
+  code-review:
+    name: "代码质量审查"
+    description: "A扫描代码 → B审查分析 → C确认评论"
     stages:
-      - scan:   "Hermes-A 扫描"
-      - review: "Hermes-B 审查"
-    producers: [hermes-a]
-    consumers: [hermes-b]
+      - stage: scanned
+        name: "扫描代码问题"
+        owner: hermes-a
+      - stage: reviewed
+        name: "审查分析"
+        owner: hermes-b
+      - stage: approved
+        name: "确认评论"
+        owner: hermes-c
+    pipeline: [hermes-a, hermes-b, hermes-c]
     trigger: on-pr-open
     deliver_to: pr-comment
     
-  # 学习报告流水线
-  # Hermes-A 记录 → Hermes-B 整理 → 用户阅读
+  # ========== 每日学习报告流水线 ==========
   daily-learn:
     name: "每日学习报告"
+    description: "A记录 → B整理 → C审核发布"
     stages:
-      - raw:    "Hermes-A 记录"
-      - summary: "Hermes-B 整理"
-    producers: [hermes-a]
-    consumers: [hermes-b]
+      - stage: raw
+        name: "记录学习内容"
+        owner: hermes-a
+      - stage: summarized
+        name: "整理总结"
+        owner: hermes-b
+      - stage: reviewed
+        name: "审核发布"
+        owner: hermes-c
+    pipeline: [hermes-a, hermes-b, hermes-c]
     schedule: "0 22 * * *"
     deliver_to: telegram
+    
+  # ========== 任务协作流水线 ==========
+  task-collab:
+    name: "任务协作流程"
+    description: "A发现任务 → B评估优先级 → C确认分配"
+    stages:
+      - stage: discovered
+        name: "发现任务需求"
+        owner: hermes-a
+      - stage: evaluated
+        name: "评估优先级"
+        owner: hermes-b
+      - stage: assigned
+        name: "确认分配"
+        owner: hermes-c
+    pipeline: [hermes-a, hermes-b, hermes-c]
+    deliver_to: tasks-pool
 
 # 通知配置
 notifications:
   telegram:
     enabled: true
-    chat_id: "522296847"
-    
-  email:
-    enabled: false
-    
   github:
     enabled: true
     label: "pipeline"
