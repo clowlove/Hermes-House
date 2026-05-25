@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "protocol": "agent-comm-v1",
+  "agents": {
+    "hermes-a": {
+      "id": "hermes-a",
+      "name": "Hermes-A (NousResearch Server)",
+      "platform": "hermes-agent",
+      "owner": "clowlove",
+      "contact": {
+        "telegram": "talkcn"
+      },
+      "capabilities": [
+        "github-api",
+        "cron-jobs",
+        "browser",
+        "web-search",
+        "code-analysis"
+      ],
+      "status": "active"
+    },
+    "hermes-b": {
+      "id": "hermes-b",
+      "name": "Hermes-B (另一台服务器)",
+      "platform": "unknown",
+      "owner": "待配置",
+      "contact": {
+        "telegram": "待配置"
+      },
+      "capabilities": [],
+      "status": "pending-setup"
+    }
+  },
+  "communication": {
+    "hub_repo": "clowlove/Harmes-House",
+    "messages_dir": "agent-comm/messages",
+    "issue_label": "agent-comm",
+    "check_interval": "5m"
+  }
+}
