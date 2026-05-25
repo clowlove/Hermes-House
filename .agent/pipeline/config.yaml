@@ -1,0 +1,51 @@
+pipelines:
+  # 趋势报告流水线
+  # Hermes-A 采集数据 → Hermes-B 分析 → 用户收到报告
+  trend-report:
+    name: "每日趋势报告"
+    stages:
+      - raw:      "Hermes-A 爬取数据"
+      - analyzed: "Hermes-B 分析"
+      - report:   "Hermes-B 生成报告"
+    producers: [hermes-a]
+    consumers: [hermes-b]
+    schedule: "0 8,17 * * *"
+    deliver_to: telegram
+    output_format: markdown
+    
+  # 代码扫描流水线
+  # Hermes-A 扫描代码 → Hermes-B 审查 → 创建 PR 评论
+  code-scan:
+    name: "代码质量扫描"
+    stages:
+      - scan:   "Hermes-A 扫描"
+      - review: "Hermes-B 审查"
+    producers: [hermes-a]
+    consumers: [hermes-b]
+    trigger: on-pr-open
+    deliver_to: pr-comment
+    
+  # 学习报告流水线
+  # Hermes-A 记录 → Hermes-B 整理 → 用户阅读
+  daily-learn:
+    name: "每日学习报告"
+    stages:
+      - raw:    "Hermes-A 记录"
+      - summary: "Hermes-B 整理"
+    producers: [hermes-a]
+    consumers: [hermes-b]
+    schedule: "0 22 * * *"
+    deliver_to: telegram
+
+# 通知配置
+notifications:
+  telegram:
+    enabled: true
+    chat_id: "522296847"
+    
+  email:
+    enabled: false
+    
+  github:
+    enabled: true
+    label: "pipeline"
