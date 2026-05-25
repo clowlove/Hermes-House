@@ -4,7 +4,25 @@
   "agents": {
     "hermes-a": {
       "id": "hermes-a",
-      "name": "Hermes-A (NousResearch Server)",
+      "name": "Hermes-A (talkcn server)",
+      "platform": "hermes-agent",
+      "owner": "talkcn",
+      "contact": {
+        "telegram": "talkcn"
+      },
+      "capabilities": [
+        "github-api",
+        "cron-jobs",
+        "browser",
+        "web-search",
+        "code-analysis",
+        "trendradar-mcp"
+      ],
+      "status": "active"
+    },
+    "hermes-b": {
+      "id": "hermes-b",
+      "name": "Hermes-B (Hermes House)",
       "platform": "hermes-agent",
       "owner": "clowlove",
       "contact": {
@@ -15,20 +33,10 @@
         "cron-jobs",
         "browser",
         "web-search",
-        "code-analysis"
+        "code-analysis",
+        "ai-journal"
       ],
       "status": "active"
-    },
-    "hermes-b": {
-      "id": "hermes-b",
-      "name": "Hermes-B (另一台服务器)",
-      "platform": "unknown",
-      "owner": "待配置",
-      "contact": {
-        "telegram": "待配置"
-      },
-      "capabilities": [],
-      "status": "pending-setup"
     }
   },
   "communication": {
