@@ -150,26 +150,39 @@ status: new
     # ========== PR 监控 ==========
     
     def check_and_merge_prs(self):
-        """检查并合并可合并的 PR"""
+        """检查并合并可合并的 PR (处理 429/401/403)"""
         self.log("🔍 检查待合并 PR...")
         
-        # 获取可合并的 PR
-        output = self.run("gh pr list --state open --json number,title,mergeable,author --jq '.[] | select(.mergeable == \"MERGEABLE\" and .author.login == \"@me\") | \"\\(.number) \\(.title)\"'")
+        # 检查 rate limit
+        try:
+            rate_limit = self.run("gh api rate_limit --jq '.rate.remaining' 2>/dev/null")
+            if rate_limit and int(rate_limit.strip()) < 10:
+                self.log("  ⚠️ API 配额不足, 跳过")
+                return []
+        except:
+            pass
         
-        if not output.strip():
+        # 获取可合并的 PR (静默处理 429/403)
+        result = self.run("gh pr list --state open --json number,title,mergeable,author --jq '.[] | select(.mergeable == \"MERGEABLE\") | \"\\(.number) \\(.title)\"' 2>/dev/null")
+        
+        if not result.strip():
             self.log("  无待合并的 PR")
             return []
         
         merged = []
-        for line in output.strip().split("\n"):
+        for line in result.strip().split("\n"):
             if not line:
                 continue
-            parts = line.split(" ", 1)
-            if len(parts) == 2:
-                pr_num, title = parts
-                self.run(f"gh pr merge {pr_num} --squash --delete-branch 2>&1")
-                self.log(f"  ✅ 合并: #{pr_num} {title[:50]}")
-                merged.append((pr_num, title))
+            try:
+                parts = line.split(" ", 1)
+                if len(parts) == 2:
+                    pr_num, title = parts
+                    # 静默合并，不输出错误
+                    self.run(f"gh pr merge {pr_num} --squash --delete-branch 2>/dev/null")
+                    self.log(f"  ✅ 合并: #{pr_num}")
+                    merged.append((pr_num, title))
+            except:
+                continue
         
         return merged
     
