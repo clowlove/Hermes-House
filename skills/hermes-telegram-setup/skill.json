@@ -1,15 +1,15 @@
 {
   "name": "hermes-telegram-setup",
   "version": "1.0.0",
-  "description": "Set up and troubleshoot Telegram bot integration with Hermes Agent gateway — token config, pairing flow, gateway service management, and common pitfalls.",
-  "author": "Hermes Agent Community",
+  "description": "Set up and troubleshoot Telegram bot integration with Hermes Agent gateway \u2014 token config, pairing flow, gateway service management, and common pitfalls.",
+  "author": "Hermes Agent",
   "license": "MIT",
   "platforms": [
     "linux",
     "macos"
   ],
   "commands": [],
-  "tags": "[telegram, gateway, bot, setup, messaging]",
+  "tags": "telegram, gateway, bot, setup, messaging",
   "hermes": {
     "skill_category": "devops",
     "compatibility": [
@@ -19,6 +19,6 @@
   "files": [
     "SKILL.md"
   ],
-  "last_updated": "2026-05-03",
+  "last_updated": "2026-05-22",
   "status": "stable"
 }

@@ -9,8 +9,8 @@
 
 If hermes-reviewer saves you time, consider buying me a coffee! ☕
 
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/imtalk)
-[![GitHub Sponsor](https://img.shields.io/badge/GitHub%20Sponsor-fafbfc?style=for-the-badge&logo=github-sponsors)](https://github.com/sponsors/clowlove)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee)](https://github.com/sponsors)
+[![GitHub Sponsor](https://img.shields.io/badge/GitHub%20Sponsor-fafbfc?style=for-the-badge&logo=github-sponsors)](https://github.com/sponsors)
 
 ---
 
@@ -91,9 +91,9 @@ Contributions welcome! Please read [CONTRIBUTING.md](../../CONTRIBUTING.md) for 
 
 If this project saves you time and you want to support ongoing development:
 
-☕ **[Buy Me a Coffee](https://www.buymeacoffee.com/imtalk)** — 一杯咖啡就是最大的鼓励
+☕ **[Support via GitHub](https://github.com/sponsors)** — 一杯咖啡就是最大的鼓励
 
-❤️ **[GitHub Sponsors](https://github.com/sponsors/clowlove)** — 长期支持开源
+❤️ **[GitHub Sponsors](https://github.com/sponsors)** — 长期支持开源
 
 ---
 

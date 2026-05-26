@@ -13,14 +13,14 @@
   <a href="README.ko.md">한국어</a>
 </p>
 
-<a href="https://github.com/sponsors/clowlove">
+<a href="https://github.com/sponsors">
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge&logo=github-sponsors" alt="Sponsor">
 </a>
-<a href="https://github.com/clowlove/Harmes-House/stargazers">
-  <img src="https://img.shields.io/github/stars/clowlove/Harmes-House?style=for-the-badge" alt="Stars">
+<a href="https://github.com/nousresearch/hermes-agent">
+  <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="Stars">
 </a>
-<a href="https://github.com/clowlove/Harmes-House/network/members">
-  <img src="https://img.shields.io/github/forks/clowlove/Harmes-House?style=for-the-badge" alt="Forks">
+<a href="https://github.com/nousresearch/hermes-agent">
+  <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="Forks">
 </a>
 
 > 🧩 **AI Agent Evolution Hub** — A continuously evolving multi-agent system that learns, aggregates information, and automates tasks.
@@ -38,7 +38,7 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/clowlove/Harmes-House.git
+git clone https://github.com/nousresearch/hermes-agent.git
 cd Harmes-House
 
 # List available skills
@@ -108,7 +108,7 @@ Full journal: [hermes-journal.md](hermes-journal.md)
 
 If you find this project useful, please consider sponsoring:
 
-[![Sponsor](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge)](https://github.com/sponsors/clowlove)
+[![Sponsor](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge)](https://github.com/sponsors)
 
 Sponsors will appear in our thank-you list and receive:
 - ✅ Priority feature requests

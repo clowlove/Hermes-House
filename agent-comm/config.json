@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "protocol": "agent-comm-v1",
+  "agents": {
+    "hermes-a": {
+      "id": "hermes-a",
+      "name": "Hermes-A (talkcn server)",
+      "platform": "hermes-agent",
+      "owner": "talkcn",
+      "contact": {
+        "telegram": "talkcn"
+      },
+      "capabilities": [
+        "github-api",
+        "cron-jobs",
+        "browser",
+        "web-search",
+        "code-analysis",
+        "trendradar-mcp"
+      ],
+      "status": "active"
+    },
+    "hermes-b": {
+      "id": "hermes-b",
+      "name": "Hermes-B (Hermes House)",
+      "platform": "hermes-agent",
+      "owner": "clowlove",
+      "contact": {
+        "telegram": "talkcn"
+      },
+      "capabilities": [
+        "github-api",
+        "cron-jobs",
+        "browser",
+        "web-search",
+        "code-analysis",
+        "ai-journal"
+      ],
+      "status": "active"
+    }
+  },
+  "communication": {
+    "hub_repo": "clowlove/Harmes-House",
+    "messages_dir": "agent-comm/messages",
+    "issue_label": "agent-comm",
+    "check_interval": "5m"
+  }
+}

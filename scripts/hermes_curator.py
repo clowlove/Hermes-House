@@ -46,7 +46,10 @@ def get_skill_usage(skill_path: Path) -> Dict:
 def grade_skills() -> List[Dict]:
     """评分所有技能"""
     skills = []
-    
+
+    if not SKILLS_DIR.exists():
+        return skills
+
     for skill_dir in SKILLS_DIR.iterdir():
         if not skill_dir.is_dir():
             continue

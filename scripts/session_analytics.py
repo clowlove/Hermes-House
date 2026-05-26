@@ -32,9 +32,11 @@ def parse_session_history() -> dict:
 def get_skill_usage_from_logs() -> dict:
     """从日志中分析技能使用情况"""
     skill_usage = defaultdict(int)
-    
+
     # 检查 skill 目录的访问时间
     skills_dir = Path.home() / ".hermes/skills"
+    if not skills_dir.exists():
+        return dict(skill_usage)
     for skill in skills_dir.iterdir():
         if skill.is_dir():
             # 使用目录修改时间作为最后使用代理
@@ -60,8 +62,8 @@ def generate_analytics_report() -> dict:
     if session_stats.get("total_turns", 0) > 100:
         report["insights"].append("活跃用户 - 高频使用会话")
     
-    recent_skills = [s for s, m in skill_usage.items() 
-                    if (datetime.now() - datetime.fromisoformat(m)).days < 7]
+    recent_skills = [s for s, m in skill_usage.items()
+                    if (datetime.now() - datetime.fromisoformat(m).replace(tzinfo=None)).days < 7]
     if recent_skills:
         report["insights"].append(f"本周使用了 {len(recent_skills)} 个技能")
     

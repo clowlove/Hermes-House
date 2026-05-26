@@ -17,12 +17,12 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
       
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
       
@@ -111,7 +111,7 @@ jobs:
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
           git checkout -b "$BRANCH"
           git config user.name "Hermès Agent"
-          git config user.email "hermes@clowlove.dev"
+          git config user.email "[REDACTED]"
           git add -A
           if git diff --staged --quiet; then
             echo "No changes to commit"
@@ -145,7 +145,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Generate Weekly Summary
         run: |
@@ -181,7 +181,7 @@ jobs:
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
           git checkout -b "$BRANCH"
           git config user.name "Hermès Agent"
-          git config user.email "hermes@clowlove.dev"
+          git config user.email "[REDACTED]"
           git add hermes-journal.md
           if git diff --staged --quiet; then
             echo "No changes to commit"

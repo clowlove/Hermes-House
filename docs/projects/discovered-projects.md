@@ -289,4 +289,412 @@ Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) serve
 - 发现时间: 2026-05-13
 
 
+
+## 2026-05-14 发现的趋势项目
+
+### [WebRover](https://github.com/hrithikkoduri/WebRover) - 992⭐
+WebRover is an autonomous AI agent designed to interpret user input and execute actions by interacting with web elements to accomplish tasks or answer questions. It leverages advanced language models and web automation tools to navigate the web, gather information, and provide structured responses based on the user's needs.
+- 话题: 无
+- 发现时间: 2026-05-14
+
+### [airecon](https://github.com/pikpikcu/airecon) - 611⭐
+AIRecon is an autonomous cybersecurity agent that combines a self-hosted Large Language Model (Ollama) with a Kali Linux Docker sandbox and a Textual TUI. It is designed to automate security assessments, penetration testing, and bug bounty reconnaissance — without any API keys or cloud dependency.
+- 话题: ai-agents, automation, bugbounty, cli, ollama
+- 发现时间: 2026-05-14
+
+### [gemini-youtube-automation](https://github.com/ChaituRajSagar/gemini-youtube-automation) - 265⭐
+A fully autonomous AI Agent/Python pipeline that utilizes Large Language Models (LLMs) like Gemini to generate content, produce videos, and automatically upload educational videos to YouTube.
+- 话题: ai-course-creator, ai-video-generator, autonomous-agents, generative-ai, image-generation
+- 发现时间: 2026-05-14
+
+### [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) - 16103⭐
+This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.
+- 话题: csharp, java, javascript, javascript-applications, mcp
+- 发现时间: 2026-05-14
+
+### [fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) - 11863⭐
+Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
+- 话题: ai, authentication, authorization, claude, cursor
+- 发现时间: 2026-05-14
+
+### [mcp-chrome](https://github.com/hangwin/mcp-chrome) - 11616⭐
+Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.
+- 话题: 无
+- 发现时间: 2026-05-14
+
+
+
+## 2026-05-15 发现的趋势项目
+
+### [WebRover](https://github.com/hrithikkoduri/WebRover) - 993⭐
+WebRover is an autonomous AI agent designed to interpret user input and execute actions by interacting with web elements to accomplish tasks or answer questions. It leverages advanced language models and web automation tools to navigate the web, gather information, and provide structured responses based on the user's needs.
+- 话题: 无
+- 发现时间: 2026-05-15
+
+### [airecon](https://github.com/pikpikcu/airecon) - 613⭐
+AIRecon is an autonomous cybersecurity agent that combines a self-hosted Large Language Model (Ollama) with a Kali Linux Docker sandbox and a Textual TUI. It is designed to automate security assessments, penetration testing, and bug bounty reconnaissance — without any API keys or cloud dependency.
+- 话题: ai-agents, automation, bugbounty, cli, ollama
+- 发现时间: 2026-05-15
+
+### [gemini-youtube-automation](https://github.com/ChaituRajSagar/gemini-youtube-automation) - 265⭐
+A fully autonomous AI Agent/Python pipeline that utilizes Large Language Models (LLMs) like Gemini to generate content, produce videos, and automatically upload educational videos to YouTube.
+- 话题: ai-course-creator, ai-video-generator, autonomous-agents, generative-ai, image-generation
+- 发现时间: 2026-05-15
+
+### [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) - 16108⭐
+This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.
+- 话题: csharp, java, javascript, javascript-applications, mcp
+- 发现时间: 2026-05-15
+
+### [fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) - 11863⭐
+Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
+- 话题: ai, authentication, authorization, claude, cursor
+- 发现时间: 2026-05-15
+
+### [mcp-chrome](https://github.com/hangwin/mcp-chrome) - 11631⭐
+Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.
+- 话题: 无
+- 发现时间: 2026-05-15
+
+
+
+## 2026-05-16 发现的趋势项目
+
+### [WebRover](https://github.com/hrithikkoduri/WebRover) - 993⭐
+WebRover is an autonomous AI agent designed to interpret user input and execute actions by interacting with web elements to accomplish tasks or answer questions. It leverages advanced language models and web automation tools to navigate the web, gather information, and provide structured responses based on the user's needs.
+- 话题: 无
+- 发现时间: 2026-05-16
+
+### [airecon](https://github.com/pikpikcu/airecon) - 616⭐
+AIRecon is an autonomous cybersecurity agent that combines a self-hosted Large Language Model (Ollama) with a Kali Linux Docker sandbox and a Textual TUI. It is designed to automate security assessments, penetration testing, and bug bounty reconnaissance — without any API keys or cloud dependency.
+- 话题: ai-agents, automation, bugbounty, cli, ollama
+- 发现时间: 2026-05-16
+
+### [gemini-youtube-automation](https://github.com/ChaituRajSagar/gemini-youtube-automation) - 265⭐
+A fully autonomous AI Agent/Python pipeline that utilizes Large Language Models (LLMs) like Gemini to generate content, produce videos, and automatically upload educational videos to YouTube.
+- 话题: ai-course-creator, ai-video-generator, autonomous-agents, generative-ai, image-generation
+- 发现时间: 2026-05-16
+
+### [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) - 16111⭐
+This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.
+- 话题: csharp, java, javascript, javascript-applications, mcp
+- 发现时间: 2026-05-16
+
+### [fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) - 11863⭐
+Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
+- 话题: ai, authentication, authorization, claude, cursor
+- 发现时间: 2026-05-16
+
+### [mcp-chrome](https://github.com/hangwin/mcp-chrome) - 11635⭐
+Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.
+- 话题: 无
+- 发现时间: 2026-05-16
+
+
+
+## 2026-05-17 发现的趋势项目
+
+### [WebRover](https://github.com/hrithikkoduri/WebRover) - 994⭐
+WebRover is an autonomous AI agent designed to interpret user input and execute actions by interacting with web elements to accomplish tasks or answer questions. It leverages advanced language models and web automation tools to navigate the web, gather information, and provide structured responses based on the user's needs.
+- 话题: 无
+- 发现时间: 2026-05-17
+
+### [airecon](https://github.com/pikpikcu/airecon) - 618⭐
+AIRecon is an autonomous cybersecurity agent that combines a self-hosted Large Language Model (Ollama) with a Kali Linux Docker sandbox and a Textual TUI. It is designed to automate security assessments, penetration testing, and bug bounty reconnaissance — without any API keys or cloud dependency.
+- 话题: ai-agents, automation, bugbounty, cli, ollama
+- 发现时间: 2026-05-17
+
+### [gemini-youtube-automation](https://github.com/ChaituRajSagar/gemini-youtube-automation) - 265⭐
+A fully autonomous AI Agent/Python pipeline that utilizes Large Language Models (LLMs) like Gemini to generate content, produce videos, and automatically upload educational videos to YouTube.
+- 话题: ai-course-creator, ai-video-generator, autonomous-agents, generative-ai, image-generation
+- 发现时间: 2026-05-17
+
+### [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) - 16118⭐
+This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.
+- 话题: csharp, java, javascript, javascript-applications, mcp
+- 发现时间: 2026-05-17
+
+### [fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) - 11864⭐
+Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
+- 话题: ai, authentication, authorization, claude, cursor
+- 发现时间: 2026-05-17
+
+### [mcp-chrome](https://github.com/hangwin/mcp-chrome) - 11637⭐
+Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.
+- 话题: 无
+- 发现时间: 2026-05-17
+
+
+
+## 2026-05-18 发现的趋势项目
+
+### [WebRover](https://github.com/hrithikkoduri/WebRover) - 994⭐
+WebRover is an autonomous AI agent designed to interpret user input and execute actions by interacting with web elements to accomplish tasks or answer questions. It leverages advanced language models and web automation tools to navigate the web, gather information, and provide structured responses based on the user's needs.
+- 话题: 无
+- 发现时间: 2026-05-18
+
+### [airecon](https://github.com/pikpikcu/airecon) - 620⭐
+AIRecon is an autonomous cybersecurity agent that combines a self-hosted Large Language Model (Ollama) with a Kali Linux Docker sandbox and a Textual TUI. It is designed to automate security assessments, penetration testing, and bug bounty reconnaissance — without any API keys or cloud dependency.
+- 话题: ai-agents, automation, bugbounty, cli, ollama
+- 发现时间: 2026-05-18
+
+### [gemini-youtube-automation](https://github.com/ChaituRajSagar/gemini-youtube-automation) - 268⭐
+A fully autonomous AI Agent/Python pipeline that utilizes Large Language Models (LLMs) like Gemini to generate content, produce videos, and automatically upload educational videos to YouTube.
+- 话题: ai-course-creator, ai-video-generator, autonomous-agents, generative-ai, image-generation
+- 发现时间: 2026-05-18
+
+### [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) - 16126⭐
+This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.
+- 话题: csharp, java, javascript, javascript-applications, mcp
+- 发现时间: 2026-05-18
+
+### [fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) - 11866⭐
+Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
+- 话题: ai, authentication, authorization, claude, cursor
+- 发现时间: 2026-05-18
+
+### [mcp-chrome](https://github.com/hangwin/mcp-chrome) - 11642⭐
+Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.
+- 话题: 无
+- 发现时间: 2026-05-18
+
+
+
+## 2026-05-19 发现的趋势项目
+
+### [WebRover](https://github.com/hrithikkoduri/WebRover) - 994⭐
+WebRover is an autonomous AI agent designed to interpret user input and execute actions by interacting with web elements to accomplish tasks or answer questions. It leverages advanced language models and web automation tools to navigate the web, gather information, and provide structured responses based on the user's needs.
+- 话题: 无
+- 发现时间: 2026-05-19
+
+### [airecon](https://github.com/pikpikcu/airecon) - 621⭐
+AIRecon is an autonomous cybersecurity agent that combines a self-hosted Large Language Model (Ollama) with a Kali Linux Docker sandbox and a Textual TUI. It is designed to automate security assessments, penetration testing, and bug bounty reconnaissance — without any API keys or cloud dependency.
+- 话题: ai-agents, automation, bugbounty, cli, ollama
+- 发现时间: 2026-05-19
+
+### [gemini-youtube-automation](https://github.com/ChaituRajSagar/gemini-youtube-automation) - 268⭐
+A fully autonomous AI Agent/Python pipeline that utilizes Large Language Models (LLMs) like Gemini to generate content, produce videos, and automatically upload educational videos to YouTube.
+- 话题: ai-course-creator, ai-video-generator, autonomous-agents, generative-ai, image-generation
+- 发现时间: 2026-05-19
+
+### [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) - 16137⭐
+This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.
+- 话题: csharp, java, javascript, javascript-applications, mcp
+- 发现时间: 2026-05-19
+
+### [fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) - 11866⭐
+Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
+- 话题: ai, authentication, authorization, claude, cursor
+- 发现时间: 2026-05-19
+
+### [mcp-chrome](https://github.com/hangwin/mcp-chrome) - 11656⭐
+Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.
+- 话题: 无
+- 发现时间: 2026-05-19
+
+
+
+## 2026-05-20 发现的趋势项目
+
+### [WebRover](https://github.com/hrithikkoduri/WebRover) - 994⭐
+WebRover is an autonomous AI agent designed to interpret user input and execute actions by interacting with web elements to accomplish tasks or answer questions. It leverages advanced language models and web automation tools to navigate the web, gather information, and provide structured responses based on the user's needs.
+- 话题: 无
+- 发现时间: 2026-05-20
+
+### [airecon](https://github.com/pikpikcu/airecon) - 623⭐
+AIRecon is an autonomous cybersecurity agent that combines a self-hosted Large Language Model (Ollama) with a Kali Linux Docker sandbox and a Textual TUI. It is designed to automate security assessments, penetration testing, and bug bounty reconnaissance — without any API keys or cloud dependency.
+- 话题: ai-agents, automation, bugbounty, cli, ollama
+- 发现时间: 2026-05-20
+
+### [gemini-youtube-automation](https://github.com/ChaituRajSagar/gemini-youtube-automation) - 268⭐
+A fully autonomous AI Agent/Python pipeline that utilizes Large Language Models (LLMs) like Gemini to generate content, produce videos, and automatically upload educational videos to YouTube.
+- 话题: ai-course-creator, ai-video-generator, autonomous-agents, generative-ai, image-generation
+- 发现时间: 2026-05-20
+
+### [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) - 16148⭐
+This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.
+- 话题: csharp, java, javascript, javascript-applications, mcp
+- 发现时间: 2026-05-20
+
+### [fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) - 11869⭐
+Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
+- 话题: ai, authentication, authorization, claude, cursor
+- 发现时间: 2026-05-20
+
+### [mcp-chrome](https://github.com/hangwin/mcp-chrome) - 11669⭐
+Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.
+- 话题: 无
+- 发现时间: 2026-05-20
+
+
+
+## 2026-05-21 发现的趋势项目
+
+### [WebRover](https://github.com/hrithikkoduri/WebRover) - 994⭐
+WebRover is an autonomous AI agent designed to interpret user input and execute actions by interacting with web elements to accomplish tasks or answer questions. It leverages advanced language models and web automation tools to navigate the web, gather information, and provide structured responses based on the user's needs.
+- 话题: 无
+- 发现时间: 2026-05-21
+
+### [airecon](https://github.com/pikpikcu/airecon) - 624⭐
+AIRecon is an autonomous cybersecurity agent that combines a self-hosted Large Language Model (Ollama) with a Kali Linux Docker sandbox and a Textual TUI. It is designed to automate security assessments, penetration testing, and bug bounty reconnaissance — without any API keys or cloud dependency.
+- 话题: ai-agents, automation, bugbounty, cli, ollama
+- 发现时间: 2026-05-21
+
+### [gemini-youtube-automation](https://github.com/ChaituRajSagar/gemini-youtube-automation) - 271⭐
+A fully autonomous AI Agent/Python pipeline that utilizes Large Language Models (LLMs) like Gemini to generate content, produce videos, and automatically upload educational videos to YouTube.
+- 话题: ai-course-creator, ai-video-generator, autonomous-agents, generative-ai, image-generation
+- 发现时间: 2026-05-21
+
+### [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) - 16159⭐
+This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.
+- 话题: csharp, java, javascript, javascript-applications, mcp
+- 发现时间: 2026-05-21
+
+### [fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) - 11871⭐
+Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
+- 话题: ai, authentication, authorization, claude, cursor
+- 发现时间: 2026-05-21
+
+### [mcp-chrome](https://github.com/hangwin/mcp-chrome) - 11681⭐
+Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.
+- 话题: 无
+- 发现时间: 2026-05-21
+
+
+
+## 2026-05-22 发现的趋势项目
+
+### [WebRover](https://github.com/hrithikkoduri/WebRover) - 994⭐
+WebRover is an autonomous AI agent designed to interpret user input and execute actions by interacting with web elements to accomplish tasks or answer questions. It leverages advanced language models and web automation tools to navigate the web, gather information, and provide structured responses based on the user's needs.
+- 话题: 无
+- 发现时间: 2026-05-22
+
+### [airecon](https://github.com/pikpikcu/airecon) - 625⭐
+AIRecon is an autonomous cybersecurity agent that combines a self-hosted Large Language Model (Ollama) with a Kali Linux Docker sandbox and a Textual TUI. It is designed to automate security assessments, penetration testing, and bug bounty reconnaissance — without any API keys or cloud dependency.
+- 话题: ai-agents, automation, bugbounty, cli, ollama
+- 发现时间: 2026-05-22
+
+### [gemini-youtube-automation](https://github.com/ChaituRajSagar/gemini-youtube-automation) - 273⭐
+A fully autonomous AI Agent/Python pipeline that utilizes Large Language Models (LLMs) like Gemini to generate content, produce videos, and automatically upload educational videos to YouTube.
+- 话题: ai-course-creator, ai-video-generator, autonomous-agents, generative-ai, image-generation
+- 发现时间: 2026-05-22
+
+### [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) - 16169⭐
+This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.
+- 话题: csharp, java, javascript, javascript-applications, mcp
+- 发现时间: 2026-05-22
+
+### [fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) - 11874⭐
+Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
+- 话题: ai, authentication, authorization, claude, cursor
+- 发现时间: 2026-05-22
+
+### [mcp-chrome](https://github.com/hangwin/mcp-chrome) - 11692⭐
+Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.
+- 话题: 无
+- 发现时间: 2026-05-22
+
+
+
+## 2026-05-23 发现的趋势项目
+
+### [WebRover](https://github.com/hrithikkoduri/WebRover) - 994⭐
+WebRover is an autonomous AI agent designed to interpret user input and execute actions by interacting with web elements to accomplish tasks or answer questions. It leverages advanced language models and web automation tools to navigate the web, gather information, and provide structured responses based on the user's needs.
+- 话题: 无
+- 发现时间: 2026-05-23
+
+### [airecon](https://github.com/pikpikcu/airecon) - 626⭐
+AIRecon is an autonomous cybersecurity agent that combines a self-hosted Large Language Model (Ollama) with a Kali Linux Docker sandbox and a Textual TUI. It is designed to automate security assessments, penetration testing, and bug bounty reconnaissance — without any API keys or cloud dependency.
+- 话题: ai-agents, automation, bugbounty, cli, ollama
+- 发现时间: 2026-05-23
+
+### [gemini-youtube-automation](https://github.com/ChaituRajSagar/gemini-youtube-automation) - 273⭐
+A fully autonomous AI Agent/Python pipeline that utilizes Large Language Models (LLMs) like Gemini to generate content, produce videos, and automatically upload educational videos to YouTube.
+- 话题: ai-course-creator, ai-video-generator, autonomous-agents, generative-ai, image-generation
+- 发现时间: 2026-05-23
+
+### [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) - 16177⭐
+This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.
+- 话题: csharp, java, javascript, javascript-applications, mcp
+- 发现时间: 2026-05-23
+
+### [fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) - 11875⭐
+Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
+- 话题: ai, authentication, authorization, claude, cursor
+- 发现时间: 2026-05-23
+
+### [mcp-chrome](https://github.com/hangwin/mcp-chrome) - 11698⭐
+Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.
+- 话题: 无
+- 发现时间: 2026-05-23
+
+
+
+## 2026-05-24 发现的趋势项目
+
+### [WebRover](https://github.com/hrithikkoduri/WebRover) - 994⭐
+WebRover is an autonomous AI agent designed to interpret user input and execute actions by interacting with web elements to accomplish tasks or answer questions. It leverages advanced language models and web automation tools to navigate the web, gather information, and provide structured responses based on the user's needs.
+- 话题: 无
+- 发现时间: 2026-05-24
+
+### [airecon](https://github.com/pikpikcu/airecon) - 629⭐
+AIRecon is an autonomous cybersecurity agent that combines a self-hosted Large Language Model (Ollama) with a Kali Linux Docker sandbox and a Textual TUI. It is designed to automate security assessments, penetration testing, and bug bounty reconnaissance — without any API keys or cloud dependency.
+- 话题: ai-agents, automation, bugbounty, cli, ollama
+- 发现时间: 2026-05-24
+
+### [gemini-youtube-automation](https://github.com/ChaitanyaEswarRajeshJakki/gemini-youtube-automation) - 274⭐
+A fully autonomous AI Agent/Python pipeline that utilizes Large Language Models (LLMs) like Gemini to generate content, produce videos, and automatically upload educational videos to YouTube.
+- 话题: ai-course-creator, ai-video-generator, autonomous-agents, generative-ai, image-generation
+- 发现时间: 2026-05-24
+
+### [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) - 16183⭐
+This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.
+- 话题: csharp, java, javascript, javascript-applications, mcp
+- 发现时间: 2026-05-24
+
+### [fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) - 11877⭐
+Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
+- 话题: ai, authentication, authorization, claude, cursor
+- 发现时间: 2026-05-24
+
+### [mcp-chrome](https://github.com/hangwin/mcp-chrome) - 11706⭐
+Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.
+- 话题: 无
+- 发现时间: 2026-05-24
+
+
+
+## 2026-05-25 发现的趋势项目
+
+### [WebRover](https://github.com/hrithikkoduri/WebRover) - 994⭐
+WebRover is an autonomous AI agent designed to interpret user input and execute actions by interacting with web elements to accomplish tasks or answer questions. It leverages advanced language models and web automation tools to navigate the web, gather information, and provide structured responses based on the user's needs.
+- 话题: 无
+- 发现时间: 2026-05-25
+
+### [airecon](https://github.com/pikpikcu/airecon) - 629⭐
+AIRecon is an autonomous cybersecurity agent that combines a self-hosted Large Language Model (Ollama) with a Kali Linux Docker sandbox and a Textual TUI. It is designed to automate security assessments, penetration testing, and bug bounty reconnaissance — without any API keys or cloud dependency.
+- 话题: ai-agents, automation, bugbounty, cli, ollama
+- 发现时间: 2026-05-25
+
+### [gemini-youtube-automation](https://github.com/ChaitanyaEswarRajeshJakki/gemini-youtube-automation) - 275⭐
+A fully autonomous AI Agent/Python pipeline that utilizes Large Language Models (LLMs) like Gemini to generate content, produce videos, and automatically upload educational videos to YouTube.
+- 话题: ai-course-creator, ai-video-generator, autonomous-agents, generative-ai, image-generation
+- 发现时间: 2026-05-25
+
+### [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) - 16198⭐
+This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.
+- 话题: csharp, java, javascript, javascript-applications, mcp
+- 发现时间: 2026-05-25
+
+### [fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) - 11880⭐
+Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
+- 话题: ai, authentication, authorization, claude, cursor
+- 发现时间: 2026-05-25
+
+### [mcp-chrome](https://github.com/hangwin/mcp-chrome) - 11711⭐
+Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.
+- 话题: 无
+- 发现时间: 2026-05-25
+
+
 <!-- LATEST -->

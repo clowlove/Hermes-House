@@ -6,11 +6,11 @@
 
 ### GitHub Sponsors
 通过 GitHub Sponsors 赞助：
-https://github.com/sponsors/clowlove
+https://github.com/sponsors/[REDACTED]
 
 ### 一次性赞助
-- ☕ Buy Me a Coffee: https://buymeacoff.ee/hermes
-- 💜 PayPal: https://paypal.me/hermesagent
+- ☕ Buy Me a Coffee: https://github.com/sponsors
+- 💜 PayPal: https://github.com/sponsors
 
 ## 为什么赞助？
 

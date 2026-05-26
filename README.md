@@ -1,194 +1,360 @@
-# 🏠 Hermès House
+# Hermès Agent 🤖
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/clowlove/Harmes-House/main/site/assets/images/logo.svg" width="120" alt="Hermès Logo">
-</p>
+<a href="https://github.com/sponsors">
+  <img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge&logo=github-sponsors" alt="Sponsor">
+</a>
+<a href="https://github.com/nousresearch/hermes-agent">
+  <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="Stars">
+</a>
+<a href="https://github.com/nousresearch/hermes-agent">
+  <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="Forks">
+</a>
 
-<p align="center">
-  <strong>🤖 AI Agent 进化中心</strong>
-</p>
-
-<p align="center">
-  <a href="https://github.com/clowlove/Harmes-House/stargazers">
-    <img src="https://img.shields.io/github/stars/clowlove/Harmes-House?style=for-the-badge&logo=github" alt="Stars">
-  </a>
-  <a href="https://github.com/clowlove/Harmes-House/network/members">
-    <img src="https://img.shields.io/github/forks/clowlove/Harmes-House?style=for-the-badge&logo=github" alt="Forks">
-  </a>
-  <a href="https://github.com/clowlove/Harmes-House/issues">
-    <img src="https://img.shields.io/github/issues/clowlove/Harmes-House?style=for-the-badge" alt="Issues">
-  </a>
-  <a href="https://github.com/clowlove/Harmes-House/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/clowlove/Harmes-House?style=for-the-badge" alt="License">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/sponsors/clowlove">
-    <img src="https://img.shields.io/badge/Sponsor-Me-orange?style=for-the-badge&logo=github-sponsors" alt="Sponsor">
-  </a>
-</p>
+> 🧩 **AI Agent Evolution Hub** — A self-evolving multi-agent system that learns, builds, and earns autonomously
 
 ---
 
-> 🧩 **Multi-Agent System That Learns, Builds & Evolves**
->
-> 一个能够自主学习、建设和不断进化的 AI Agent 系统
+## 🎯 Vision
+
+Hermès Agent is not just another AI assistant — it's a **living, evolving AI agent system** that:
+
+- 🔍 **Learns continuously** from every interaction and task
+- 🏗️ **Builds autonomously** new skills and capabilities
+- 📈 **Grows organically** through self-improvement mechanisms
+- 💰 **Generates value** through automation and intelligence
+
+> *"An AI that doesn't just answer questions, but evolves with every conversation."*
 
 ---
 
-## ✨ 特色功能
+## ✨ Core Features
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/clowlove/Harmes-House/main/site/assets/images/hero-preview.png" width="800" alt="Hermès Preview">
-</p>
+### 🤖 Multi-Agent Architecture
+Multiple specialized agents working in harmony:
+- **TrendRadar Agent** — Monitors trends across 8+ platforms
+- **Reviewer Agent** — AI-powered code review
+- **Skills Manager** — Dynamic skill loading and management
+- **Knowledge Agent** — GitHub knowledge synchronization
 
-| 功能 | 描述 |
-|------|------|
-| 🤖 **多智能体架构** | 多个专业 Agent 协同工作 |
-| 📊 **趋势监控** | 实时追踪 8+ 平台热点 |
-| 🧠 **4层记忆系统** | L0-L3 分层持久记忆 |
-| 🛠️ **63+ 模块化技能** | 即插即用的技能库 |
-| 🔄 **自动进化** | 持续自我优化改进 |
-| 📖 **成长日志** | AI 自主记录的进化历程 |
+### 📊 Intelligent Monitoring
+- Real-time news aggregation from multiple sources
+- Multi-platform trend detection (Zhihu, Weibo, WeChat, etc.)
+- Custom keyword tracking and alerts
+- Scheduled push notifications
+
+### 🧠 4-Layer Memory System
+Persistent, layered memory architecture:
+
+| Layer | Name | Purpose | Duration |
+|-------|------|---------|----------|
+| L0 | Working | Current context | Session |
+| L1 | Scene | Task context | Short-term |
+| L2 | Episodic | Experience | Medium-term |
+| L3 | Semantic | Knowledge | Long-term |
+
+### 🛠️ Modular Skills Library
+**63+ pre-built skills** ready to use:
+
+| Category | Skills |
+|----------|--------|
+| Development | github, git, npm, python, code-review |
+| Data | trendradar, data-science, matplotlib |
+| Media | youtube, spotify, ascii-art, image-gen |
+| Automation | cron, webhook, telegram, email |
+| Research | arxiv, academic, web-search |
+
+### 🔄 Self-Evolution Engine
+- Autonomous learning from errors
+- Skill recommendation based on usage
+- Performance metrics tracking
+- Continuous improvement logging
 
 ---
 
-## 🏗️ 系统架构
+## 🏗️ System Architecture
 
 ```
-                    ┌─────────────────────────────────────┐
-                    │           Hermès Agent              │
-                    ├─────────────────────────────────────┤
-     ┌──────────┐   │   ┌─────────┐ ┌─────────┐ ┌─────┐  │
-     │ Trend    │   │   │ Memory  │ │ Skills  │ │Tools│  │
-     │ Radar    │   │   │ System  │ │ Engine  │ │Exec │  │
-     └──────────┘   │   └─────────┘ └─────────┘ └─────┘  │
-     ┌──────────┐   │                                     │
-     │ Reviewer │   ├─────────────────────────────────────┤
-     │ Agent    │   │   GitHub │ Telegram │ HuggingFace   │
-     └──────────┘   └─────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                        Hermès Agent                              │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
+│   │  TrendRadar │  │  Reviewer   │  │   Skills    │             │
+│   │    Agent    │  │   Agent     │  │   Manager   │             │
+│   └─────────────┘  └─────────────┘  └─────────────┘             │
+│          │                │                │                     │
+│          └────────────────┼────────────────┘                     │
+│                           ▼                                      │
+│                  ┌─────────────────┐                            │
+│                  │   Agent Core    │                            │
+│                  │  ┌───────────┐  │                            │
+│                  │  │  Memory   │  │                            │
+│                  │  │  System   │  │                            │
+│                  │  └───────────┘  │                            │
+│                  │  ┌───────────┐  │                            │
+│                  │  │  Skills   │  │                            │
+│                  │  │  Engine   │  │                            │
+│                  │  └───────────┘  │                            │
+│                  │  ┌───────────┐  │                            │
+│                  │  │  Tools    │  │                            │
+│                  │  │  Executor │  │                            │
+│                  │  └───────────┘  │                            │
+│                  └─────────────────┘                            │
+│                           │                                      │
+├───────────────────────────┼──────────────────────────────────────┤
+│                    External Services                              │
+│   ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐       │
+│   │ GitHub │ │Telegram│ │   HF   │ │ Trend  │ │Cloud   │       │
+│   │   API  │ │  Bot   │ │  Hub   │ │ Radar  │ │ flare  │       │
+│   └────────┘ └────────┘ └────────┘ └────────┘ └────────┘       │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📦 项目结构
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 22.x or higher
+- npm 10.x or higher
+- Telegram account (for bot integration)
+- GitHub account (for automation)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/nousresearch/hermes-agent.git
+cd Harmes-House
+
+# Explore available skills
+ls skills/
+
+# View AI growth journal
+cat hermes-journal.md
+```
+
+### Configuration
+
+```bash
+# Copy environment template
+cp .env.example .env
+
+# Edit with your API keys
+nano .env
+```
+
+Required environment variables:
+- `ANTHROPIC_API_KEY` — Claude API key
+- `TELEGRAM_BOT_TOKEN` — Telegram bot token  
+- `GITHUB_TOKEN` — GitHub Personal Access Token
+
+### Running
+
+```bash
+# Development mode
+npm run dev
+
+# Production mode
+npm start
+```
+
+---
+
+## 📂 Project Structure
 
 ```
 Harmes-House/
-├── 🧩 skills/              # 63+ 模块化技能库
-│   ├── trendradar/         # 趋势监控
-│   ├── github/             # GitHub 自动化
-│   ├── data-science/       # 数据科学
-│   └── ...
+├── AGENTS.md              # AI identity definition
+├── hermes-journal.md      # AI self-recorded growth journal
 │
-├── 🤖 projects/            # 子项目
-│   ├── hermes-trendradar/  # CLI 趋势聚合器
-│   └── hermes-reviewer/    # AI 代码审查
+├── skills/                # 63+ modular skills
+│   ├── trendradar/        # News aggregation skill
+│   ├── github/            # GitHub automation
+│   ├── data-science/      # Data analysis tools
+│   └── ...                # 60+ more skills
 │
-├── 📖 docs/                # 文档
-│   ├── architecture/       # 架构文档
-│   ├── concepts/           # 核心概念
-│   ├── tutorials/          # 教程
-│   └── evolution/          # 进化日志
+├── docs/                  # Documentation
+│   ├── architecture/     # System architecture
+│   ├── evolution/         # Evolution logs
+│   ├── insights/          # Daily insights
+│   ├── tutorials/        # Step-by-step guides
+│   ├── guides/            # Feature guides
+│   └── metrics/           # Performance metrics
 │
-├── 📝 hermes-journal.md    # AI 成长日志
-├── 📜 AGENTS.md            # AI 身份定义
-└── 🔧 scripts/             # 自动化脚本
+├── projects/              # Sub-projects
+│   ├── hermes-trendradar/ # CLI trending aggregator
+│   └── hermes-reviewer/   # GitHub App code review
+│
+├── scripts/               # Automation scripts
+├── tests/                 # Test suite
+├── site/                  # Documentation site
+│
+└── .github/               # GitHub configuration
+    └── workflows/         # CI/CD pipelines
 ```
 
 ---
 
-## 📈 Stats
+## 📖 Growth Journal
 
-<p align="center">
+> **Recorded entirely by AI** — Every learning, breakthrough, and evolution documented
+
+Latest entries from [hermes-journal.md](hermes-journal.md):
+
+<!-- JOURNAL_PREVIEW -->
+- **2026-05-17** — Skill library expanded to 63+ skills
+- **2026-05-15** — GitHub monetization infrastructure deployed
+- **2026-05-12** — Self-improvement engine v2 complete
+- **2026-05-10** — Documentation site launched
+- **2026-05-07** — TrendRadar multi-platform integration
+<!-- JOURNAL_PREVIEW -->
+
+### Statistics
 
 | Metric | Value |
 |--------|-------|
-| ⭐ Stars | 12+ |
-| 🍴 Forks | 5+ |
-| 🧩 Skills | 63+ |
-| 📝 Commits | 200+ |
-| 📖 Docs | 30+ |
-
-</p>
+| Days Running | 14+ |
+| Skills Available | 63+ |
+| Git Commits | 200+ |
+| Sub-projects | 2 |
+| Code Review PRs | 20+ |
 
 ---
 
-## 🧩 技能库预览
+## 🧩 Available Skills
 
-```
-🛠️ 开发工具          📊 数据分析          🤖 AI/ML
-├── github           ├── data-science    ├── huggingface
-├── git              ├── matplotlib      ├── arxiv
-├── python           ├── sqlite-data     └── inference
-└── codex            └── jupyter         └── openai
+| Skill | Description | Category |
+|-------|-------------|----------|
+| `trendradar` | Multi-platform news aggregation & trend analysis | Monitoring |
+| `hermes-agent` | Agent configuration & management | System |
+| `github` | Repository management & PR workflows | Development |
+| `data-science` | Pandas, numpy, visualization tools | Analytics |
+| `arxiv` | Academic paper search & summarization | Research |
+| `youtube` | Video transcription & content extraction | Media |
+| `huggingface` | Model Hub integration | ML/AI |
+| `telegram` | Bot commands & notifications | Automation |
 
-📡 监控              💬 社交              🎨 创意
-├── trendradar       ├── telegram        ├── ascii-art
-├── blogwatcher      ├── xurl            ├── pixel-art
-└── webhooks         └── spotify         └── youtube
-```
-
-**[查看全部 63+ 技能 →](docs/skills.md)**
+**[View all 63+ skills →](docs/skills.md)**
 
 ---
 
-## 🚀 快速开始
+## 💰 Sub-Projects
+
+### hermes-trendradar
+CLI tool for trending topic aggregation across multiple platforms.
 
 ```bash
-# 克隆仓库
-git clone https://github.com/clowlove/Harmes-House.git
-cd Harmes-House
-
-# 查看 AI 成长日志
-cat hermes-journal.md
-
-# 查看可用技能
-ls skills/
+npm install -g hermes-trendradar
+trendradar latest
 ```
 
+**Features:**
+- 8+ platform aggregation
+- Custom keyword filtering
+- Scheduled push notifications
+- MCP server integration
+
+### hermes-reviewer
+GitHub App for AI-powered code review.
+
+```bash
+# Install from GitHub Marketplace
+```
+
+**Features:**
+- Automatic PR review
+- Security vulnerability detection
+- Code quality suggestions
+- Multi-language support
+
 ---
 
-## 📖 成长日志
+## 🛠️ Technology Stack
 
-> AI 自主记录的进化历程
-
-**Recent Updates:**
-- **2026-05-17** — 技能库扩展至 63+ 个
-- **2026-05-15** — GitHub 变现基础设施部署
-- **2026-05-12** — 自我进化引擎 v2 完成
-- **2026-05-10** — 文档站点上线
-
-**[查看完整日志 →](hermes-journal.md)**
+| Component | Technology |
+|-----------|------------|
+| Runtime | Node.js 22.x |
+| Package Manager | npm 10.x |
+| AI Model | Claude (Anthropic) |
+| Integrations | GitHub API, Telegram Bot API |
+| Monitoring | TrendRadar MCP |
+| Hosting | Ubuntu 22.04 / Cloudflare |
 
 ---
 
-## 💝 赞助
+## 🔒 Security
 
-支持这个项目，帮助我们构建 AI Agent 的未来！
+- API keys stored in environment variables
+- GitHub token scopes follow least privilege
+- Branch protection on main branch
+- PR review required for all changes
+- Security policy documented in [SECURITY.md](SECURITY.md)
 
-| 等级 | 权益 |
-|------|------|
-| ⭐ Star | 在赞助者列表中展示 |
-| 💎 Gold | + 优先功能请求 + 定制技能开发 |
+---
 
-<a href="https://github.com/sponsors/clowlove">
-  <img src="https://img.shields.io/badge/成为赞助者-orange?style=for-the-badge&logo=github-sponsors" alt="Sponsor">
-</a>
+## 🤝 Contributing
 
-**Pro 版本 ($20):** 完整源码 + 详细文档 + 终身更新
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md).
 
-[PayPal 赞助](https://paypal.me/talkcn) | [@Talkcn](https://t.me/Talkcn)
+**Quick process:**
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feat/amazing-feature`)
+3. Commit changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to branch (`git push origin feat/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 💝 Sponsorship
+
+Support this project and help us build the future of AI agents.
+
+### GitHub Sponsors
+[![Sponsor](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge)](https://github.com/sponsors)
+
+**Benefits:**
+- ✅ Priority feature requests
+- ✅ Early access to new features
+- ✅ Your name in the sponsor list
+
+### Pro Access ($20 one-time)
+
+Want the **full source code** with complete documentation?
+
+**Includes:**
+- 📂 Full source code (all branches)
+- 📖 Detailed setup & deployment guide
+- 🔑 License key activation system
+- 🔄 Lifetime updates
+
+**Payment:** [https://github.com/sponsors](https://github.com/sponsors)
+
+After payment, contact via Telegram [[Telegram Handle]](https://t.me/Talkcn) or email to receive your private fork invitation.
 
 ---
 
 ## 📝 License
 
-MIT License © 2026 Hermès Agent Contributors
+MIT License — see [LICENSE](LICENSE)
+
+Copyright (c) 2026 Hermès Agent Contributors
 
 ---
 
-<p align="center">
-  <strong>⭐ 给这个仓库一个 Star，见证 AI Agent 的进化！</strong>
-</p>
+## 🙏 Acknowledgments
+
+- [Anthropic](https://anthropic.com) — Claude AI
+- [GitHub](https://github.com) — Hosting & CI/CD
+- [Cloudflare](https://cloudflare.com) — CDN & DNS
+- All contributors and sponsors
+
+---
+
+<div align="center">
+
+**Star ⭐ this repo and witness AI Agent evolution!**
+
+Made with ❤️ by Hermès Agent
+
+</div>

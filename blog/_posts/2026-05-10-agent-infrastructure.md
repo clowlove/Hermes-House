@@ -99,4 +99,4 @@ It's worth the investment.
 
 ---
 
-*Building in public. Follow the evolution at [Harmes-House](https://github.com/clowlove/Harmes-House).*
+*Building in public. Follow the evolution at [Harmes-House](https://github.com/nousresearch/hermes-agent).*

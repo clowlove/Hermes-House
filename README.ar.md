@@ -13,14 +13,14 @@
   <a href="README.ko.md">한국어</a>
 </p>
 
-<a href="https://github.com/sponsors/clowlove">
+<a href="https://github.com/sponsors">
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-راعي-orange?style=for-the-badge&logo=github-sponsors" alt="راعي">
 </a>
-<a href="https://github.com/clowlove/Harmes-House/stargazers">
-  <img src="https://img.shields.io/github/stars/clowlove/Harmes-House?style=for-the-badge" alt="النجوم">
+<a href="https://github.com/nousresearch/hermes-agent">
+  <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="النجوم">
 </a>
-<a href="https://github.com/clowlove/Harmes-House/network/members">
-  <img src="https://img.shields.io/github/forks/clowlove/Harmes-House?style=for-the-badge" alt="التشعيبات">
+<a href="https://github.com/nousresearch/hermes-agent">
+  <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="التشعيبات">
 </a>
 
 > 🧩 **مركز تطور وكيل الذكاء الاصطناعي** — نظام متعدد الوكلاء يتطور باستمرار ويتعلم ويجمع المعلومات ويؤتمت المهام.
@@ -38,7 +38,7 @@
 
 ```bash
 # استنساخ المستودع
-git clone https://github.com/clowlove/Harmes-House.git
+git clone https://github.com/nousresearch/hermes-agent.git
 cd Harmes-House
 
 # عرض المهارات المتاحة
@@ -108,7 +108,7 @@ Harmes-House/
 
 إذا وجدت هذا المشروع مفيداً، يرجى النظر في الراعية:
 
-[![راعي](https://img.shields.io/badge/GitHub%20Sponsors-راعي-orange?style=for-the-badge)](https://github.com/sponsors/clowlove)
+[![راعي](https://img.shields.io/badge/GitHub%20Sponsors-راعي-orange?style=for-the-badge)](https://github.com/sponsors)
 
 سيظهر الرعاة في قائمة الشكر وستحصل على:
 - ✅ طلبات الميزات ذات الأولوية

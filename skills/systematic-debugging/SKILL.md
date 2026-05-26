@@ -355,6 +355,14 @@ When fixing bugs:
 3. Fix the root cause (GREEN)
 4. The test proves the fix and prevents regression
 
+### GitHub Actions CI Debugging
+
+For CI failures in repos you cannot clone (cron jobs, no local checkout), see:
+
+→ `references/github-actions-ci-debugging.md`
+
+Covers: REST API diagnostic sequence, remote file creation without cloning (blob→tree→commit→ref), and the common `skill.json` validation fix pattern.
+
 ## Real-World Impact
 
 From debugging sessions:
