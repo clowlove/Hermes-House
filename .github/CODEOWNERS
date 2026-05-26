@@ -1,5 +1,16 @@
-# Codeowners - 自动分配 reviewer
-# 指定各目录的默认 reviewer
-skills/  @clowlove
-.github/ @clowlove
-docs/    @clowlove
+# Code Owners
+# 自动分配审核人员
+
+# 默认审核人
+* @clowlove
+
+# 各模块审核人
+# skills/ @clowlove
+# docs/ @clowlove
+# projects/ @clowlove
+# .github/ @clowlove
+
+# 需要特定审核的
+*.md @clowlove
+README.md @clowlove
+AGENTS.md @clowlove

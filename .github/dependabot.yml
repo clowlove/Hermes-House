@@ -1,17 +1,84 @@
-# Dependabot 自动更新依赖
 version: 2
 updates:
-  - package-ecosystem: "pip"
+  # Enable npm updates
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "sunday"
     open-pull-requests-limit: 5
-    commit-message:
-      prefix: "deps"
     
+    # Labels for npm updates
+    labels:
+      - "dependencies"
+      - "npm"
+    
+    # Auto-merge minor and patch updates
+    allow:
+      - dependency-type: "production"
+        update-type: "semver-patch"
+      - dependency-type: "development"
+        update-type: "semver-patch"
+    
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    
+    reviewers:
+      - "clowlove"
+    
+    # Group minor updates
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+        update-types:
+          - "minor"
+          - "patch"
+      development-dependencies:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Enable GitHub Actions updates
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "sunday"
+    open-pull-requests-limit: 3
+    
+    labels:
+      - "dependencies"
+      - "github-actions"
+    
     commit-message:
       prefix: "ci"
+      include: "scope"
+    
+    reviewers:
+      - "clowlove"
+
+  # Enable Python pip updates (if applicable)
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+    open-pull-requests-limit: 3
+    
+    labels:
+      - "dependencies"
+      - "python"
+    
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+
+# Auto-merge configuration
+automerge: true
+automerge-type: "squash"
+automerge-strategy: "auto"
+
+# Require CI to pass before merging
+priority: -1

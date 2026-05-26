@@ -1,27 +1,31 @@
 ---
-name: 🚀 新技能
-description: 提交一个新技能的申请
+name: 🧩 Skill Request
+about: Request a new skill for the library
 title: "[Skill] "
-labels: ["skill-request"]
-assignees: ''
+labels: "skill-request"
+assignees: ""
 ---
 
-## 技能名称
+## 🧩 Skill Name
 
-<!-- 请填写技能名称 -->
+[What should this skill be called?]
 
-## 技能描述
+## 📖 Description
 
-<!-- 简要描述这个技能的功能 -->
+[What should this skill do?]
 
-## 使用场景
+## 🎯 Use Case
 
-<!-- 这个技能解决什么问题？ -->
+[When would you use this skill?]
 
-## 替代方案
+## 🔧 Suggested Implementation
 
-<!-- 是否有现成的替代方案？ -->
+[Any specific tools, APIs, or approaches?]
 
-## 参考链接
+## 📎 Examples
 
-<!-- 如有参考项目或文档，请提供链接 -->
+[Show me an example of how it would be used]
+
+---
+
+**Labels:** skill-request, needs-review
