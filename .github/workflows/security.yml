@@ -14,6 +14,8 @@ jobs:
       security-events: write
       actions: read
       contents: read
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
     steps:
     - name: Checkout repository
@@ -32,6 +34,8 @@ jobs:
   dependency-review:
     name: Dependency Review
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -43,12 +47,16 @@ jobs:
         deny-packages: |
           # Packages to deny
         deny-licenses: |
-          GPL-3.0
-          AGPL-3.0
+          GPL-3.0-only
+          GPL-3.0-or-later
+          AGPL-3.0-only
+          AGPL-3.0-or-later
 
   secscan:
     name: Security Scan
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     steps:
     - name: Checkout
       uses: actions/checkout@v4
