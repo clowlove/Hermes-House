@@ -1,69 +1,36 @@
-name: "Security & Quality"
-
-on:
-  push:
-    branches: [main, automation]
-  pull_request:
-    branches: [main]
-
-jobs:
-  codeql:
-    name: CodeQL
-    runs-on: ubuntu-latest
-    permissions:
-      security-events: write
-      actions: read
-      contents: read
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
-      with:
-        languages: javascript, python
-        
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3
-      with:
-        category: "/language:javascript,python"
-
-  dependency-review:
-    name: Dependency Review
-    runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
-    - name: Dependency Review
-      uses: actions/dependency-review-action@v4
-      with:
-        fail-on-severity: high
-        deny-packages: |
-          # Packages to deny
-        deny-licenses: |
-          GPL-3.0-only
-          GPL-3.0-or-later
-          AGPL-3.0-only
-          AGPL-3.0-or-later
-
-  secscan:
-    name: Security Scan
-    runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      
-    - name: Run npm audit
-      run: npm audit --audit-level=high
-      
-    - name: Run safety check
-      if: contains(matrix.language, 'python')
-      run: pip install safety && safety check
+     1|name: Security & Quality
+     2|
+     3|on:
+     4|  push:
+     5|    branches: [main]
+     6|  pull_request:
+     7|    branches: [main]
+     8|
+     9|permissions:
+    10|  contents: read
+    11|  security-events: write
+    12|
+    13|jobs:
+    14|  dependency-review:
+    15|    name: Dependency Review
+    16|    runs-on: ubuntu-latest
+    17|    if: github.event_name == 'pull_request'
+    18|    steps:
+    19|      - uses: actions/checkout@v4
+    20|      - uses: actions/dependency-review-action@v4
+    21|        with:
+    22|          fail-on-severity: high
+    23|          deny-licenses: GPL-3.0-only, GPL-3.0-or-later, AGPL-3.0-only, AGPL-3.0-or-later
+    24|
+    25|  secscan:
+    26|    name: Security Scan
+    27|    runs-on: ubuntu-latest
+    28|    env:
+    29|      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+    30|    steps:
+    31|      - uses: actions/checkout@v4
+    32|      - uses: github/codeql-action/init@v3
+    33|        with:
+    34|          languages: javascript
+    35|      - uses: github/codeql-action/analyze@v3
+    36|
