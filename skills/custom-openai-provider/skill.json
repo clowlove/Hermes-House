@@ -1,0 +1,24 @@
+{
+  "name": "custom-openai-provider",
+  "version": "1.0.0",
+  "description": "Configure any OpenAI-compatible API as a Hermes model provider — NVIDIA NIM, Together AI, Fireworks, Groq, local vLLM/Ollama, or any custom endpoint. Covers the critical provider-clearing pitfall.",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[models, providers, nvidia-nim, custom-endpoint, openai-compatible]",
+  "hermes": {
+    "skill_category": "devops",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
