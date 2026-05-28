@@ -1,0 +1,27 @@
+{
+  "name": "github-wiki-editing",
+  "version": "1.0.0",
+  "description": "Edit GitHub Wiki pages programmatically via git clone, edit, and push",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": [
+    "github",
+    "github-wiki-editing"
+  ],
+  "hermes": {
+    "skill_category": "github",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
