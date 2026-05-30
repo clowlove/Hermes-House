@@ -1,0 +1,5 @@
+textual>=0.52.0
+docker>=6.1.0
+requests>=2.31.0
+PyYAML>=6.0
+aiohttp>=3.9.0
