@@ -1,0 +1,27 @@
+{
+  "name": "php-website-development",
+  "version": "1.0.0",
+  "description": "Build and maintain PHP websites with Bootstrap, MySQL, nginx, and Cloudflare — admin panels, product catalogs, inquiry systems, SEO, and performance optimization.",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": [
+    "software-development",
+    "php-website-development"
+  ],
+  "hermes": {
+    "skill_category": "software-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
