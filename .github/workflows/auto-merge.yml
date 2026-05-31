@@ -27,7 +27,7 @@ jobs:
         contains(github.event.pull_request.labels.*.name, 'npm') ||
         contains(github.event.pull_request.labels.*.name, 'github-actions') ||
         contains(github.event.pull_request.labels.*.name, 'python')
-      uses: actions/github-script@v7
+      uses: actions/github-script@v9
       with:
         script: |
           // Check if PR is approved
