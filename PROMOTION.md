@@ -118,7 +118,7 @@ Harmes-House/
 
 - **GitHub**: [clowlove](https://github.com/clowlove)
 - **Telegram**: [@Talkcn](https://t.me/Talkcn)
-- **Email**: sdtractor@outlook.com
+- **Email**: imtalk@outlook.com
 
 ## 许可证
 

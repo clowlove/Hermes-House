@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=6366f1&height=180&section=header&text=Herm%C3%A8s%20Agent&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=AI%20Agent%20Evolution%20Hub&descSize=20&descAlignY=55" width="100%"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=6366f1&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=🤖+AI+Agent+That+Learns,+Builds+%26+Evolves;📊+50%2B+Skills+•+250%2B+Commits+•+10+Platforms)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=6366f1&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=🤖+AI+Agent+That+Learns,+Builds+%26+Evolves;📊+51%2B+Skills+•+260%2B+Commits+•+12+Platforms)](https://git.io/typing-svg)
 
 <br/>
 
@@ -39,11 +39,11 @@
 
 **核心数据：**
 
-- 📅 运行天数：**30+ 天**
-- 🧩 技能数量：**50+ 个**
-- 📝 Git 提交：**250+ 次**
+- 📅 运行天数：**35+ 天**
+- 🧩 技能数量：**51+ 个**
+- 📝 Git 提交：**260+ 次**
 - 📦 子项目：**3 个**
-- 🌐 监控平台：**10+ 个**
+- 🌐 监控平台：**12+ 个**
 
 </td>
 </tr>
@@ -90,12 +90,12 @@
 
 | 类别 | 技能数 | 示例 |
 |------|--------|------|
-| 🔧 开发工具 | 12 | GitHub PR、代码审查、调试 |
-| 📊 数据分析 | 8 | 趋势雷达、SEO分析、关键词 |
-| 🤖 AI/ML | 6 | 模型管理、提示优化、多Agent |
-| 🌐 网络/代理 | 5 | 3X-UI、代理优化、地理优化 |
-| 📱 通讯集成 | 4 | Telegram、Teams、邮件 |
-| 🏢 业务运营 | 5 | 外贸运营、内容生成、元标签 |
+| 🔧 开发工具 | 14 | GitHub PR、代码审查、调试、部署 |
+| 📊 数据分析 | 10 | 趋势雷达、SEO分析、价格追踪 |
+| 🤖 AI/ML | 8 | 视频生成、代码助手、翻译 |
+| 🌐 网络/代理 | 6 | 3X-UI、代理优化、数据爬虫 |
+| 📱 通讯集成 | 5 | Telegram、Twitter、社交媒体 |
+| 🏢 业务运营 | 8 | 内容生成、安全扫描、备份 |
 
 ---
 
@@ -141,15 +141,27 @@ memory/
 └── YYYY-MM-DD.md      # 每日日志
 ```
 
-### 🛠️ 技能库
+### 🛠️ 技能库 (51+)
 
 ```
 skills/
-├── github-pr-workflow/    # GitHub PR 工作流
-├── trendradar/            # 趋势监控
-├── seo-analysis/          # SEO 分析
-├── kanban-orchestrator/   # 看板编排
-└── ... (50+ skills)
+├── ai-video-generator/     # AI 视频生成
+├── auto-deploy/            # 一键部署
+├── ai-code-review/         # AI 代码审查
+├── smart-analytics/        # 智能分析
+├── content-generator/      # 内容生成
+├── ai-translator/          # AI 翻译
+├── twitter-bot/            # Twitter 机器人
+├── youtube-auto/           # YouTube 自动化
+├── github-star-bot/        # GitHub 自动 Star
+├── auto-backup/            # 自动备份
+├── security-scan/          # 安全扫描
+├── price-tracker/          # 价格追踪
+├── social-media-auto/      # 社交媒体自动化
+├── coding-assistant/       # 编程助手
+├── data-scraper/           # 数据爬虫
+├── api-doc-generator/      # API 文档生成
+└── ... (更多技能)
 ```
 
 ### 📊 监控面板
@@ -171,7 +183,7 @@ def auto_review_pr(pr_url):
     # 1. 获取 PR 详情
     pr = github.get_pr(pr_url)
     
-    # 2. 代码审查
+    # 2. AI 代码审查
     review = code_review_agent.analyze(pr.diff)
     
     # 3. 自动评论
@@ -194,6 +206,23 @@ def daily_trend_report():
     
     # 发送到 Telegram
     telegram.send(report)
+```
+
+### 🎬 内容创作自动化
+
+```python
+# 示例：自动生成并发布内容
+@agent.task
+def create_and_publish_content(topic):
+    # 1. 生成内容
+    content = content_generator.generate(topic)
+    
+    # 2. 翻译成多语言
+    translations = ai_translator.translate(content, ['zh', 'ja', 'en'])
+    
+    # 3. 发布到社交媒体
+    twitter.post(translations['en'])
+    weibo.post(translations['zh'])
 ```
 
 ---
@@ -262,7 +291,7 @@ def daily_trend_report():
 
 ### 2026 Q2 ✅
 - [x] 多 Agent 架构
-- [x] 技能库 (50+)
+- [x] 技能库 (51+)
 - [x] 记忆系统
 - [x] 趋势监控
 
@@ -291,7 +320,7 @@ def daily_trend_report():
 
 - **GitHub**: [clowlove](https://github.com/clowlove)
 - **Telegram**: [@Talkcn](https://t.me/Talkcn)
-- **Email**: sdtractor@outlook.com
+- **Email**: imtalk@outlook.com
 
 ---
 
