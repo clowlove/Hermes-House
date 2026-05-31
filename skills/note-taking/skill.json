@@ -1,0 +1,24 @@
+{
+  "name": "note-taking",
+  "version": "1.0.0",
+  "description": "Note taking skills, to save information, assist with research, and collab on multi-session planning and information sharing.",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[note]",
+  "hermes": {
+    "skill_category": ".archive",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

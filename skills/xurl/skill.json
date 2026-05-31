@@ -1,0 +1,24 @@
+{
+  "name": "xurl",
+  "version": "1.1.1",
+  "description": "X/Twitter via xurl CLI: post, search, DM, media, v2 API.",
+  "author": "xdevplatform + openclaw + Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[twitter, x, social-media, xurl, official-api]",
+  "hermes": {
+    "skill_category": "communication",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
