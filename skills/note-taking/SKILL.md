@@ -1,26 +1,11 @@
 ---
-name: note-taking
 description: Note taking skills, to save information, assist with research, and collab on multi-session planning and information sharing.
-version: 1.0.0
-metadata:
-  hermes:
-    tags: [note]
-    related_skills: ['obsidian']
 ---
 
 # Note Taking
 
-## Overview
-
-Note taking skills, to save information, assist with research, and collab on multi-session planning and information sharing.
-
-## Sub-skills
-
-- **obsidian**
+Skills for taking notes, saving information, assisting with research, and collaborating on multi-session planning.
 
 ## Usage
 
-Load individual skills from this category using:
-```
-skill_view(name="note-taking/{sub_skill}")
-```
+Use this skill when you need to create, organize, or search notes across sessions.
