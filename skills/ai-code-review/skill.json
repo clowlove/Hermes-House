@@ -1,0 +1,24 @@
+{
+  "name": "ai-code-review",
+  "version": "1.0.0",
+  "description": "AI-powered code review with security scanning, performance analysis, and best practices checking.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "AI, Code-Review, Security, Automation",
+  "hermes": {
+    "skill_category": "general",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-06-05",
+  "status": "stable"
+}
