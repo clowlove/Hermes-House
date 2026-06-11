@@ -1,0 +1,24 @@
+{
+  "name": "hermes-s6-container-supervision",
+  "version": "1.0.0",
+  "description": "Modify, debug, or extend the s6-overlay supervision tree inside the Hermes Agent Docker image — adding new services, debugging profile gateways, understanding the Architecture B main-program pattern.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[docker, s6, supervision, gateway, profiles]",
+  "hermes": {
+    "skill_category": "software-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
