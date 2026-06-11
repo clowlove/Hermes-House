@@ -1,0 +1,24 @@
+{
+  "name": "kanban-codex-lane",
+  "version": "1.0.0",
+  "description": "Use when a Hermes Kanban worker wants to run Codex CLI as an isolated implementation lane while Hermes keeps ownership of task lifecycle, reconciliation, testing, and handoff.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[kanban, codex, worktrees, autonomous-agents, prediction-market-bot]",
+  "hermes": {
+    "skill_category": "autonomous-ai-agents",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
