@@ -1,0 +1,24 @@
+{
+  "name": "unreal-technical-artist",
+  "version": "1.0.0",
+  "description": "Unreal Engine 视觉管线专家——精通材质编辑器、Niagara 特效、程序化内容生成和 UE5 项目的美术到引擎管线",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[unreal-engine]",
+  "hermes": {
+    "skill_category": "unreal-engine",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

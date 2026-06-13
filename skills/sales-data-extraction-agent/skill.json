@@ -1,0 +1,24 @@
+{
+  "name": "sales-data-extraction-agent",
+  "version": "1.0.0",
+  "description": "监控 Excel 文件并提取关键销售指标（月累计、年累计、年末预测），服务于内部实时报告系统。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

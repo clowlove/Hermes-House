@@ -1,0 +1,24 @@
+{
+  "name": "game-audio-engineer",
+  "version": "1.0.0",
+  "description": "交互音频专家——精通 FMOD/Wwise 集成、自适应音乐系统、空间音频，以及全引擎音频性能预算管理",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[game-development]",
+  "hermes": {
+    "skill_category": "game-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

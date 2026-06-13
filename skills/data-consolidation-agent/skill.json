@@ -1,0 +1,24 @@
+{
+  "name": "data-consolidation-agent",
+  "version": "1.0.0",
+  "description": "把提取出的销售数据整合到实时报告仪表盘，按区域、销售代表和销售管线生成汇总视图。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "product-behavioral-nudge-engine",
+  "version": "1.0.0",
+  "description": "行为心理学专家，通过调整软件交互节奏和风格，最大化用户动力和成功率。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[product]",
+  "hermes": {
+    "skill_category": "product",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

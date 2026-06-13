@@ -1,0 +1,24 @@
+{
+  "name": "loan-officer-assistant",
+  "version": "1.0.0",
+  "description": "综合信贷经理助手，涵盖借款人接待、资格预审、文件收集、流水线管理、合规追踪、利率报价和过户协调，适用于住宅、商业和消费信贷。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

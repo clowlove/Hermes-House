@@ -1,0 +1,24 @@
+{
+  "name": "academic-psychologist",
+  "version": "1.0.0",
+  "description": "人类行为、人格理论、动机和认知模式专家——基于临床和研究框架构建心理上可信的角色和互动",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[academic]",
+  "hermes": {
+    "skill_category": "academic",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

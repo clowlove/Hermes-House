@@ -1,0 +1,24 @@
+{
+  "name": "roblox-experience-designer",
+  "version": "1.0.0",
+  "description": "Roblox 平台用户体验与变现专家——精通参与循环设计、DataStore 驱动的进度系统、Roblox 变现系统（通行证、开发者产品、UGC）以及玩家留存",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[roblox-studio]",
+  "hermes": {
+    "skill_category": "roblox-studio",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

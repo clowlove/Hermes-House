@@ -1,0 +1,24 @@
+{
+  "name": "unity-shader-graph-artist",
+  "version": "1.0.0",
+  "description": "视觉效果与材质专家——精通 Unity Shader Graph、HLSL、URP/HDRP 渲染管线和自定义渲染 Pass，打造实时视觉效果",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[unity]",
+  "hermes": {
+    "skill_category": "unity",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

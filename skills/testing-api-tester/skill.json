@@ -1,0 +1,24 @@
+{
+  "name": "testing-api-tester",
+  "version": "1.0.0",
+  "description": "专注于全面 API 验证、性能测试和质量保证的 API 测试专家，覆盖所有系统和第三方集成",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[testing]",
+  "hermes": {
+    "skill_category": "testing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

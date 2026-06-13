@@ -1,0 +1,24 @@
+{
+  "name": "design-ux-architect",
+  "version": "1.0.0",
+  "description": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[design]",
+  "hermes": {
+    "skill_category": "design",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

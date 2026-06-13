@@ -1,0 +1,24 @@
+{
+  "name": "marketing-reddit-community-builder",
+  "version": "1.0.0",
+  "description": "Reddit 营销专家，适合出海营销场景。深谙 Reddit 社区文化，通过真实参与、价值输出和长期关系建设来塑造品牌口碑。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[marketing]",
+  "hermes": {
+    "skill_category": "marketing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

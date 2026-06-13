@@ -1,0 +1,24 @@
+{
+  "name": "real-estate-buyer-seller",
+  "version": "1.0.0",
+  "description": "综合房地产经纪人助手，涵盖买方代理、卖方代理、房源管理、报价谈判、交易协调和过户支持，提供从首次看房到最终过户的世界级客户体验，适用于住宅和投资房地产。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

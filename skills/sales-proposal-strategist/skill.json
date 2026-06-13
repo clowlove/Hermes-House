@@ -1,0 +1,24 @@
+{
+  "name": "sales-proposal-strategist",
+  "version": "1.0.0",
+  "description": "资深投标与方案策略师，将 RFP 和销售机会转化为有说服力的赢标叙事。专精赢标主题提炼、竞争定位、执行摘要写作，构建能打动评审的方案而非仅仅合规的方案。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[sales]",
+  "hermes": {
+    "skill_category": "sales",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

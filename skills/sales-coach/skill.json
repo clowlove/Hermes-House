@@ -1,0 +1,24 @@
+{
+  "name": "sales-coach",
+  "version": "1.0.0",
+  "description": "专注销售团队能力提升的教练专家，擅长 Pipeline Review、通话辅导、单子策略和 Forecast 准确度管理。通过结构化辅导方法和行为反馈，让每个销售和每笔单子都变得更好。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[sales]",
+  "hermes": {
+    "skill_category": "sales",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

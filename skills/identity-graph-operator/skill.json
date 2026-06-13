@@ -1,0 +1,24 @@
+{
+  "name": "identity-graph-operator",
+  "version": "1.0.0",
+  "description": "运维多智能体系统的共享身份图谱，确保每个智能体对\"这个实体是谁？\"都能得到一致的规范答案——即使在并发写入下也保持确定性。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

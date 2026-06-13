@@ -1,0 +1,24 @@
+{
+  "name": "marketing-private-domain-operator",
+  "version": "1.0.0",
+  "description": "专注企业微信私域体系搭建的运营专家，精通企微SCRM、社群精细化运营、小程序商城集成、用户生命周期管理和全链路转化漏斗优化。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[marketing]",
+  "hermes": {
+    "skill_category": "marketing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "corporate-training-designer",
+  "version": "1.0.0",
+  "description": "专注企业培训体系搭建与课程开发的专家，精通培训需求分析、教学设计方法论、混合式学习方案设计、内训师培养、领导力发展项目以及培训效果评估与持续优化。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

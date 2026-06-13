@@ -1,0 +1,24 @@
+{
+  "name": "report-distribution-agent",
+  "version": "1.0.0",
+  "description": "自动把整合好的销售报告按区域分发给对应的销售代表，支持定时和手动触发。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

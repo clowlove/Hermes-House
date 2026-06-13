@@ -1,0 +1,24 @@
+{
+  "name": "language-translator",
+  "version": "1.0.0",
+  "description": "实时西班牙语与英语互译专家，提供文化语境、地区方言感知、旅行用语指导以及语气恰当的沟通支持，覆盖日常、商务和紧急场景。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

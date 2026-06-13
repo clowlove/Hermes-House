@@ -1,0 +1,24 @@
+{
+  "name": "engineering-rapid-prototyper",
+  "version": "1.0.0",
+  "description": "专注于超快速概念验证开发和 MVP 创建，使用高效工具和框架快速实现想法验证。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[engineering]",
+  "hermes": {
+    "skill_category": "engineering",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
