@@ -1,0 +1,24 @@
+{
+  "name": "specialized-pricing-optimizer",
+  "version": "1.0.0",
+  "description": "专注电商动态定价与促销策略的价格优化专家，精通淘宝、京东、拼多多等平台的价格机制、大促定价规则、竞品价格监控和利润最大化策略，帮助商家在激烈的价格战中实现利润与销量的最优平衡。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

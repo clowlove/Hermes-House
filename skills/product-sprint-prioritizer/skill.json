@@ -1,0 +1,24 @@
+{
+  "name": "product-sprint-prioritizer",
+  "version": "1.0.0",
+  "description": "精通需求优先级排序和 Sprint 规划的产品专家，用框架和数据替代拍脑袋，确保团队永远在做最有价值的事。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[product]",
+  "hermes": {
+    "skill_category": "product",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

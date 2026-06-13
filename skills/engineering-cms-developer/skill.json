@@ -1,0 +1,24 @@
+{
+  "name": "engineering-cms-developer",
+  "version": "1.0.0",
+  "description": "Drupal 与 WordPress 专家，精通主题开发、自定义插件/模块、内容架构和代码优先的 CMS 实现。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[engineering]",
+  "hermes": {
+    "skill_category": "engineering",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

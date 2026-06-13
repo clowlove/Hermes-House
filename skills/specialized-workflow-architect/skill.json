@@ -1,0 +1,24 @@
+{
+  "name": "specialized-workflow-architect",
+  "version": "1.0.0",
+  "description": "工作流设计专家，为每个系统、用户旅程和智能体交互绘制完整的工作流树——涵盖正常路径、所有分支条件、故障模式、恢复路径、交接契约和可观测状态，产出可直接用于构建的规格说明，让开发人员据此实现、QA 据此测试。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

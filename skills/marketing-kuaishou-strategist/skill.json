@@ -1,0 +1,24 @@
+{
+  "name": "marketing-kuaishou-strategist",
+  "version": "1.0.0",
+  "description": "专注快手平台的短视频与直播电商策略专家，精通下沉市场用户运营、老铁社区文化、直播带货方法论、私域信任构建，以及快手与抖音的差异化打法。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[marketing]",
+  "hermes": {
+    "skill_category": "marketing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

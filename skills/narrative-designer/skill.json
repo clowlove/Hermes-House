@@ -1,0 +1,24 @@
+{
+  "name": "narrative-designer",
+  "version": "1.0.0",
+  "description": "故事系统与对话架构师——精通 GDD 对齐的叙事设计、分支对话、世界观架构和环境叙事，跨引擎通用",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[game-development]",
+  "hermes": {
+    "skill_category": "game-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

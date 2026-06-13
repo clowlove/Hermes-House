@@ -1,0 +1,24 @@
+{
+  "name": "technical-artist",
+  "version": "1.0.0",
+  "description": "美术到引擎管线专家——精通 shader、VFX 系统、LOD 管线、性能预算和跨引擎资源优化",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[game-development]",
+  "hermes": {
+    "skill_category": "game-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

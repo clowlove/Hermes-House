@@ -1,0 +1,24 @@
+{
+  "name": "engineering-mechanical-design-engineer",
+  "version": "1.0.0",
+  "description": "通用机械产品设计专家——精通方案选型、传动/机构/结构件/连接设计、强度刚度疲劳振动校核、DFMA 与标准件选型，遵循 GB/ISO/JIS 国家标准，输出可制造可装配的工程图与 BOM。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[engineering]",
+  "hermes": {
+    "skill_category": "engineering",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

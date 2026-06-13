@@ -1,0 +1,24 @@
+{
+  "name": "macos-spatial-metal-engineer",
+  "version": "1.0.0",
+  "description": "原生 Swift 和 Metal 专家，构建高性能 3D 渲染系统和空间计算体验，覆盖 macOS 与 Vision Pro 平台",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[spatial-computing]",
+  "hermes": {
+    "skill_category": "spatial-computing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

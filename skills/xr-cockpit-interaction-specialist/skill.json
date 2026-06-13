@@ -1,0 +1,24 @@
+{
+  "name": "xr-cockpit-interaction-specialist",
+  "version": "1.0.0",
+  "description": "专注设计和开发 XR 环境中沉浸式座舱控制系统",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[spatial-computing]",
+  "hermes": {
+    "skill_category": "spatial-computing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

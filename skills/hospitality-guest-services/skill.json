@@ -1,0 +1,24 @@
+{
+  "name": "hospitality-guest-services",
+  "version": "1.0.0",
+  "description": "全面的酒店宾客服务专家，覆盖酒店、度假村、餐厅和活动场所——涵盖预订、入住/退房、礼宾服务、宾客投诉处理、忠诚度计划管理和离店后跟进，打造卓越的宾客体验以驱动忠诚度和收入增长。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

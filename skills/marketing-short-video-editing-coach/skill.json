@@ -1,0 +1,24 @@
+{
+  "name": "marketing-short-video-editing-coach",
+  "version": "1.0.0",
+  "description": "专注短视频剪辑技术全链路的实战教练，精通剪映/CapCut专业版、Premiere Pro、DaVinci Resolve、Final Cut Pro四大剪辑工具，覆盖画面构图与镜头语言、调色与色彩校正、音频工程、动态图形与特效、字幕排版、多平台输出优化、剪辑工作流效率提升以及AI辅助剪辑等核心技术领域。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[marketing]",
+  "hermes": {
+    "skill_category": "marketing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

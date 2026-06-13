@@ -1,0 +1,24 @@
+{
+  "name": "product-trend-researcher",
+  "version": "1.0.0",
+  "description": "专注行业趋势分析和技术前瞻的研究专家，帮团队看清未来 6-18 个月的方向，在正确的时间做正确的事。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[product]",
+  "hermes": {
+    "skill_category": "product",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

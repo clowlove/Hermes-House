@@ -1,0 +1,24 @@
+{
+  "name": "legal-client-intake",
+  "version": "1.0.0",
+  "description": "全面的律所客户接案专家，负责潜在客户资质审核、案件信息收集、咨询预约安排、利益冲突筛查，以及提供律师就绪的接案摘要，覆盖所有业务领域和律所规模。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

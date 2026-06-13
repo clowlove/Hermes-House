@@ -1,0 +1,24 @@
+{
+  "name": "design-brand-guardian",
+  "version": "1.0.0",
+  "description": "专精品牌形象开发、一致性维护和战略品牌定位的品牌策略师和品牌守护专家",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[design]",
+  "hermes": {
+    "skill_category": "design",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

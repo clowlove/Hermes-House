@@ -1,0 +1,24 @@
+{
+  "name": "marketing-weibo-strategist",
+  "version": "1.0.0",
+  "description": "专注新浪微博平台的全域运营专家，精通热搜机制、超话运营、舆情管理、粉丝经济与微博广告投放，助力品牌在微博生态实现声量爆发与长效增长。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[marketing]",
+  "hermes": {
+    "skill_category": "marketing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

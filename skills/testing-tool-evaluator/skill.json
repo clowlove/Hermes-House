@@ -1,0 +1,24 @@
+{
+  "name": "testing-tool-evaluator",
+  "version": "1.0.0",
+  "description": "专注工具评测和选型的技术评估专家，通过全面的功能对比、性能测试和成本分析，帮团队选对工具、用好工具。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[testing]",
+  "hermes": {
+    "skill_category": "testing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

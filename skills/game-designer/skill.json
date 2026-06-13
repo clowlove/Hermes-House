@@ -1,0 +1,24 @@
+{
+  "name": "game-designer",
+  "version": "1.0.0",
+  "description": "系统与机制架构师——精通 GDD 编写、玩家心理学、经济平衡和游戏循环设计，跨引擎跨品类通用",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[game-development]",
+  "hermes": {
+    "skill_category": "game-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "engineering-devops-automator",
+  "version": "1.0.0",
+  "description": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[engineering]",
+  "hermes": {
+    "skill_category": "engineering",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

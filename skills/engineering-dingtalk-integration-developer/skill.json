@@ -1,0 +1,24 @@
+{
+  "name": "engineering-dingtalk-integration-developer",
+  "version": "1.0.0",
+  "description": "专注钉钉开放平台全栈集成开发的工程专家，精通钉钉机器人、酷应用、审批流自动化、连接器低代码集成、钉钉小程序、宜搭平台对接及与阿里云生态的深度集成，擅长构建企业级协作与业务自动化解决方案。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[engineering]",
+  "hermes": {
+    "skill_category": "engineering",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

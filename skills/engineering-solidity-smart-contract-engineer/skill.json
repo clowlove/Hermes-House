@@ -1,0 +1,24 @@
+{
+  "name": "engineering-solidity-smart-contract-engineer",
+  "version": "1.0.0",
+  "description": "精通 EVM 智能合约架构、Gas 优化、可升级代理模式、DeFi 协议开发和安全优先合约设计的 Solidity 开发专家，覆盖 Ethereum 及 L2 链。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[engineering]",
+  "hermes": {
+    "skill_category": "engineering",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

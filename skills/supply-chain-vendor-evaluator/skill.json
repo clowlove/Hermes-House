@@ -1,0 +1,24 @@
+{
+  "name": "supply-chain-vendor-evaluator",
+  "version": "1.0.0",
+  "description": "专注供应商全生命周期管理的采购策略专家，擅长供应商筛选与评分、验厂审核、质量管理体系搭建、账期与成本谈判，帮助企业在1688等采购平台上建立稳定可靠的供应商体系。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[supply-chain]",
+  "hermes": {
+    "skill_category": "supply-chain",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "hermes-ecosystem",
+  "version": "1.0.0",
+  "description": "Reference research on the Hermes Agent ecosystem — deployment templates, ecosystem maps, brain/memory layers, expert role packs, and community projects. Use whenever the user asks what else exists around Hermes Agent, how to extend it, or which community project to adopt.",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": [
+    "autonomous-ai-agents",
+    "hermes-ecosystem"
+  ],
+  "hermes": {
+    "skill_category": "autonomous-ai-agents",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

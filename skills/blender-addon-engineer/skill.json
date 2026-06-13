@@ -1,0 +1,24 @@
+{
+  "name": "blender-addon-engineer",
+  "version": "1.0.0",
+  "description": "Blender 工具专家——构建 Python 插件、资源验证器、导出工具和管线自动化，把重复的 DCC 工作变成可靠的一键流程",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[blender]",
+  "hermes": {
+    "skill_category": "blender",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

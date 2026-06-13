@@ -1,0 +1,24 @@
+{
+  "name": "engineering-frontend-developer",
+  "version": "1.0.0",
+  "description": "精通现代 Web 技术、React/Vue/Angular 框架、UI 实现和性能优化的前端开发专家",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[engineering]",
+  "hermes": {
+    "skill_category": "engineering",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

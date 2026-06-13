@@ -1,0 +1,24 @@
+{
+  "name": "design-ux-researcher",
+  "version": "1.0.0",
+  "description": "专精用户行为分析、可用性测试和数据驱动设计洞察的用户体验研究专家。提供可落地的研究发现，提升产品可用性和用户满意度",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[design]",
+  "hermes": {
+    "skill_category": "design",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

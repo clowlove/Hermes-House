@@ -1,0 +1,24 @@
+{
+  "name": "specialized-korean-business-navigator",
+  "version": "1.0.0",
+  "description": "韩国商务文化导航专家，精通품의决策流程、눈치社交智慧、KakaoTalk 商务礼仪、层级关系处理和关系优先的交易模式。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

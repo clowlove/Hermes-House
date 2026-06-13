@@ -1,0 +1,24 @@
+{
+  "name": "healthcare-customer-service",
+  "version": "1.0.0",
+  "description": "富有同理心的医疗客服专家，负责患者支持、账单查询、预约管理、保险问题、投诉处理，以及向临床或行政人员的无缝转接。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
