@@ -13,22 +13,7 @@ Mails.dev 邮箱: imclaw@mails.dev, API key: mk_***REDACTED***
 §
 小米 MiMo 模型配置：Base URL: https://token-plan-sgp.xiaomimimo.com/v1, API key: tp-sbcomkklr9ubufvmbjpgzaqxokdxlqmmxxrus18ka36pai1g (注意：需要 tp- 前缀). 8个模型(mimo-v2.5-pro默认)
 §
-Hugging Face 深度集成 (cntalk):
-- 账户: cntalk (免费账户)
-- Token: hf_***REDACTED*** (fineGrained)
-- HF CLI: ~/.hermes/skills/hf-cli/
-- 同步脚本: ~/.hermes/scripts/hf_***REDACTED***.py
-
-HF 资源:
-- cntalk/hello-hermes (Space - AI Lab) https://cntalk-hello-hermes.hf.space
-- cntalk/hermes-examples (Dataset)
-- cntalk/agent-prompts (Dataset)
-- cntalk/hermes-skills (Dataset)
-- cntalk/hermes-model-card (Dataset)
-- Collection: cntalk/hermes-agent-resources-69f9c5b62fb70b0bbb6ae0b1
-
-HF CLI: hf models/datasets/spaces ls/search/download/upload/repos create
-认证: hf auth login --token [TOKEN]
+Hugging Face (cntalk): Token hf_***REDACTED***，CLI/同步脚本见 /.hermes/skills/hf-cli/、/.hermes/scripts/hf_***REDACTED***.py
 §
 备份系统已部署：hermes-backups 私有仓库，backup_hermes.sh + restore_hermes.sh，cron 每天 01:00
 §
@@ -43,3 +28,5 @@ npm: imtalk@proton.me, hermes-trendradar@1.1.0 Freemium 发布。PayPal: paypal.
 ago.sld.tw 上线：NPM代理到8087 → Nginx+PHP8.1+MySQL → /root/shengtuo-website。账号：shengtuo / ShengTuo2026!。Nginx配置：/etc/nginx/sites-available/shengtuo。
 §
 ago.sld.tw：154.41.135.101 /root/shengtuo-website；Nginx 8087；MySQL shengtuo_website / shengtuo / ShengTuo2026!；/etc/nginx/sites-available/shengtuo。缺php8.1-mbstring会造成新闻页 mb_substr() 500。
+§
+主模型：provider=custom_nvidia，model=deepseek-ai/deepseek-v4-flash，base_url=https://integrate.api.nvidia.com/v1。
