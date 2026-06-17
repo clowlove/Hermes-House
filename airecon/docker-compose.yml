@@ -1,0 +1,98 @@
+version: "3.9"
+
+services:
+  # ===========================================================================
+  # AIRecon Main Application
+  # ===========================================================================
+  ai-recon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: airecon-app
+    hostname: airecon
+    # Expose TUI if desired (Textual can run in terminal, but we map for debug)
+    # stdin_open and tty required for interactive TUI in container
+    stdin_open: true
+    tty: true
+    environment:
+      - OLLAMA_HOST=${OLLAMA_HOST:-http://ollama:11434}
+      - KALI_SANDBOX_HOST=${KALI_SANDBOX_HOST:-kali-sandbox}
+      - AIRECON_DATA_DIR=/data
+    volumes:
+      # Mount Docker socket to allow the orchestrator to manage sandbox containers
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      # Persistent session data and configuration
+      - airecon-data:/data
+      # Optional: mount host Kali tools directory if needed
+    networks:
+      - airecon-net
+    depends_on:
+      kali-sandbox:
+        condition: service_started
+      ollama:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # ===========================================================================
+  # Kali Linux Sandbox Container
+  # ===========================================================================
+  kali-sandbox:
+    image: kalilinux/kali-rolling:latest
+    container_name: airecon-kali-sandbox
+    hostname: kali-sandbox
+    # Keep container running indefinitely
+    command: ["/bin/bash", "-c", "apt-get update && apt-get install -y --no-install-recommends kali-linux-headless && sleep infinity"]
+    # Alternatively, use a prebuilt image with tools (e.g., kalilinux/kali-rolling)
+    # For production, consider building a custom image from a Dockerfile in ./kali/
+    tty: true
+    environment:
+      - DEBIAN_FRONTEND=noninteractive
+    volumes:
+      # Share a volume for result exchange (optional)
+      - airecon-data:/data:ro
+    networks:
+      - airecon-net
+    healthcheck:
+      test: ["CMD", "which", "nmap"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 120s
+    restart: unless-stopped
+
+  # ===========================================================================
+  # Self-hosted Ollama LLM Service
+  # ===========================================================================
+  ollama:
+    image: ollama/ollama:latest
+    container_name: airecon-ollama
+    hostname: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      # Persistent model storage
+      - ollama-models:/root/.ollama
+    networks:
+      - airecon-net
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+    restart: unless-stopped
+
+# =============================================================================
+# Volumes
+# =============================================================================
+volumes:
+  airecon-data:
+  ollama-models:
+
+# =============================================================================
+# Networks
+# =============================================================================
+networks:
+  airecon-net:
+    driver: bridge
+    name: airecon-net
