@@ -30,3 +30,5 @@ ago.sld.tw 上线：NPM代理到8087 → Nginx+PHP8.1+MySQL → /root/shengtuo-w
 ago.sld.tw：154.41.135.101 /root/shengtuo-website；Nginx 8087；MySQL shengtuo_website / shengtuo / ShengTuo2026!；/etc/nginx/sites-available/shengtuo。缺php8.1-mbstring会造成新闻页 mb_substr() 500。
 §
 主模型：provider=custom_nvidia，model=deepseek-ai/deepseek-v4-flash，base_url=https://integrate.api.nvidia.com/v1。
+§
+Updated `powerpoint` skill: added `references/chinese-education-pptx.md` with a Chinese-education PPT theme and dense single-page lesson layout pattern to reuse for school/course-style decks.
