@@ -46,6 +46,44 @@ This is the #1 mistake when switching from a named provider to a custom endpoint
 
 Exit CLI and restart hermes. For gateway: `hermes gateway restart`.
 
+## Switching Between Named Providers (e.g., → mimo)
+
+When the target provider is already defined in `config.yaml` under `providers`, **do NOT set `model.base_url` or `model.api_key`** — clear them so Hermes inherits from the provider block. Set `model.provider` to the provider name:
+
+```yaml
+model:
+  api_mode: chat_completions
+  provider: mimo       # provider name from config.yaml providers section
+  api_key: ''          # MUST be empty — inherits from providers.mimo.api_key
+  base_url: ''         # MUST be empty — inherits from providers.mimo.base_url
+  default: mimo-v2.5-pro
+```
+
+Then update fallback:
+```yaml
+fallback_providers:
+- mimo
+- xiaomi_mimo
+- openrouter
+```
+
+**Pitfall**: Some API keys need a provider-specific prefix (e.g., mimo uses `tp-`). Test with curl first:
+```bash
+curl -s -X POST "https://token-plan-sgp.xiaomimimo.com/v1/chat/completions" \
+  -H "Authorization: Bearer tp-YOUR_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"mimo-v2.5-pro","messages":[{"role":"user","content":"Hi"}],"max_tokens":10}'
+```
+If 401 "Invalid API Key" — try adding the provider's required prefix.
+
+**Mimo Provider Details:**
+| Item | Value |
+|------|-------|
+| Base URL | `https://token-plan-sgp.xiaomimimo.com/v1` |
+| API Key Format | `tp-` prefix required (e.g., `tp-sbcomkklr...`) |
+| Models | `mimo-v2.5-pro`, `mimo-v2.5`, `mimo-v2-pro`, `mimo-v2-omni`, `mimo-v2-flash` |
+| Config in | `providers.mimo` in config.yaml |
+
 ## NVIDIA NIM
 
 - Base URL: `https://integrate.api.nvidia.com/v1`

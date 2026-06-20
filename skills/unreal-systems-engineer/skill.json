@@ -1,0 +1,24 @@
+{
+  "name": "unreal-systems-engineer",
+  "version": "1.0.0",
+  "description": "性能与混合架构专家——精通 C++/Blueprint 边界、Nanite 几何体、Lumen GI 和 Gameplay Ability System，面向 AAA 级 Unreal Engine 项目",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[unreal-engine]",
+  "hermes": {
+    "skill_category": "unreal-engine",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

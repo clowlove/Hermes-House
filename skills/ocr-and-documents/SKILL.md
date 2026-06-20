@@ -71,19 +71,14 @@ python scripts/extract_pymupdf.py document.pdf --metadata    # Title, author, pa
 python scripts/extract_pymupdf.py document.pdf --pages 0-4   # Specific pages
 ```
 
-**Inline**:
+## Inline:
 ```bash
-python3 -c "
-import pymupdf
-doc = pymupdf.open('document.pdf')
-for page in doc:
-    print(page.get_text())
-"
+python3 -c "import pymupdf; print('ok')"
 ```
 
 ---
 
-## marker-pdf (high-quality OCR)
+
 
 ```bash
 # Check disk space first

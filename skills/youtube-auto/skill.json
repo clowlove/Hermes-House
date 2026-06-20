@@ -1,0 +1,24 @@
+{
+  "name": "youtube-auto",
+  "version": "1.0.0",
+  "description": "Automate YouTube content creation, SEO optimization, and channel management.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "YouTube, SEO, Automation, Content",
+  "hermes": {
+    "skill_category": "general",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-06-05",
+  "status": "stable"
+}

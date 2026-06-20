@@ -1,0 +1,205 @@
+name: "Hermès Growth Journal"
+description: "Auto-update the Hermès journal with latest activities"
+
+on:
+  schedule:
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-journal:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      
+      - name: Update Journal with Community Findings
+        run: |
+          python3 << 'PYEOF'
+          import subprocess
+          from pathlib import Path
+          from datetime import datetime
+          import re
+          import urllib.request
+          import json
+          
+          journal_file = Path("hermes-journal.md")
+          log_file = Path("docs/evolution/log-2026-05.md")
+          
+          # Search for trending AI Agent projects (unauthenticated, 10 reqs/min limit)
+          queries = [
+              "AI agent autonomous reasoning MCP",
+              "LLM tool use agent framework 2025",
+          ]
+          
+          all_projects = []
+          for q in queries[:1]:  # Just do 1 query to save time
+              try:
+                  url = f"https://api.github.com/search/repositories?q={urllib.parse.quote(q)}&sort=stars&order=desc&per_page=5"
+                  req = urllib.request.Request(url)  # Unauthenticated - 10 reqs/min
+                  with urllib.request.urlopen(req, timeout=10) as resp:
+                      items = json.loads(resp.read().decode())["items"][:3]
+                      for item in items:
+                          if item.get("stargazers_count", 0) > 100:
+                              all_projects.append({
+                                  "name": item["name"],
+                                  "full_name": item["full_name"],
+                                  "stars": item["stargazers_count"],
+                                  "description": item.get("description", "无描述") or "无描述"
+                              })
+              except Exception as e:
+                  print(f"Search error: {e}")
+          
+          # Deduplicate
+          seen = set()
+          unique = []
+          for p in all_projects:
+              if p["full_name"] not in seen:
+                  seen.add(p["full_name"])
+                  unique.append(p)
+          
+          if not unique:
+              print("No new projects found")
+          else:
+              print(f"Found {len(unique)} new projects")
+              
+              # Update evolution log
+              if log_file.exists():
+                  today = datetime.now().strftime("%Y-%m-%d")
+                  entry = f"\n### {today} — 社区探索\n\n**发现的新项目：**\n\n"
+                  for p in unique:
+                      entry += f"- **{p['name']}** ({p['stars']}⭐): {p['description']}\n"
+                      entry += f"  - URL: https://github.com/{p['full_name']}\n"
+                  entry += "\n---\n"
+                  
+                  content = log_file.read_text()
+                  content = content.replace("\n---\n\n*日志自动生成，最后更新:", f"\n{entry}\n---\n\n*日志自动生成，最后更新:")
+                  log_file.write_text(content)
+                  print(f"Updated evolution log with {len(unique)} projects")
+          
+          # Update journal timestamp
+          if journal_file.exists():
+              content = journal_file.read_text()
+              new_timestamp = f'*最后更新：{datetime.now().strftime("%Y-%m-%d %H:%M")} UTC*'
+              content = re.sub(
+                  r'\*最后更新：\d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC\*',
+                  new_timestamp,
+                  content
+              )
+              journal_file.write_text(content)
+              print(f"Updated journal timestamp: {new_timestamp}")
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Create Branch and Commit
+        id: create-branch
+        run: |
+          BRANCH="auto/journal-update-$(date +%Y%m%d-%H%M%S)"
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          git checkout -b "$BRANCH"
+          git config user.name "Hermès Agent"
+          git config user.email "[REDACTED]"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Auto-update journal"
+          git push -u origin "$BRANCH"
+          echo "Branch $BRANCH pushed successfully"
+
+      - name: Create and Merge Pull Request
+        run: |
+          echo "Creating PR for branch: $BRANCH"
+          # Use gh cli to create and merge PR
+          gh pr create \
+            --title "Auto-update journal $(date +%Y-%m-%d)" \
+            --body "🤖 Automated journal update" \
+            --head "$BRANCH" \
+            --base main \
+            --admin \
+            && echo "PR created, attempting merge..." \
+            && gh pr merge --squash --auto || echo "PR merge failed or already merged"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ env.BRANCH }}
+
+  weekly-reflection:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Generate Weekly Summary
+        run: |
+          python3 << 'PYEOF'
+          import subprocess
+          from pathlib import Path
+
+          result = subprocess.run(
+              ["git", "log", "--oneline", "--since=7 days ago", "--format=%s"],
+              capture_output=True,
+              text=True
+          )
+          commits = [c for c in result.stdout.strip().split('\n') if c]
+
+          if commits:
+              lines = []
+              lines.append("### 本周总结")
+              lines.append("")
+              lines.append(f"本周共 {len(commits)} 次提交：")
+              lines.append("")
+              for commit in commits[:10]:
+                  lines.append(f"- {commit}")
+              if len(commits) > 10:
+                  lines.append(f"- ... 还有 {len(commits) - 10} 次提交")
+
+              print('\n'.join(lines))
+          PYEOF
+
+      - name: Create Branch and Commit
+        id: weekly-branch
+        run: |
+          BRANCH="auto/weekly-summary-$(date +%Y%m%d-%H%M%S)"
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          git checkout -b "$BRANCH"
+          git config user.name "Hermès Agent"
+          git config user.email "[REDACTED]"
+          git add hermes-journal.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Weekly summary update"
+          git push -u origin "$BRANCH"
+
+      - name: Create and Merge Pull Request
+        run: |
+          echo "Creating PR for branch: $BRANCH"
+          gh pr create \
+            --title "Weekly summary $(date +%Y-%m-%d)" \
+            --body "🤖 Automated weekly summary" \
+            --head "$BRANCH" \
+            --base main \
+            --admin \
+            && gh pr merge --squash --auto || echo "PR merge failed or already merged"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ env.BRANCH }}

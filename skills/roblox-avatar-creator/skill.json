@@ -1,0 +1,24 @@
+{
+  "name": "roblox-avatar-creator",
+  "version": "1.0.0",
+  "description": "Roblox UGC 与虚拟形象管线专家——精通 Roblox 虚拟形象系统、UGC 物品制作、配件绑定、纹理标准和 Creator Marketplace 提交流程",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[roblox-studio]",
+  "hermes": {
+    "skill_category": "roblox-studio",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "xiaomi-mimo-api",
+  "version": "1.0.0",
+  "description": "Call Xiaomi MiMo via the free-ai bootstrap + chat endpoints. Covers auth flow, headers, model IDs, streaming, and known failure modes.",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": [
+    "software-development",
+    "xiaomi-mimo-api"
+  ],
+  "hermes": {
+    "skill_category": "software-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

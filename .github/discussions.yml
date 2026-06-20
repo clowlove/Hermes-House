@@ -1,0 +1,31 @@
+{
+  "categories": [
+    {
+      "name": "General",
+      "emoji": "💬",
+      "description": "General discussions about Hermès House"
+    },
+    {
+      "name": "Ideas",
+      "emoji": "💡",
+      "description": "Share and discuss new ideas"
+    },
+    {
+      "name": "Q&A",
+      "emoji": "❓",
+      "description": "Ask questions and get help"
+    },
+    {
+      "name": "Show and Tell",
+      "emoji": "🎨",
+      "description": "Share what you've built"
+    },
+    {
+      "name": "Announcements",
+      "emoji": "📢",
+      "description": "Project announcements and updates"
+    }
+  ],
+  "default_category": "General",
+  "default_category_description": "General discussions about Hermès House"
+}

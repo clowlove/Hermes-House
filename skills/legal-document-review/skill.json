@@ -1,0 +1,24 @@
+{
+  "name": "legal-document-review",
+  "version": "1.0.0",
+  "description": "全面的法律文书审查专家，涵盖合同、诉讼文件和不动产协议——提供文档摘要、风险条款标记、合同版本比对和合规检查，适用于各类律所和业务领域。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

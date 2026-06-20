@@ -10,11 +10,11 @@
   ],
   "commands": [],
   "tags": [
-    "note-taking",
+    "productivity",
     "obsidian"
   ],
   "hermes": {
-    "skill_category": "note-taking",
+    "skill_category": "productivity",
     "compatibility": [
       "hermes-agent >= 1.0.0"
     ]

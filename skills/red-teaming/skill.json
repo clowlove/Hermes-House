@@ -1,0 +1,24 @@
+{
+  "name": "red-teaming",
+  "version": "1.0.0",
+  "description": "Skill category for red teaming",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[red]",
+  "hermes": {
+    "skill_category": ".archive",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

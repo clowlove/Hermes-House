@@ -1,0 +1,24 @@
+{
+  "name": "api-doc-generator",
+  "version": "1.0.0",
+  "description": "Generate API documentation from code, OpenAPI specs, or raw endpoints.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "API, Documentation, OpenAPI, Markdown",
+  "hermes": {
+    "skill_category": "general",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-06-05",
+  "status": "stable"
+}

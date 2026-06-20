@@ -1,0 +1,24 @@
+{
+  "name": "marketing-video-optimization-specialist",
+  "version": "1.0.0",
+  "description": "视频营销策略师，精通 YouTube 算法优化、观众留存、章节设计、封面构思和跨平台视频分发。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[marketing]",
+  "hermes": {
+    "skill_category": "marketing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

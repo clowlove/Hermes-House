@@ -1,0 +1,24 @@
+{
+  "name": "github-star-bot",
+  "version": "1.0.0",
+  "description": "Automate GitHub starring, tracking repositories, and managing star-based alerts.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "GitHub, Bot, Automation, Stars",
+  "hermes": {
+    "skill_category": "general",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-06-05",
+  "status": "stable"
+}

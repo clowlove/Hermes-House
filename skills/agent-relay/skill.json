@@ -1,0 +1,24 @@
+{
+  "name": "agent-relay",
+  "version": "1.0.0",
+  "description": "Agent-to-Agent communication via GitHub relay — using a shared repo as message queue between autonomous AI agents.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[multi-agent, github, relay, autonomous, pr-communication]",
+  "hermes": {
+    "skill_category": "github",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

@@ -76,5 +76,46 @@ The `hf` command is the modern command-line interface for interacting with the H
 *   `-q` / `--quiet`: Limits output to IDs only.
 
 ### Extensions & Skills
-*   **Extensions:** Extend CLI functionality via GitHub repositories using `hf extensions install REPO_ID`.
-*   **Skills:** Manage AI assistant skills with `hf skills add`.
+## Hermes Agent HF Resources (cntalk)
+
+| Resource | Type | URL |
+|----------|------|-----|
+| hello-hermes | Space | hf.co/spaces/cntalk/hello-hermes |
+| hermes-toolkit | Space | hf.co/spaces/cntalk/hermes-toolkit |
+| hermes-examples | Dataset | hf.co/datasets/cntalk/hermes-examples |
+| agent-prompts | Dataset | hf.co/datasets/cntalk/agent-prompts |
+| hermes-skills | Dataset | hf.co/datasets/cntalk/hermes-skills |
+| hermes-integration | Dataset | hf.co/datasets/cntalk/hermes-integration |
+
+Collection: [hermes-agent-resources](https://huggingface.co/collections/cntalk/hermes-agent-resources-69f9c5b62fb70b0bbb6ae0b1)
+
+### Sync Script
+```bash
+python ~/.hermes/scripts/hf_sync.py  # Sync Hermes resources to HF
+```
+
+## Free Inference API Models
+
+- text-generation: meta-llama/Llama-3.2-1B-Instruct, mistralai/Mistral-7B-Instruct-v0.2
+- summarization: facebook/bart-large-cnn
+- translation: Helsinki-NLP/opus-mt-zh-en
+- sentiment-analysis: distilbert-base-uncased-finetuned-sst-2-english
+- question-answering: deepset/roberta-base-squad2
+- image-classification: google/vit-base-patch16-224
+
+### Inference API Example (Python)
+```python
+from huggingface_hub import InferenceClient
+
+client = InferenceClient(model="meta-llama/Llama-3.2-1B-Instruct", token="hf_xxx")
+result = client.text_generation(prompt="Hello, how are you?", max_new_tokens=100, temperature=0.7)
+```
+
+## Tips
+
+- Free accounts can create public models/datasets/Spaces
+- Space CPU Basic is free; T4 GPU is billed per hour
+- Inference API has rate limits (when model not specified)
+- Ensure `.gitattributes` is set correctly before upload (LFS if needed)
+- Extensions: extend CLI via `hf extensions install REPO_ID`
+- Skills: manage AI assistant skills with `hf skills add`

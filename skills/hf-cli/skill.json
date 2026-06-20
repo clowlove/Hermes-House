@@ -1,0 +1,27 @@
+{
+  "name": "hf-cli",
+  "version": "1.0.0",
+  "description": "hf-cli skill for Hermes Agent",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": [
+    ".archive",
+    "hf-cli"
+  ],
+  "hermes": {
+    "skill_category": ".archive",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

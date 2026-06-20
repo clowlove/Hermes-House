@@ -474,6 +474,8 @@ gh gist create script.py --public --desc "Useful script"
 gh gist list
 ```
 
+> **Script reference**: For automated repo description updates (hermes_repo_update.py), see `references/hermes_repo_update.md`.
+
 **With curl:**
 
 ```bash
@@ -513,3 +515,24 @@ for g in json.load(sys.stdin):
 | List workflows | `gh workflow list` | `curl GET /repos/o/r/actions/workflows` |
 | Rerun CI | `gh run rerun ID` | `curl POST /repos/o/r/actions/runs/ID/rerun` |
 | Set secret | `gh secret set KEY` | `curl PUT /repos/o/r/actions/secrets/KEY` (+ encryption) |
+
+## Privacy Cleanup
+
+Before moving code to a private repo, redact personal information:
+- Emails, GitHub usernames, PayPal/BuyMeACoffee links
+- API keys (nvapi-, ghp_, hf_)
+- Telegram handles
+
+See `references/privacy-cleanup.md` for detailed workflow.
+
+### Common Patterns to Redact
+```bash
+# GitHub handles
+git add -A && git commit -m "chore: privacy redaction"
+git push origin chore/privacy-redaction
+
+# Patterns
+content = re.sub(r'github\.com/clowlove/...', 'github.com/[REDACTED]/...', content)
+content = re.sub(r'paypal\.me/...', 'paypal.me/[REDACTED]', content)
+content = re.sub(r'nvapi-[\w-]+', '[REDACTED]', content)
+```

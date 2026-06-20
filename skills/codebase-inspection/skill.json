@@ -1,7 +1,7 @@
 {
   "name": "codebase-inspection",
-  "version": "1.0.0",
-  "description": "Inspect codebases w/ pygount: LOC, languages, ratios.",
+  "version": "1.1.0",
+  "description": "Inspect codebases w/ pygount: LOC, languages, ratios. Also: remote GitHub repo analysis via gh CLI API.",
   "author": "Hermes Agent",
   "license": "MIT",
   "platforms": [
@@ -9,7 +9,7 @@
     "macos"
   ],
   "commands": [],
-  "tags": "[LOC, Code Analysis, pygount, Codebase, Metrics, Repository]",
+  "tags": "[LOC, Code Analysis, pygount, Codebase, Metrics, Repository, GitHub, Deep Analysis, Repo Review]",
   "hermes": {
     "skill_category": "github",
     "compatibility": [

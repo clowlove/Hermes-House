@@ -1,0 +1,24 @@
+{
+  "name": "price-tracker",
+  "version": "1.0.0",
+  "description": "Track product prices across multiple platforms and get alerts when prices drop.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "Price, Tracker, E-commerce, Automation",
+  "hermes": {
+    "skill_category": "general",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-06-05",
+  "status": "stable"
+}

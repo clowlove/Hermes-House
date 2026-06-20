@@ -1,6 +1,6 @@
 {
   "name": "himalaya",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "Himalaya CLI: IMAP/SMTP email from terminal.",
   "author": "community",
   "license": "MIT",
@@ -11,7 +11,7 @@
   "commands": [],
   "tags": "[Email, IMAP, SMTP, CLI, Communication]",
   "hermes": {
-    "skill_category": "email",
+    "skill_category": "communication",
     "compatibility": [
       "hermes-agent >= 1.0.0"
     ]

@@ -1,0 +1,24 @@
+{
+  "name": "xr-immersive-developer",
+  "version": "1.0.0",
+  "description": "WebXR 和沉浸式技术专家，专注浏览器端 AR/VR/XR 应用开发",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[spatial-computing]",
+  "hermes": {
+    "skill_category": "spatial-computing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

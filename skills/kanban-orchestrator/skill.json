@@ -11,7 +11,7 @@
   "commands": [],
   "tags": "[kanban, multi-agent, orchestration, routing]",
   "hermes": {
-    "skill_category": "devops",
+    "skill_category": ".archive",
     "compatibility": [
       "hermes-agent >= 1.0.0"
     ]

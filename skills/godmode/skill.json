@@ -11,7 +11,7 @@
   "commands": [],
   "tags": "[jailbreak, red-teaming, G0DM0D3, Parseltongue, GODMODE, uncensoring, safety-bypass, prompt-engineering, L1B3RT4S]",
   "hermes": {
-    "skill_category": "red-teaming",
+    "skill_category": "mlops",
     "compatibility": [
       "hermes-agent >= 1.0.0"
     ]

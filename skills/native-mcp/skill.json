@@ -9,7 +9,7 @@
     "macos"
   ],
   "commands": [],
-  "tags": "[MCP, Tools, Integrations]",
+  "tags": "MCP, Tools, Integrations",
   "hermes": {
     "skill_category": "mcp",
     "compatibility": [
@@ -19,6 +19,6 @@
   "files": [
     "SKILL.md"
   ],
-  "last_updated": "2026-05-03",
+  "last_updated": "2026-05-22",
   "status": "stable"
 }

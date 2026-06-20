@@ -1,0 +1,24 @@
+{
+  "name": "compliance-auditor",
+  "version": "1.0.0",
+  "description": "专业技术合规审计师，擅长 SOC 2、ISO 27001、HIPAA 和 PCI-DSS 审计——从就绪评估、证据收集到认证全流程。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[specialized]",
+  "hermes": {
+    "skill_category": "specialized",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

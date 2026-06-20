@@ -11,7 +11,7 @@
   "commands": [],
   "tags": "[database, sqlite, data-storage, query]",
   "hermes": {
-    "skill_category": "data-science",
+    "skill_category": ".archive",
     "compatibility": [
       "hermes-agent >= 1.0.0"
     ]

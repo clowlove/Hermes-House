@@ -1,0 +1,24 @@
+{
+  "name": "godot-shader-developer",
+  "version": "1.0.0",
+  "description": "Godot 4 视觉效果专家——精通 Godot 着色语言（类 GLSL）、VisualShader 编辑器、CanvasItem 和 Spatial shader、后处理及性能优化，面向 2D/3D 效果",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[godot]",
+  "hermes": {
+    "skill_category": "godot",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

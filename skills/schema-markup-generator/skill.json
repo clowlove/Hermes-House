@@ -1,0 +1,5 @@
+{
+  "name": "schema-markup-generator",
+  "version": "1.0.0",
+  "description": "Generate JSON-LD structured data for rich snippets and AI search enhancement"
+}

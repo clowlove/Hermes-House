@@ -91,10 +91,14 @@ rm 3x-ui-linux-amd64.tar.gz
 | Symptom | Cause | Fix |
 |---------|-------|-----|
 | Port 49004 not responding | Service down or firewall | Check `systemctl status x-ui`, `sudo ufw allow 49004` |
+| Port works locally but nginx proxy to public IP fails | 3x-ui binds only to 127.0.0.1, not 0.0.0.0 | Use `proxy_pass http://127.0.0.1:49004` — see `references/reverse-proxy-8443.md` |
+| "400 The plain HTTP request was sent to HTTPS port" | Upstream 49004 is HTTPS, nginx used HTTP | Use `proxy_pass http://127.0.0.1:49004` (nginx terminates SSL, 3x-ui speaks HTTPS locally) |
 | "address already in use" | Another process on port | `sudo lsof -i :49004` to find conflicting process |
 | Can't login | Wrong password | Reset with `x-ui setting -username admin -password admin` |
 | xray backend not running | Config issue | Check `/usr/local/x-ui/bin/config.json`, `journalctl -u x-ui` |
 | Permission denied on log file | Log dir missing | `sudo mkdir -p /var/log/x-ui && sudo chown x-ui:x-ui /var/log/x-ui` |
+
+- Nginx 反代理配置（绕过 Cloudflare 端口限制）: `references/reverse-proxy-8443.md`
 
 ## Related
 

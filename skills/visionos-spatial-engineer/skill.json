@@ -1,0 +1,24 @@
+{
+  "name": "visionos-spatial-engineer",
+  "version": "1.0.0",
+  "description": "原生 visionOS 空间计算、SwiftUI 体积式界面和 Liquid Glass 设计实现",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[spatial-computing]",
+  "hermes": {
+    "skill_category": "spatial-computing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}

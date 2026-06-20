@@ -1,0 +1,21 @@
+{
+  "id": "trend-20260525-01",
+  "pipeline": "trend-monitor",
+  "stage": "raw",
+  "owner": "hermes-a",
+  "timestamp": "2026-05-25T10:00:00Z",
+  "data": {
+    "platforms": [
+      {"name": "github-trending", "items": 25},
+      {"name": "hacker-news", "items": 15},
+      {"name": "techcrunch", "items": 10}
+    ],
+    "top_topics": ["AI Agent", "LLM Optimization", "RAG", "Multi-Agent"],
+    "sample_items": [
+      {"title": "AutoGPT-Next: 下一代自主 Agent 框架", "platform": "github", "stars": 2800},
+      {"title": "Meta 发布 LLaMA 3.1 405B", "platform": "github", "stars": 5200},
+      {"title": "Anthropic Claude 3.5 发布", "platform": "hacker-news", "score": 980}
+    ]
+  },
+  "status": "ready-for-analysis"
+}

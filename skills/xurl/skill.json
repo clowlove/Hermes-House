@@ -11,7 +11,7 @@
   "commands": [],
   "tags": "[twitter, x, social-media, xurl, official-api]",
   "hermes": {
-    "skill_category": "social-media",
+    "skill_category": "communication",
     "compatibility": [
       "hermes-agent >= 1.0.0"
     ]

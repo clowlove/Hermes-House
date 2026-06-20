@@ -11,7 +11,7 @@
   "commands": [],
   "tags": "[Email, AI-Agent, Mails.dev]",
   "hermes": {
-    "skill_category": "email",
+    "skill_category": ".archive",
     "compatibility": [
       "hermes-agent >= 1.0.0"
     ]

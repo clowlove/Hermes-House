@@ -9,7 +9,7 @@
     "macos"
   ],
   "commands": [],
-  "tags": "[GitHub, Pull-Requests, CI/CD, Git, Automation, Merge]",
+  "tags": "GitHub, Pull-Requests, CI/CD, Git, Automation, Merge",
   "hermes": {
     "skill_category": "github",
     "compatibility": [
@@ -19,6 +19,6 @@
   "files": [
     "SKILL.md"
   ],
-  "last_updated": "2026-05-03",
+  "last_updated": "2026-05-22",
   "status": "stable"
 }

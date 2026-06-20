@@ -1,0 +1,24 @@
+{
+  "name": "supply-chain-strategist",
+  "version": "1.0.0",
+  "description": "专业的供应链管理与采购策略专家，精通供应商开发与管理、战略采购、质量管控和供应链数字化。立足中国制造业生态，帮助企业构建高效、韧性、可持续的供应链体系。",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[supply-chain]",
+  "hermes": {
+    "skill_category": "supply-chain",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
