@@ -1,0 +1,24 @@
+{
+  "name": "hermes-agent-skill-authoring",
+  "version": "1.0.0",
+  "description": "Author in-repo SKILL.md: frontmatter, validator, structure.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[skills, authoring, hermes-agent, conventions, skill-md]",
+  "hermes": {
+    "skill_category": "software-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
