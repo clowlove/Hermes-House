@@ -32,3 +32,5 @@ ago.sld.tw：154.41.135.101 /root/shengtuo-website；Nginx 8087；MySQL shengtuo
 主模型：provider=custom_nvidia，model=deepseek-ai/deepseek-v4-flash，base_url=https://integrate.api.nvidia.com/v1。
 §
 Updated `powerpoint` skill: added `references/chinese-education-pptx.md` with a Chinese-education PPT theme and dense single-page lesson layout pattern to reuse for school/course-style decks.
+§
+TrendRadar MCP 不支持 Twitter/X 平台，仅覆盖中文平台（微博、知乎、抖音、B站、百度等）。若用户要求查推特内容，需改用浏览器直接访问 twitter.com/x.com，或说明数据源限制。
