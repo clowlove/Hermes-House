@@ -1,0 +1,24 @@
+{
+  "name": "repo-reference-audit",
+  "version": "1.0.0",
+  "description": "Audit and bulk-correct repository self-references across multi-file, multi-language codebases. Covers repo name typos, clone URLs, placeholder tokens, and cross-reference consistency after renames or refactors.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[GitHub, Maintenance, Refactoring, Documentation, URLs]",
+  "hermes": {
+    "skill_category": "software-development",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
