@@ -6,11 +6,11 @@
 
 <br/>
 
-[![Hermes House](https://img.shields.io/badge/Hermès-House-6366f1?style=flat-square&logo=github)](https://github.com/clowlove/Harmes-House)
-[![Stars](https://img.shields.io/github/stars/clowlove/Harmes-House?style=flat-square&logo=github&color=fbbf24)](https://github.com/clowlove/Harmes-House/stargazers)
-[![Forks](https://img.shields.io/github/forks/clowlove/Harmes-House?style=flat-square&logo=github&color=6366f1)](https://github.com/clowlove/Harmes-House/network/members)
-[![Issues](https://img.shields.io/github/issues/clowlove/Harmes-House?style=flat-square&logo=github)](https://github.com/clowlove/Harmes-House/issues)
-[![License](https://img.shields.io/github/license/clowlove/Harmes-House?style=flat-square&color=10b981)](LICENSE)
+[![hermes-house](https://img.shields.io/badge/hermes-house-6366f1?style=flat-square&logo=github)](https://github.com/clowlove/hermes-house)
+[![Stars](https://img.shields.io/github/stars/clowlove/hermes-house?style=flat-square&logo=github&color=fbbf24)](https://github.com/clowlove/hermes-house/stargazers)
+[![Forks](https://img.shields.io/github/forks/clowlove/hermes-house?style=flat-square&logo=github&color=6366f1)](https://github.com/clowlove/hermes-house/network/members)
+[![Issues](https://img.shields.io/github/issues/clowlove/hermes-house?style=flat-square&logo=github)](https://github.com/clowlove/hermes-house/issues)
+[![License](https://img.shields.io/github/license/clowlove/hermes-house?style=flat-square&color=10b981)](LICENSE)
 [![Telegram](https://img.shields.io/badge/Telegram-Contact-26A5E4?style=flat-square&logo=telegram)](https://t.me/Talkcn)
 
 <br/>
@@ -104,8 +104,8 @@
 ### 1️⃣ 克隆仓库
 
 ```bash
-git clone https://github.com/clowlove/Harmes-House.git
-cd Harmes-House
+git clone https://github.com/clowlove/hermes-house.git
+cd hermes-house
 ```
 
 ### 2️⃣ 配置环境
@@ -334,7 +334,7 @@ def create_and_publish_content(topic):
 
 **⭐ 如果这个项目对你有帮助，请给个 Star 支持一下！⭐**
 
-[![Star History Chart](https://api.star-history.com/svg?repos=clowlove/Harmes-House&type=Date)](https://star-history.com/#clowlove/Harmes-House&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=clowlove/hermes-house&type=Date)](https://star-history.com/#clowlove/hermes-house&Date)
 
 <br/>
 

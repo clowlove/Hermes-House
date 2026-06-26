@@ -168,7 +168,7 @@ SQL 注入漏洞！
 
 第一步，克隆仓库
 
-git clone https://github.com/clowlove/Harmes-House.git
+git clone https://github.com/clowlove/hermes-house.git
 
 第二步，安装依赖
 

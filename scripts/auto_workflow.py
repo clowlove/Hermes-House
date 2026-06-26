@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Hermes House 自动化工作流
+hermes-house 自动化工作流
 每天自动执行：GitHub热点发现 → 生成日报 → 推送Telegram → 提交PR
 """
 
@@ -10,7 +10,7 @@ from datetime import datetime
 
 # 配置
 REPO_OWNER = "clowlove"
-REPO_NAME = "Harmes-House"
+REPO_NAME = "hermes-house"
 TELEGRAM_CHAT_ID = "522296847"
 BRANCH_NAME = "automation"
 
@@ -69,7 +69,7 @@ def commit_and_pr(repo_path, changes):
     return output
 
 def main():
-    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M')}] Hermes House 自动化工作流")
+    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M')}] hermes-house 自动化工作流")
     
     # 1. 运行热点发现
     print("  → 运行 GitHub 热点发现...")

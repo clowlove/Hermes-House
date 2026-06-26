@@ -52,7 +52,7 @@ ZH_DESC = {
 ━━━━━━━━━━━━━━━━━━
 
 💡 关注我，每天发现AI新趋势
-🔗 github.com/clowlove/Harmes-House
+🔗 github.com/clowlove/hermes-house
 ```
 
 **格式要点：**
@@ -107,7 +107,7 @@ ZH_DESC = {
 ### 创建每日定时任务
 ```bash
 hermes cron create \
-  --name "Hermes House 每日进化同步" \
+  --name "hermes-house 每日进化同步" \
   --prompt "运行 GitHub 热点发现并推送到 Telegram..." \
   --schedule "0 9 * * *" \
   --skills "hermes-agent,github"

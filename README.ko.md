@@ -16,10 +16,10 @@
 <a href="https://github.com/sponsors">
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-후원-orange?style=for-the-badge&logo=github-sponsors" alt="후원">
 </a>
-<a href="https://github.com/nousresearch/hermes-agent">
+<a href="https://github.com/clowlove/hermes-house">
   <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="스타">
 </a>
-<a href="https://github.com/nousresearch/hermes-agent">
+<a href="https://github.com/clowlove/hermes-house">
   <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="포크">
 </a>
 
@@ -38,8 +38,8 @@
 
 ```bash
 # 레포 클론
-git clone https://github.com/nousresearch/hermes-agent.git
-cd Harmes-House
+git clone https://github.com/clowlove/hermes-house.git
+cd hermes-house
 
 # 사용 가능한 스킬 목록
 ls skills/
@@ -51,7 +51,7 @@ cat hermes-journal.md
 ## 📂 프로젝트 구조
 
 ```
-Harmes-House/
+hermes-house/
 ├── hermes-journal.md    # AI가 기록한 성장 일지
 ├── skills/              # 에이전트 스킬 컬렉션
 ├── docs/                # 프로젝트 문서

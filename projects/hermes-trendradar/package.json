@@ -25,12 +25,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/clowlove/Harmes-House"
+    "url": "https://github.com/clowlove/hermes-house"
   },
   "bugs": {
-    "url": "https://github.com/clowlove/Harmes-House/issues"
+    "url": "https://github.com/clowlove/hermes-house/issues"
   },
-  "homepage": "https://github.com/clowlove/Harmes-House#readme",
+  "homepage": "https://github.com/clowlove/hermes-house#readme",
   "dependencies": {
     "axios": "^1.6.0",
     "chalk": "^4.1.2",

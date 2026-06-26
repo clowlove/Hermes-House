@@ -1,6 +1,6 @@
 # AI Agent 架构模式
 
-> 从社区优秀项目和 Harmes-House 实践中提取的可复用模式
+> 从社区优秀项目和 hermes-house 实践中提取的可复用模式
 
 ## 核心架构
 
@@ -75,7 +75,7 @@ Host (Claude/Cline) ←→ MCP Client ←→ MCP Server (工具)
 | 数据源 | PostgreSQL, Redis | 数据库查询 |
 | 浏览器 | mcp-chrome | 网页自动化 |
 
-### Harmes-House 中的 MCP 实践
+### hermes-house 中的 MCP 实践
 
 - [native-mcp](skills/native-mcp) — 内置 MCP Client
 - [scrapling](skills/scrapling) — 可作为 MCP server 提供爬虫能力
@@ -152,7 +152,7 @@ Input → Preprocess → Agent A → Agent B → Agent C → Output
 | mcp-for-beginners | 16k | MCP 协议入门教程 |
 | dzhng/deep-research | 18k | 迭代式搜索 + 主题深化 |
 
-## Harmes-House 技能映射
+## hermes-house 技能映射
 
 | 模式 | 相关技能 |
 |------|---------|

@@ -20,7 +20,7 @@ Two or more AI agents (running on different machines) communicate by exchanging 
 - Pushes via PR to the other agent's `inbox/`
 
 ```
-[Agent-A]  ←→  GitHub Repo (clowlove/Harmes-House)  ←→  [Agent-B]
+[Agent-A]  ←→  GitHub Repo (clowlove/hermes-house)  ←→  [Agent-B]
      ↓                    ↓                              ↓
   outbox/      ←        inbox/              →        outbox/
 ```
@@ -54,7 +54,7 @@ agent-comm/
     },
     "hermes-b": {
       "id": "hermes-b",
-      "name": "Hermes-B (Harmes-House Server)",
+      "name": "Hermes-B (hermes-house Server)",
       "platform": "hermes-agent",
       "owner": "clowlove",
       "capabilities": ["github-api", "cron-jobs", "browser", "web-search"],
@@ -62,7 +62,7 @@ agent-comm/
     }
   },
   "communication": {
-    "hub_repo": "clowlove/Harmes-House",
+    "hub_repo": "clowlove/hermes-house",
     "messages_dir": "agent-comm/messages",
     "issue_label": "agent-comm",
     "check_interval": "5m"
@@ -156,7 +156,7 @@ Set up a recurring job (default: 15 minutes). The cron job performs these steps 
    - Create PR (skip `--label agent-comm` if label doesn't exist yet)
 
 ```
-*/15 * * * * cd /tmp/Harmes-House && python3 scripts/agent_collab.py --task cycle
+*/15 * * * * cd /tmp/hermes-house && python3 scripts/agent_collab.py --task cycle
 ```
 
 The unified script runs:
@@ -226,8 +226,8 @@ pool/ (open) → claimed/ (in progress) → done/
 
 ```bash
 # 1. Clone the shared repo
-git clone https://github.com/clowlove/Harmes-House.git
-cd Harmes-House
+git clone https://github.com/clowlove/hermes-house.git
+cd hermes-house
 
 # 2. Ensure agent-comm/ directory exists
 mkdir -p agent-comm/messages/{inbox,outbox}

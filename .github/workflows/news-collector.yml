@@ -43,7 +43,7 @@ jobs:
         run: |
           date=$(date +%Y-%m-%d)
           existing=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/clowlove/Harmes-House/issues?state=open&labels=news" | \
+            "https://api.github.com/repos/clowlove/hermes-house/issues?state=open&labels=news" | \
             python3 -c "import sys,json; i=json.load(sys.stdin); print(str(i[0]['number']) if i else '')")
 
           if [ -n "$existing" ]; then
@@ -53,6 +53,6 @@ jobs:
             curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
               -H "Content-Type: application/json" \
               -d "{\"title\": \"AI News Digest $(date +'%Y-%m-%d')\", \"body\": \"AI News Digest - $(date +'%Y年%m月%d日')\", \"labels\": [\"news\"]}" \
-              "https://api.github.com/repos/clowlove/Harmes-House/issues" | \
+              "https://api.github.com/repos/clowlove/hermes-house/issues" | \
             python3 -c "import sys,json; d=json.load(sys.stdin); print(f\"Created issue #{d.get('number')}\")"
           fi

@@ -71,7 +71,7 @@ skills/<name>/
 
 ## 联系方式
 
-- **用户**: 亨利 (Henry [REDACTED]
+- **用户**: 亨利 (Henry)，GitHub: clowlove
 - **Telegram**: 已连接
 - **Email**: 已连接
 

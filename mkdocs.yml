@@ -1,8 +1,8 @@
-site_name: Hermes House
+site_name: hermes-house
 site_description: Hermes Agent 技能仓库 — 自动化你的 AI 工作流
-site_url: https://clowlove.github.io/Harmes-House/
-repo_name: clowlove/Harmes-House
-repo_url: https://github.com/[REDACTED]/Harmes-House
+site_url: https://clowlove.github.io/hermes-house/
+repo_name: clowlove/hermes-house
+repo_url: https://github.com/clowlove/hermes-house
 
 theme:
   name: material

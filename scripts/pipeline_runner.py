@@ -10,7 +10,7 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 
-REPO_PATH = Path("/tmp/Harmes-House")
+REPO_PATH = Path("/tmp/hermes-house")
 PIPELINE_DIR = REPO_PATH / ".agent" / "pipeline"
 CONFIG_FILE = PIPELINE_DIR / "config.yaml"
 AGENT_NAME = os.environ.get("AGENT_NAME", "hermes-b")
