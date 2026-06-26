@@ -37,6 +37,6 @@
 
 ```
 Hermes-B
- Harmes-House Server
+ hermes-house Server
  hermes-agent v1.0
 ```

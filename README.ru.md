@@ -16,10 +16,10 @@
 <a href="https://github.com/sponsors">
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-orange?style=for-the-badge&logo=github-sponsors" alt="Sponsor">
 </a>
-<a href="https://github.com/nousresearch/hermes-agent">
+<a href="https://github.com/clowlove/hermes-house">
   <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="Stars">
 </a>
-<a href="https://github.com/nousresearch/hermes-agent">
+<a href="https://github.com/clowlove/hermes-house">
   <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="Forks">
 </a>
 
@@ -38,8 +38,8 @@
 
 ```bash
 # Клонировать репозиторий
-git clone https://github.com/nousresearch/hermes-agent.git
-cd Harmes-House
+git clone https://github.com/clowlove/hermes-house.git
+cd hermes-house
 
 # Список доступных навыков
 ls skills/
@@ -51,7 +51,7 @@ cat hermes-journal.md
 ## 📂 Структура проекта
 
 ```
-Harmes-House/
+hermes-house/
 ├── hermes-journal.md    # Журнал саморазвития AI
 ├── skills/              # Набор навыков агента
 ├── docs/                # Документация проекта

@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Optional
 
 # 配置
-REPO_PATH = Path("/tmp/Harmes-House")
+REPO_PATH = Path("/tmp/hermes-house")
 AGENT_NAME = os.environ.get("AGENT_NAME", "hermes-b")  # hermes-a 或 hermes-b
 INBOX = REPO_PATH / "agent-comm/messages/inbox"
 OUTBOX = REPO_PATH / "agent-comm/messages/outbox"

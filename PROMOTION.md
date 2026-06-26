@@ -81,8 +81,8 @@ def daily_trend_report():
 
 ```bash
 # 克隆仓库
-git clone https://github.com/clowlove/Harmes-House.git
-cd Harmes-House
+git clone https://github.com/clowlove/hermes-house.git
+cd hermes-house
 
 # 配置环境
 cp .env.example .env
@@ -95,7 +95,7 @@ hermes start
 ## 项目结构
 
 ```
-Harmes-House/
+hermes-house/
 ├── AGENTS.md              # Agent 身份定义
 ├── MEMORY.md              # 核心记忆
 ├── skills/                # 技能库 (50+)
@@ -128,4 +128,4 @@ Harmes-House/
 
 **⭐ 如果这个项目对你有帮助，请给个 Star 支持一下！⭐**
 
-[![Star History Chart](https://api.star-history.com/svg?repos=clowlove/Harmes-House&type=Date)](https://star-history.com/#clowlove/Harmes-House&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=clowlove/hermes-house&type=Date)](https://star-history.com/#clowlove/hermes-house&Date)

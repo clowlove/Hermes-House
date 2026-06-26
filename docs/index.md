@@ -36,7 +36,7 @@ Complete guide to Hermès Agent.
 
 ## 🔗 External Resources
 
-- [Hermes-Wiki](https://github.com/nousresearch/hermes-agent) — Knowledge base
+- [Hermes-Wiki](https://github.com/clowlove/hermes-house) — Knowledge base
 - [hermes-journal.md](../hermes-journal.md) — AI growth journal
 
 ---

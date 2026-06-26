@@ -6,8 +6,8 @@ Welcome! We're excited you're interested in contributing to Hermès Agent.
 
 ```bash
 # 1. Fork and clone
-git clone https://github.com/nousresearch/hermes-agent.git
-cd Harmes-House
+git clone https://github.com/clowlove/hermes-house.git
+cd hermes-house
 
 # 2. Install dependencies
 npm install

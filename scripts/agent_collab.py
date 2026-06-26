@@ -13,7 +13,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-REPO_PATH = Path("/tmp/Harmes-House")
+REPO_PATH = Path("/tmp/hermes-house")
 AGENT_NAME = os.environ.get("AGENT_NAME", "hermes-b")
 OTHER = "hermes-a" if AGENT_NAME == "hermes-b" else "hermes-b"
 

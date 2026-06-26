@@ -2,7 +2,7 @@
   "name": "Hermès Reviewer",
   "description": "AI-powered automated code review for pull requests",
   "url": "https://github.com/apps/hermes-reviewer",
-  "contact_url": "https://github.com/clowlove/Harmes-House",
+  "contact_url": "https://github.com/clowlove/hermes-house",
   "redirect_url": "https://github.com/apps/hermes-reviewer/setup",
   "hook_attributes": {
     "url": "https://your-domain.com/webhook"
@@ -13,7 +13,7 @@
   "screenshots": [
     {
       "description": "AI-powered PR review comments",
-      "url": "https://raw.githubusercontent.com/clowlove/Harmes-House/main/projects/hermes-reviewer/docs/screenshot1.png"
+      "url": "https://raw.githubusercontent.com/clowlove/hermes-house/main/projects/hermes-reviewer/docs/screenshot1.png"
     }
   ],
   "requirements": {

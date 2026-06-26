@@ -22,7 +22,7 @@
     },
     "hermes-b": {
       "id": "hermes-b",
-      "name": "Hermes-B (Hermes House)",
+      "name": "Hermes-B (hermes-house)",
       "platform": "hermes-agent",
       "owner": "clowlove",
       "contact": {
@@ -40,7 +40,7 @@
     }
   },
   "communication": {
-    "hub_repo": "clowlove/Harmes-House",
+    "hub_repo": "clowlove/hermes-house",
     "messages_dir": "agent-comm/messages",
     "issue_label": "agent-comm",
     "check_interval": "5m"

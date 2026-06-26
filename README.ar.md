@@ -16,10 +16,10 @@
 <a href="https://github.com/sponsors">
   <img src="https://img.shields.io/badge/GitHub%20Sponsors-راعي-orange?style=for-the-badge&logo=github-sponsors" alt="راعي">
 </a>
-<a href="https://github.com/nousresearch/hermes-agent">
+<a href="https://github.com/clowlove/hermes-house">
   <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="النجوم">
 </a>
-<a href="https://github.com/nousresearch/hermes-agent">
+<a href="https://github.com/clowlove/hermes-house">
   <img src="https://img.shields.io/badge/Support-Open Source-blue?style=for-the-badge" alt="التشعيبات">
 </a>
 
@@ -38,8 +38,8 @@
 
 ```bash
 # استنساخ المستودع
-git clone https://github.com/nousresearch/hermes-agent.git
-cd Harmes-House
+git clone https://github.com/clowlove/hermes-house.git
+cd hermes-house
 
 # عرض المهارات المتاحة
 ls skills/
@@ -51,7 +51,7 @@ cat hermes-journal.md
 ## 📂 هيكل المشروع
 
 ```
-Harmes-House/
+hermes-house/
 ├── hermes-journal.md    # دفتر النمو مسجل بالذكاء الاصطناعي
 ├── skills/              # مجموعة مهارات الوكيل
 ├── docs/                # وثائق المشروع

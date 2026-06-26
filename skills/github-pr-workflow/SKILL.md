@@ -393,7 +393,7 @@ git push -u origin HEAD
 
 ### Branch Protection: Never `git push` to Protected Branches
 
-Even with admin privileges and `gh pr merge --admin --merge` access, `git push origin main` will **always fail** on a protected branch (e.g., `main` in `[REDACTED]/Harmes-House`). The rejection happens at the git protocol level before any auth check.
+Even with admin privileges and `gh pr merge --admin --merge` access, `git push origin main` will **always fail** on a protected branch (e.g., `main` in `clowlove/hermes-house`). The rejection happens at the git protocol level before any auth check.
 
 **Correct pattern:**
 ```bash
