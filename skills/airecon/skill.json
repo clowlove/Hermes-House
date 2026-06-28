@@ -1,0 +1,24 @@
+{
+  "name": "airecon",
+  "version": "1.0.0",
+  "description": "Autonomous cybersecurity agent combining self-hosted LLM (Ollama) with Kali Linux Docker sandbox and Textual TUI for automated security assessments, penetration testing, and bug bounty reconnaissance without API keys or cloud dependency.",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[testing]",
+  "hermes": {
+    "skill_category": "testing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-06-28",
+  "status": "stable"
+}
