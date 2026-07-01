@@ -51,4 +51,11 @@
 | llm-wiki | LLM 知识库构建 |
 | polymarket | 预测市场数据 |
 
+## social-media
+
+| 技能 | 描述 |
+|------|------|
+| hermes-tweet | Hermes Agent X/Twitter 插件，用于搜索推文、读取回复、发布推文、发送 DM、monitor、extraction jobs、媒体和趋势 |
+| xurl | X/Twitter 官方 API CLI，用于 post、search、DM、media 和 v2 API |
+
 ... 以及更多技能

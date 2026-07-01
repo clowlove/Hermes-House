@@ -151,6 +151,7 @@ skills/
 ├── smart-analytics/        # 智能分析
 ├── content-generator/      # 内容生成
 ├── ai-translator/          # AI 翻译
+├── hermes-tweet/           # Hermes Agent X/Twitter 插件
 ├── twitter-bot/            # Twitter 机器人
 ├── youtube-auto/           # YouTube 自动化
 ├── github-star-bot/        # GitHub 自动 Star
@@ -182,10 +183,10 @@ skills/
 def auto_review_pr(pr_url):
     # 1. 获取 PR 详情
     pr = github.get_pr(pr_url)
-    
+
     # 2. AI 代码审查
     review = code_review_agent.analyze(pr.diff)
-    
+
     # 3. 自动评论
     if review.quality > 0.8:
         pr.approve(review.comment)
@@ -200,10 +201,10 @@ def auto_review_pr(pr_url):
 @agent.cron("0 9 * * *")  # 每天早上9点
 def daily_trend_report():
     trends = trendradar.analyze()
-    
+
     # 生成报告
     report = generate_report(trends)
-    
+
     # 发送到 Telegram
     telegram.send(report)
 ```
@@ -216,10 +217,10 @@ def daily_trend_report():
 def create_and_publish_content(topic):
     # 1. 生成内容
     content = content_generator.generate(topic)
-    
+
     # 2. 翻译成多语言
     translations = ai_translator.translate(content, ['zh', 'ja', 'en'])
-    
+
     # 3. 发布到社交媒体
     twitter.post(translations['en'])
     weibo.post(translations['zh'])
