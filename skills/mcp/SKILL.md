@@ -1,26 +1,11 @@
 ---
-name: mcp
 description: Skills for working with MCP (Model Context Protocol) servers, tools, and integrations. Documents the built-in native MCP client — configure servers in config.yaml for automatic tool discovery.
-version: 1.0.0
-metadata:
-  hermes:
-    tags: [mcp]
-    related_skills: ['native-mcp']
 ---
 
-# Mcp
+# MCP (Model Context Protocol)
 
-## Overview
-
-Skills for working with MCP (Model Context Protocol) servers, tools, and integrations. Documents the built-in native MCP client — configure servers in config.yaml for automatic tool discovery.
-
-## Sub-skills
-
-- **native-mcp**
+Skills for working with MCP servers, tools, and integrations. The built-in native MCP client can be configured in `config.yaml` for automatic tool discovery.
 
 ## Usage
 
-Load individual skills from this category using:
-```
-skill_view(name="mcp/{sub_skill}")
-```
+Use this skill when setting up or working with MCP servers and tools.
