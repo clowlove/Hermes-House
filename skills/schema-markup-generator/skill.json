@@ -1,5 +1,24 @@
 {
   "name": "schema-markup-generator",
   "version": "1.0.0",
-  "description": "Generate JSON-LD structured data for rich snippets and AI search enhancement"
+  "description": "Generate JSON-LD structured data for rich snippets and AI search enhancement",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[marketing]",
+  "hermes": {
+    "skill_category": "marketing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
 }
