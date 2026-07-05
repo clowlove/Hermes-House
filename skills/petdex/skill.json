@@ -1,0 +1,24 @@
+{
+  "name": "petdex",
+  "version": "1.0.0",
+  "description": "Install and select animated petdex mascots for Hermes.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[petdex, mascot, display, cli, tui, desktop]",
+  "hermes": {
+    "skill_category": "productivity",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
