@@ -1,0 +1,27 @@
+{
+  "name": "cf-b2b-website",
+  "version": "1.0.0",
+  "description": "Cloudflare Workers + D1 e-commerce site for Shengtuo Tractor. Deploy, DB ops, SEO, product sync.",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": [
+    "devops",
+    "cf-b2b-website"
+  ],
+  "hermes": {
+    "skill_category": "devops",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
