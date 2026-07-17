@@ -1,0 +1,24 @@
+{
+  "name": "pdf-appearance-modifier",
+  "version": "1.0.0",
+  "description": "Modify PDF appearance without changing content/structure: change font colors, remove highlights, adjust styling. Preserves all text, layout, fonts, and embedded resources.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[PDF, Documents, pikepdf, color-modification, appearance]",
+  "hermes": {
+    "skill_category": "productivity",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
