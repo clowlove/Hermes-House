@@ -1,0 +1,27 @@
+{
+  "name": "hermes-backup-migration",
+  "version": "1.0.0",
+  "description": "Backup, restore, and migrate Hermes Agent data across machines. Covers the local backup scripts, cron scheduling, retention policies, git remote management, shallow-clone migration, and cross-machine parallel deployment.",
+  "author": "Hermes Agent Community",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": [
+    "devops",
+    "hermes-backup-migration"
+  ],
+  "hermes": {
+    "skill_category": "devops",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
