@@ -1,0 +1,28 @@
+{
+  "name": "hermes-tweet",
+  "version": "0.1.8",
+  "description": "Native Hermes Agent plugin for X/Twitter research, monitoring, extraction, and approval-gated actions through Xquik. Not affiliated with X Corp.",
+  "author": "Burak Bayır (@kriptoburak), Xquik",
+  "license": "MIT",
+  "platforms": ["linux", "macos"],
+  "commands": ["hermes", "uv"],
+  "python": ">=3.11",
+  "api_keys_needed": ["XQUIK_API_KEY"],
+  "tags": [
+    "hermes-agent",
+    "xquik",
+    "twitter",
+    "x",
+    "tweet-search",
+    "tweet-posting",
+    "social-media",
+    "automation"
+  ],
+  "hermes": {
+    "skill_category": "social-media",
+    "compatibility": ["Hermes Agent with third-party plugin support"]
+  },
+  "files": ["SKILL.md"],
+  "last_updated": "2026-07-18",
+  "status": "alpha"
+}
