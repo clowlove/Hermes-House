@@ -1,0 +1,24 @@
+{
+  "name": "hermes-multi-instance-migration",
+  "version": "1.0.0",
+  "description": "Migrate Hermes Agent to a new server while keeping both instances running in parallel. Covers backup, SSH troubleshooting, skill/memory sync, and GitHub remote setup.",
+  "author": "Hermes Agent",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[hermes, migration, multi-instance, backup, sync, gcp, fail2ban]",
+  "hermes": {
+    "skill_category": "hermes",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
+}
