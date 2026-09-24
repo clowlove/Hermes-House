@@ -1,5 +1,24 @@
 {
   "name": "geo-optimizer",
   "version": "1.0.0",
-  "description": "Optimize content for AI search engines (ChatGPT, Perplexity, Gemini, AI Overviews) — Generative Engine Optimization"
+  "description": "Optimize content for AI search engines (ChatGPT, Perplexity, Gemini, AI Overviews) — Generative Engine Optimization",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[marketing]",
+  "hermes": {
+    "skill_category": "marketing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
 }

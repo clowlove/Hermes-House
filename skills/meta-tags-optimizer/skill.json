@@ -1,5 +1,24 @@
 {
   "name": "meta-tags-optimizer",
   "version": "1.0.0",
-  "description": "Optimize title tags, meta descriptions, Open Graph, and Twitter cards for maximum click-through rate"
+  "description": "Optimize title tags, meta descriptions, Open Graph, and Twitter cards for maximum click-through rate",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[marketing]",
+  "hermes": {
+    "skill_category": "marketing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
 }

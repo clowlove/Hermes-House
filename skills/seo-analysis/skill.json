@@ -1,5 +1,24 @@
 {
   "name": "seo-analysis",
   "version": "1.0.0",
-  "description": "Full SEO audit: analyze keywords, meta tags, content quality, technical SEO, and competitor positioning"
+  "description": "Full SEO audit: analyze keywords, meta tags, content quality, technical SEO, and competitor positioning",
+  "author": "agency-agents-zh",
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ],
+  "commands": [],
+  "tags": "[marketing]",
+  "hermes": {
+    "skill_category": "marketing",
+    "compatibility": [
+      "hermes-agent >= 1.0.0"
+    ]
+  },
+  "files": [
+    "SKILL.md"
+  ],
+  "last_updated": "2026-05-03",
+  "status": "stable"
 }
