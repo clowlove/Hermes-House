@@ -1,25 +1,24 @@
 ---
-name: domain
-description: Passive domain reconnaissance using Python stdlib. Use this skill for subdomain discovery, SSL certificate inspection, WHOIS lookups, DNS records, domain availability checks, and bulk multi-domain analysis. No API keys required. Triggers on requests like
-version: 1.0.0
-metadata:
-  hermes:
-    tags: [domain]
-    related_skills: []
+description: Passive domain reconnaissance using Python stdlib. Use this skill for subdomain discovery, SSL certificate inspection, WHOIS lookups, DNS records, domain availability checks, and bulk multi-domain analysis.
 ---
 
-# Domain
+# Domain Intelligence
 
-## Overview
+Passive domain reconnaissance skills using Python standard library. No API keys required.
 
-Passive domain reconnaissance using Python stdlib. Use this skill for subdomain discovery, SSL certificate inspection, WHOIS lookups, DNS records, domain availability checks, and bulk multi-domain analysis. No API keys required. Triggers on requests like
+## Features
 
-## Sub-skills
+- Subdomain discovery
+- SSL certificate inspection
+- WHOIS lookups
+- DNS records analysis
+- Domain availability checks
+- Bulk multi-domain analysis
 
+## Triggers
 
-## Usage
-
-Load individual skills from this category using:
-```
-skill_view(name="domain/{sub_skill}")
-```
+- "find subdomains"
+- "check ssl cert"
+- "whois lookup"
+- "is this domain available"
+- "bulk check these domains"
